@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>GPU集群验证报告 - gpu-test-cluster</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; background: #f5f5f5; }
+        .container { max-width: 1200px; margin: 0 auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        h1 { color: #333; border-bottom: 2px solid #4CAF50; padding-bottom: 10px; }
+        h2 { color: #555; margin-top: 30px; }
+        .summary { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin: 20px 0; }
+        .summary-item { text-align: center; padding: 15px; border-radius: 8px; }
+        .summary-item.total { background: #e3f2fd; }
+        .summary-item.pass { background: #e8f5e9; }
+        .summary-item.fail { background: #ffebee; }
+        .summary-item.warning { background: #fff3e0; }
+        .summary-item.skip { background: #f5f5f5; }
+        .summary-item .count { font-size: 32px; font-weight: bold; }
+        .summary-item .label { font-size: 14px; color: #666; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background: #f5f5f5; font-weight: bold; }
+        tr:hover { background: #f9f9f9; }
+        .status-pass { color: #4CAF50; font-weight: bold; }
+        .status-fail { color: #f44336; font-weight: bold; }
+        .status-warning { color: #ff9800; font-weight: bold; }
+        .status-skip { color: #9e9e9e; }
+        .status-unknown { color: #9e9e9e; }
+        .meta { color: #666; font-size: 14px; margin-bottom: 20px; }
+        .section { margin: 20px 0; padding: 15px; background: #fafafa; border-radius: 8px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>GPU集群验证报告</h1>
+        <div class="meta">
+            <p>集群名称: gpu-test-cluster</p>
+            <p>检查时间: 2026-05-15T14:48:09.408865</p>
+        </div>
+
+        <div class="summary">
+            <div class="summary-item total">
+                <div class="count">42</div>
+                <div class="label">总检查项</div>
+            </div>
+            <div class="summary-item pass">
+                <div class="count">34</div>
+                <div class="label">通过</div>
+            </div>
+            <div class="summary-item fail">
+                <div class="count">5</div>
+                <div class="label">失败</div>
+            </div>
+            <div class="summary-item warning">
+                <div class="count">0</div>
+                <div class="label">警告</div>
+            </div>
+            <div class="summary-item skip">
+                <div class="count">3</div>
+                <div class="label">跳过</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>网络状态</h2>
+            <p>状态: partial(1/2)</p>
+        </div>
+
+        <div class="section">
+            <h2>设备状态</h2>
+            <p>状态: all_ok</p>
+        </div>
+
+        <h2>检查结果详情</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>检查项</th>
+                    <th>状态</th>
+                    <th>消息</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>step_00: 设备一致性检查</td>
+                    <td class="status-pass">通过</td>
+                    <td>所有节点已配置</td>
+                </tr>
+                <tr>
+                    <td>step_0b: 网络连通性检查</td>
+                    <td class="status-pass">通过</td>
+                    <td>所有节点已配置</td>
+                </tr>
+                <tr>
+                    <td>step_01: 依赖软件包</td>
+                    <td class="status-fail">失败</td>
+                    <td>未配置<div class="host-details" style="margin-top: 8px; font-size: 12px; color: #666;"><span class="status-fail" style="margin-right: 10px;">10.0.22.182: ✗ 缺失依赖包: pdsh, cmake</span><span class="status-fail" style="margin-right: 10px;">10.0.16.39: ✗ 缺失依赖包: pdsh, cmake</span></div></td>
+                </tr>
+                <tr>
+                    <td>step_02: 内核版本检查</td>
+                    <td class="status-pass">通过</td>
+                    <td>所有节点已配置</td>
+                </tr>
+                <tr>
+                    <td>step_03: glibc版本检查</td>
+                    <td class="status-pass">通过</td>
+                    <td>所有节点已配置</td>
+                </tr>
+                <tr>
+                    <td>step_04: OpenSSH版本检查</td>
+                    <td class="status-pass">通过</td>
+                    <td>所有节点已配置</td>
+                </tr>
+                <tr>
+                    <td>step_05: sudo免密</td>
+                    <td class="status-pass">通过</td>
+                    <td>所有节点已配置</td>
+                </tr>
+                <tr>
+                    <td>step_06: 数据盘挂载</td>
+                    <td class="status-pass">通过</td>
+                    <td>所有节点已配置</td>
+                </tr>
+                <tr>
+                    <td>step_07: MSR设置</td>
+                    <td class="status-pass">通过</td>
+                    <td>所有节点已配置</td>
+                </tr>
+                <tr>
+                    <td>step_08: rc.local配置</td>
+                    <td class="status-pass">通过</td>
+                    <td>所有节点已配置</td>
+                </tr>
+                <tr>
+                    <td>step_09: 主机名和hosts</td>
+                    <td class="status-pass">通过</td>
+                    <td>所有节点已配置</td>
+                </tr>
+                <tr>
+                    <td>step_10: ubuntu用户</td>
+                    <td class="status-pass">通过</td>
+                    <td>所有节点已配置</td>
+                </tr>
+                <tr>
+                    <td>step_11: SSH免密登录</td>
+                    <td class="status-pass">通过</td>
+                    <td>所有节点已配置<div class="host-details" style="margin-top: 8px; font-size: 12px; color: #666;"><span class="status-pass" style="margin-right: 10px;">10.0.22.182: ✓ configured</span><span class="status-pass" style="margin-right: 10px;">10.0.16.39: ✓ configured</span></div></td>
+                </tr>
+                <tr>
+                    <td>step_12: CPU性能模式</td>
+                    <td class="status-pass">通过</td>
+                    <td>所有节点已配置</td>
+                </tr>
+                <tr>
+                    <td>step_13: 文件描述符</td>
+                    <td class="status-pass">通过</td>
+                    <td>所有节点已配置</td>
+                </tr>
+                <tr>
+                    <td>step_15: 禁用自动更新</td>
+                    <td class="status-pass">通过</td>
+                    <td>所有节点已配置</td>
+                </tr>
+                <tr>
+                    <td>step_16: 固定内核版本</td>
+                    <td class="status-pass">通过</td>
+                    <td>所有节点已配置</td>
+                </tr>
+                <tr>
+                    <td>step_17: 时区设置</td>
+                    <td class="status-pass">通过</td>
+                    <td>所有节点已配置</td>
+                </tr>
+                <tr>
+                    <td>step_18: 禁用IPv6</td>
+                    <td class="status-pass">通过</td>
+                    <td>所有节点已配置</td>
+                </tr>
+                <tr>
+                    <td>step_19: vmcore和休眠</td>
+                    <td class="status-pass">通过</td>
+                    <td>所有节点已配置</td>
+                </tr>
+                <tr>
+                    <td>step_20: Mellanox驱动</td>
+                    <td class="status-fail">失败</td>
+                    <td>未配置<div class="host-details" style="margin-top: 8px; font-size: 12px; color: #666;"><span class="status-fail" style="margin-right: 10px;">10.0.22.182: ✗ MLNX_OFED未安装</span><span class="status-fail" style="margin-right: 10px;">10.0.16.39: ✗ MLNX_OFED未安装</span></div></td>
+                </tr>
+                <tr>
+                    <td>step_21: 禁用nouveau</td>
+                    <td class="status-fail">失败</td>
+                    <td>未配置<div class="host-details" style="margin-top: 8px; font-size: 12px; color: #666;"><span class="status-fail" style="margin-right: 10px;">10.0.22.182: ✗ nouveau黑名单配置不存在</span><span class="status-fail" style="margin-right: 10px;">10.0.16.39: ✗ nouveau黑名单配置不存在</span></div></td>
+                </tr>
+                <tr>
+                    <td>step_22: NVIDIA驱动</td>
+                    <td class="status-pass">通过</td>
+                    <td>所有节点已配置</td>
+                </tr>
+                <tr>
+                    <td>step_23: FabricManager</td>
+                    <td class="status-fail">失败</td>
+                    <td>未配置<div class="host-details" style="margin-top: 8px; font-size: 12px; color: #666;"><span class="status-fail" style="margin-right: 10px;">10.0.22.182: ✗ 未安装</span><span class="status-fail" style="margin-right: 10px;">10.0.16.39: ✗ 未安装</span></div></td>
+                </tr>
+                <tr>
+                    <td>step_24: CUDA Toolkit</td>
+                    <td class="status-pass">通过</td>
+                    <td>所有节点已配置</td>
+                </tr>
+                <tr>
+                    <td>step_25: NCCL</td>
+                    <td class="status-pass">通过</td>
+                    <td>所有节点已配置</td>
+                </tr>
+                <tr>
+                    <td>step_26: RDMA网卡重命名</td>
+                    <td class="status-pass">通过</td>
+                    <td>所有节点已配置</td>
+                </tr>
+                <tr>
+                    <td>step_26b: 以太网重命名</td>
+                    <td class="status-skip">跳过</td>
+                    <td>跳过检查（无检查方法）</td>
+                </tr>
+                <tr>
+                    <td>step_27: GPU持久模式</td>
+                    <td class="status-pass">通过</td>
+                    <td>所有节点已配置</td>
+                </tr>
+                <tr>
+                    <td>step_28: NVIDIA内核模块</td>
+                    <td class="status-pass">通过</td>
+                    <td>所有节点已配置</td>
+                </tr>
+                <tr>
+                    <td>step_29: 禁用ACS</td>
+                    <td class="status-pass">通过</td>
+                    <td>所有节点已配置</td>
+                </tr>
+                <tr>
+                    <td>step_30: 时间同步</td>
+                    <td class="status-pass">通过</td>
+                    <td>所有节点已配置</td>
+                </tr>
+                <tr>
+                    <td>step_34: NFS配置</td>
+                    <td class="status-pass">通过</td>
+                    <td>所有节点已配置</td>
+                </tr>
+                <tr>
+                    <td>GPU持久模式</td>
+                    <td class="status-pass">通过</td>
+                    <td>所有节点正常<div class="host-details" style="margin-top: 8px; font-size: 12px; color: #666;"><span class="status-pass" style="margin-right: 10px;">10.0.22.182: ✓ 1 GPUs in persistence mode</span><span class="status-pass" style="margin-right: 10px;">10.0.16.39: ✓ 1 GPUs in persistence mode</span></div></td>
+                </tr>
+                <tr>
+                    <td>GPU ECC错误</td>
+                    <td class="status-pass">通过</td>
+                    <td>所有节点正常<div class="host-details" style="margin-top: 8px; font-size: 12px; color: #666;"><span class="status-pass" style="margin-right: 10px;">10.0.22.182: ✓ 无ECC错误</span><span class="status-pass" style="margin-right: 10px;">10.0.16.39: ✓ 无ECC错误</span></div></td>
+                </tr>
+                <tr>
+                    <td>GPU温度</td>
+                    <td class="status-pass">通过</td>
+                    <td>所有节点正常<div class="host-details" style="margin-top: 8px; font-size: 12px; color: #666;"><span class="status-pass" style="margin-right: 10px;">10.0.22.182: ✓ 最高温度 30°C</span><span class="status-pass" style="margin-right: 10px;">10.0.16.39: ✓ 最高温度 28°C</span></div></td>
+                </tr>
+                <tr>
+                    <td>GPU功率</td>
+                    <td class="status-pass">通过</td>
+                    <td>所有节点正常<div class="host-details" style="margin-top: 8px; font-size: 12px; color: #666;"><span class="status-pass" style="margin-right: 10px;">10.0.22.182: ✓ 正常</span><span class="status-pass" style="margin-right: 10px;">10.0.16.39: ✓ 正常</span></div></td>
+                </tr>
+                <tr>
+                    <td>RDMA链路状态</td>
+                    <td class="status-skip">跳过</td>
+                    <td>所有节点跳过<div class="host-details" style="margin-top: 8px; font-size: 12px; color: #666;"><span class="status-skip" style="margin-right: 10px;">10.0.22.182: ○ 无IB设备</span><span class="status-skip" style="margin-right: 10px;">10.0.16.39: ○ 无IB设备</span></div></td>
+                </tr>
+                <tr>
+                    <td>FabricManager服务</td>
+                    <td class="status-skip">跳过</td>
+                    <td>所有节点跳过<div class="host-details" style="margin-top: 8px; font-size: 12px; color: #666;"><span class="status-skip" style="margin-right: 10px;">10.0.22.182: ○ 未安装</span><span class="status-skip" style="margin-right: 10px;">10.0.16.39: ○ 未安装</span></div></td>
+                </tr>
+                <tr>
+                    <td>ACS状态</td>
+                    <td class="status-pass">通过</td>
+                    <td>所有节点正常<div class="host-details" style="margin-top: 8px; font-size: 12px; color: #666;"><span class="status-pass" style="margin-right: 10px;">10.0.22.182: ✓ 已禁用</span><span class="status-pass" style="margin-right: 10px;">10.0.16.39: ✓ 已禁用</span></div></td>
+                </tr>
+                <tr>
+                    <td>nvidia_peermem模块</td>
+                    <td class="status-fail">失败</td>
+                    <td>异常节点: 10.0.22.182(未配置), 10.0.16.39(未配置)<div class="host-details" style="margin-top: 8px; font-size: 12px; color: #666;"><span class="status-fail" style="margin-right: 10px;">10.0.22.182: ✗ 未配置</span><span class="status-fail" style="margin-right: 10px;">10.0.16.39: ✗ 未配置</span></div></td>
+                </tr>
+                <tr>
+                    <td>时间同步</td>
+                    <td class="status-pass">通过</td>
+                    <td>所有节点正常<div class="host-details" style="margin-top: 8px; font-size: 12px; color: #666;"><span class="status-pass" style="margin-right: 10px;">10.0.22.182: ✓ 偏移 +0.000000000s</span><span class="status-pass" style="margin-right: 10px;">10.0.16.39: ✓ 偏移 +0.000000000s</span></div></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

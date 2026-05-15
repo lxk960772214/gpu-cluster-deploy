@@ -1,0 +1,29 @@
+cuda:
+  version: "13.0"
+  toolkit_file: "cuda_13.0.0_580.65.06_linux.run"
+  download_url: "https://developer.download.nvidia.com/compute/cuda/13.0.0/local_installers/cuda_13.0.0_580.65.06_linux.run"
+
+nvidia_driver:
+  version: "580.159.03"
+  file: "NVIDIA-Linux-x86_64-580.159.03.run"
+  local_file: "/tmp/NVIDIA-Linux-x86_64-580.159.03.run"
+
+mlnx_ofed:
+  enabled: false
+
+kernel:
+  mode: "keep"
+  keep:
+    lock_version: true
+    update_grub: true
+
+# nccl:
+#   enabled: true
+#   install_method: "local_file"
+#   install_path: "/tmp/nccl"
+#   local_file: "/tmp/nccl-master.zip"
+
+nccl:
+  enabled: true
+  install_method: "source"  # 直接克隆编译
+  install_path: "/home/ubuntu/nccl"

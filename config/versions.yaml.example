@@ -1,0 +1,90 @@
+# 软件版本配置示例
+# 使用方法: 复制此文件为 versions.yaml 并修改配置
+
+# ============================================================
+# 安装包管理说明
+# ============================================================
+# 支持两种模式获取安装包：
+#
+# 1. download_url: 在登录服务器下载
+#    - 适合登录服务器有外网访问权限的场景
+#    - 在登录服务器下载到 /tmp/ 目录
+#    - 从登录服务器分发到各GPU节点
+#    - 登录服务器同时是GPU节点时跳过本机传输
+#
+# 2. local_file: 从本机上传
+#    - 适合本机已有安装包的场景
+#    - 从本机上传到登录服务器 /tmp/ 目录
+#    - 从登录服务器分发到各GPU节点
+#    - 登录服务器同时是GPU节点时跳过本机传输
+#
+# 优先级: local_file > download_url > 默认路径(/tmp/{filename})
+#
+# 可选校验:
+# - checksum: 文件校验和，格式 "sha256:xxx" 或 "md5:xxx"
+# - file_size: 文件大小（字节），用于进度显示
+# ============================================================
+
+# CUDA配置
+cuda:
+  version: "12.8"
+  toolkit_file: "cuda_12.8.0_570.86.10_linux.run"
+
+  # 安装包位置（三选一，优先级从高到低）
+  # 方式1: 集群节点已有文件（推荐，无需下载）
+  # local_file: "/opt/software/cuda_12.8.0_570.86.10_linux.run"
+
+  # 方式2: 从URL下载（自动下载到跳转机，然后分发给所有节点）
+  # download_url: "https://developer.download.nvidia.com/compute/cuda/12.8.0/local_installers/cuda_12.8.0_570.86.10_linux.run"
+
+  # 校验和（可选，用于验证下载文件完整性）
+  # checksum: "sha256:abc123..."
+
+  # 文件大小（可选，用于下载进度显示）
+  # file_size: 4500000000
+
+# NVIDIA驱动配置
+nvidia_driver:
+  version: "590.48.01"
+  file: "NVIDIA-Linux-x86_64-590.48.01.run"
+
+  # 安装包位置（三选一）
+  # local_file: "/opt/software/NVIDIA-Linux-x86_64-590.48.01.run"
+  # download_url: "https://us.download.nvidia.com/XFree86/Linux-x86_64/590.48.01/NVIDIA-Linux-x86_64-590.48.01.run"
+
+  # 校验和（可选）
+  # checksum: "sha256:xxx"
+
+  # 文件大小（可选）
+  # file_size: 300000000
+
+# MLNX_OFED驱动配置
+mlnx_ofed:
+  version: "24.10-2.1.8.0"
+  file: "MLNX_OFED_LINUX-24.10-2.1.8.0-ubuntu22.04-x86_64.tgz"
+  enabled: true
+
+  # 安装包位置（三选一）
+  # local_file: "/opt/software/MLNX_OFED_LINUX-24.10-2.1.8.0-ubuntu22.04-x86_64.tgz"
+  # download_url: "https://content.mellanox.com/ofed/MLNX_OFED-24.10-2.1.8.0/MLNX_OFED_LINUX-24.10-2.1.8.0-ubuntu22.04-x86_64.tgz"
+
+  # 校验和（可选）
+  # checksum: "sha256:xxx"
+
+# 内核配置
+kernel:
+  mode: "keep"              # keep | specify
+  keep:
+    lock_version: true      # 是否锁定当前内核版本
+    update_grub: true       # 是否更新GRUB固定启动版本
+
+# OpenSSH配置
+openssh:
+  min_version: "1:8.9p1-3ubuntu0.10"  # CVE-2024-6387 修复版本
+  auto_upgrade: true
+
+# NCCL配置
+nccl:
+  enabled: false
+  install_method: "source"
+  install_path: "/home/ubuntu/nccl"

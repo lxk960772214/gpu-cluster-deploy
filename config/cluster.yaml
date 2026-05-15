@@ -1,0 +1,63 @@
+cluster:
+  name: "gpu-test-cluster"
+  deploy_user: "root"
+
+jumphost:
+  host: "10.0.22.182"
+  port: 22
+  auth:
+    type: "key"
+    username: "root"
+    # password: "taL1eqvYiv.fmI7o"
+    private_key: "~/.ssh/id_rsa"
+    # node_auth:
+    #   type: "key"
+    #   username: "root"
+    #   password: "taL1eqvYiv.fmI7o"
+
+nodes:
+  - hostname: "gpu-server"
+    ip: "10.0.22.182"
+    username: "root"
+    # password: "taL1eqvYiv.fmI7o"
+    private_key: "~/.ssh/id_rsa"  # 或使用密钥
+    roles:
+      - nfs_server
+      - time_server
+      - gpu_node
+    storage:
+      type: "single"
+      device: "/dev/vdb"
+      mount_point: "/ssd"
+      filesystem: "ext4"
+      format_disk: true
+
+  - hostname: "gpu-worker"
+    ip: "10.0.16.39"
+    username: "root"
+    # password: "j.uUPLJJFN0h7Vbg"
+    private_key: "~/.ssh/id_rsa"  # 或使用密钥
+    roles:
+      - gpu_node
+    storage:
+      type: "single"
+      device: "/dev/vdb"
+      mount_point: "/ssd"
+      filesystem: "ext4"
+      format_disk: true
+
+nfs:
+  enabled: true
+  server: "gpu-server"
+  export_path: "/ssd/nfs"
+  client_mount: "/ssd/nfs"
+
+time_sync:
+  server: "gpu-server"
+  timezone: "Asia/Shanghai"
+
+ssh_key:
+  enabled: true
+  users:
+    - ubuntu
+    - root
