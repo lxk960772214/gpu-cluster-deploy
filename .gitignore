@@ -1,0 +1,54 @@
+# 忽略所有隐藏文件和目录
+.*
+
+# 但保留以下必要的隐藏文件
+!.gitignore
+
+
+# 常见的系统文件
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Helmwave 相关
+.helmwave/
+
+# 日志目录
+logs/
+
+# 临时文件
+*.tmp
+*.temp
+*.swp
+*.swo
+.venv/
+*~
+
+# IDE 和编辑器
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# 操作系统生成的文件
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# 测试文件（根据原文件保留）
+info.txt
+
+# git相关
+.git/
+
+# 特定目录的忽略规则
+
+
