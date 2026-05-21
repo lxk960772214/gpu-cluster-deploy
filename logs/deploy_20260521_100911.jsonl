@@ -1,0 +1,26 @@
+{"timestamp": "2026-05-21T10:09:11.889117", "level": "INFO", "logger": "gpu-deploy", "message": "============================================================"}
+{"timestamp": "2026-05-21T10:09:11.889263", "level": "INFO", "logger": "gpu-deploy", "message": "\u5f00\u59cbGPU\u96c6\u7fa4\u73af\u5883\u90e8\u7f72"}
+{"timestamp": "2026-05-21T10:09:11.889379", "level": "INFO", "logger": "gpu-deploy", "message": "============================================================"}
+{"timestamp": "2026-05-21T10:09:11.889467", "level": "INFO", "logger": "gpu-deploy", "message": "\u6b63\u5728\u52a0\u8f7d\u914d\u7f6e..."}
+{"timestamp": "2026-05-21T10:09:11.898050", "level": "INFO", "logger": "gpu-deploy", "message": "\u914d\u7f6e\u52a0\u8f7d\u6210\u529f: gpu-test-cluster"}
+{"timestamp": "2026-05-21T10:09:11.898176", "level": "INFO", "logger": "gpu-deploy", "message": "\u8282\u70b9\u6570\u91cf: 2"}
+{"timestamp": "2026-05-21T10:09:11.898324", "level": "INFO", "logger": "gpu-deploy", "message": "\u6b63\u5728\u521d\u59cb\u5316SSH\u8fde\u63a5..."}
+{"timestamp": "2026-05-21T10:09:12.111009", "level": "INFO", "logger": "gpu-deploy", "message": "SSH\u521d\u59cb\u5316\u6210\u529f"}
+{"timestamp": "2026-05-21T10:09:12.111214", "level": "INFO", "logger": "gpu-deploy", "message": "\u6b63\u5728\u68c0\u67e5\u8282\u70b9\u8fde\u901a\u6027..."}
+{"timestamp": "2026-05-21T10:09:13.704378", "level": "INFO", "logger": "gpu-deploy", "message": "\u8fde\u901a\u6027\u68c0\u67e5\u5b8c\u6210: 2/2 \u8282\u70b9\u53ef\u8fbe"}
+{"timestamp": "2026-05-21T10:09:13.704760", "level": "WARNING", "logger": "gpu-deploy", "message": "\u6b65\u9aa4 45 \u6ca1\u6709\u5173\u8054\u7684\u9636\u6bb5"}
+{"timestamp": "2026-05-21T10:09:13.704846", "level": "INFO", "logger": "gpu-deploy", "message": "[45] \u68c0\u67e5\u914d\u7f6e\u72b6\u6001..."}
+{"timestamp": "2026-05-21T10:09:13.704932", "level": "INFO", "logger": "gpu-deploy", "message": "[45] [10.0.16.211] \u6267\u884c: test -f /ssd/nfs/gpu-test/toolkit/nccl-tests-master/build/all_reduce_perf && echo 'exists' || echo 'not_exists'"}
+{"timestamp": "2026-05-21T10:09:13.789119", "level": "INFO", "logger": "gpu-deploy", "message": "[45] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-21T10:09:13.789356", "level": "INFO", "logger": "gpu-deploy", "message": "  exists"}
+{"timestamp": "2026-05-21T10:09:13.789617", "level": "INFO", "logger": "gpu-deploy", "message": "[45] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.08s"}
+{"timestamp": "2026-05-21T10:09:13.789890", "level": "INFO", "logger": "gpu-deploy", "message": "[45] [10.0.22.143] \u6267\u884c: test -f /ssd/nfs/gpu-test/toolkit/nccl-tests-master/build/all_reduce_perf && echo 'exists' || echo 'not_exists'"}
+{"timestamp": "2026-05-21T10:09:13.877194", "level": "INFO", "logger": "gpu-deploy", "message": "[45] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-21T10:09:13.877552", "level": "INFO", "logger": "gpu-deploy", "message": "  exists"}
+{"timestamp": "2026-05-21T10:09:13.877640", "level": "INFO", "logger": "gpu-deploy", "message": "[45] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-21T10:09:13.877722", "level": "INFO", "logger": "gpu-deploy", "message": "[45] 2 \u53f0\u4e3b\u673a\u5df2\u914d\u7f6e\uff0c\u8df3\u8fc7: 10.0.16.211, 10.0.22.143"}
+{"timestamp": "2026-05-21T10:09:13.878189", "level": "INFO", "logger": "gpu-deploy", "message": "\u8fdb\u5ea6\u62a5\u544a\u5df2\u4fdd\u5b58: logs/progress_report.json"}
+{"timestamp": "2026-05-21T10:09:13.878394", "level": "INFO", "logger": "gpu-deploy", "message": "HTML\u62a5\u544a\u5df2\u751f\u6210: logs/deployment_report.html"}
+{"timestamp": "2026-05-21T10:09:13.878883", "level": "INFO", "logger": "gpu-deploy", "message": "============================================================"}
+{"timestamp": "2026-05-21T10:09:13.879430", "level": "INFO", "logger": "gpu-deploy", "message": "\u90e8\u7f72\u6210\u529f"}
+{"timestamp": "2026-05-21T10:09:13.879512", "level": "INFO", "logger": "gpu-deploy", "message": "============================================================"}

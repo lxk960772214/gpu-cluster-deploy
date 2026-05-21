@@ -1,0 +1,21 @@
+{"timestamp": "2026-05-19T12:49:39.807248", "level": "INFO", "logger": "gpu-deploy", "message": "============================================================"}
+{"timestamp": "2026-05-19T12:49:39.807408", "level": "INFO", "logger": "gpu-deploy", "message": "\u5f00\u59cbGPU\u96c6\u7fa4\u73af\u5883\u90e8\u7f72"}
+{"timestamp": "2026-05-19T12:49:39.807482", "level": "INFO", "logger": "gpu-deploy", "message": "============================================================"}
+{"timestamp": "2026-05-19T12:49:39.807571", "level": "INFO", "logger": "gpu-deploy", "message": "\u6b63\u5728\u52a0\u8f7d\u914d\u7f6e..."}
+{"timestamp": "2026-05-19T12:49:39.814257", "level": "INFO", "logger": "gpu-deploy", "message": "\u914d\u7f6e\u52a0\u8f7d\u6210\u529f: gpu-test-cluster"}
+{"timestamp": "2026-05-19T12:49:39.814354", "level": "INFO", "logger": "gpu-deploy", "message": "\u8282\u70b9\u6570\u91cf: 2"}
+{"timestamp": "2026-05-19T12:49:39.814422", "level": "INFO", "logger": "gpu-deploy", "message": "\u6b63\u5728\u521d\u59cb\u5316SSH\u8fde\u63a5..."}
+{"timestamp": "2026-05-19T12:49:40.008069", "level": "INFO", "logger": "gpu-deploy", "message": "SSH\u521d\u59cb\u5316\u6210\u529f"}
+{"timestamp": "2026-05-19T12:49:40.008276", "level": "INFO", "logger": "gpu-deploy", "message": "\u6b63\u5728\u68c0\u67e5\u8282\u70b9\u8fde\u901a\u6027..."}
+{"timestamp": "2026-05-19T12:49:41.292445", "level": "INFO", "logger": "gpu-deploy", "message": "\u8fde\u901a\u6027\u68c0\u67e5\u5b8c\u6210: 2/2 \u8282\u70b9\u53ef\u8fbe"}
+{"timestamp": "2026-05-19T12:49:41.293069", "level": "WARNING", "logger": "gpu-deploy", "message": "\u6b65\u9aa4 44 \u6ca1\u6709\u5173\u8054\u7684\u9636\u6bb5"}
+{"timestamp": "2026-05-19T12:49:41.293230", "level": "INFO", "logger": "gpu-deploy", "message": "[44] \u68c0\u67e5\u914d\u7f6e\u72b6\u6001..."}
+{"timestamp": "2026-05-19T12:49:41.293401", "level": "WARNING", "logger": "gpu-deploy", "message": "[44] [10.0.16.211] \u914d\u7f6e\u68c0\u67e5\u5f02\u5e38: 'TestPackagesConfig' object has no attribute 'install_dir'"}
+{"timestamp": "2026-05-19T12:49:41.293551", "level": "WARNING", "logger": "gpu-deploy", "message": "[44] [10.0.22.143] \u914d\u7f6e\u68c0\u67e5\u5f02\u5e38: 'TestPackagesConfig' object has no attribute 'install_dir'"}
+{"timestamp": "2026-05-19T12:49:41.293722", "level": "ERROR", "logger": "gpu-deploy", "message": "[44] \u6267\u884c\u5f02\u5e38: 'TestPackagesConfig' object has no attribute 'install_dir'"}
+{"timestamp": "2026-05-19T12:49:41.293859", "level": "ERROR", "logger": "gpu-deploy", "message": "[44] \u4ee3\u7801\u7ea7\u9519\u8bef\uff0c\u8df3\u8fc7\u91cd\u8bd5: AttributeError: 'TestPackagesConfig' object has no attribute 'install_dir'"}
+{"timestamp": "2026-05-19T12:49:41.294434", "level": "INFO", "logger": "gpu-deploy", "message": "\u8fdb\u5ea6\u62a5\u544a\u5df2\u4fdd\u5b58: logs/progress_report.json"}
+{"timestamp": "2026-05-19T12:49:41.294897", "level": "INFO", "logger": "gpu-deploy", "message": "HTML\u62a5\u544a\u5df2\u751f\u6210: logs/deployment_report.html"}
+{"timestamp": "2026-05-19T12:49:41.295820", "level": "INFO", "logger": "gpu-deploy", "message": "============================================================"}
+{"timestamp": "2026-05-19T12:49:41.296004", "level": "INFO", "logger": "gpu-deploy", "message": "\u90e8\u7f72\u5931\u8d25"}
+{"timestamp": "2026-05-19T12:49:41.296134", "level": "INFO", "logger": "gpu-deploy", "message": "============================================================"}

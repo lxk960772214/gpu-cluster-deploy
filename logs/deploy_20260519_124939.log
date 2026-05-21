@@ -1,0 +1,21 @@
+2026-05-19 12:49:39,807 - INFO - gpu-deploy - ============================================================
+2026-05-19 12:49:39,807 - INFO - gpu-deploy - 开始GPU集群环境部署
+2026-05-19 12:49:39,807 - INFO - gpu-deploy - ============================================================
+2026-05-19 12:49:39,807 - INFO - gpu-deploy - 正在加载配置...
+2026-05-19 12:49:39,814 - INFO - gpu-deploy - 配置加载成功: gpu-test-cluster
+2026-05-19 12:49:39,814 - INFO - gpu-deploy - 节点数量: 2
+2026-05-19 12:49:39,814 - INFO - gpu-deploy - 正在初始化SSH连接...
+2026-05-19 12:49:40,007 - INFO - gpu-deploy - SSH初始化成功
+2026-05-19 12:49:40,008 - INFO - gpu-deploy - 正在检查节点连通性...
+2026-05-19 12:49:41,292 - INFO - gpu-deploy - 连通性检查完成: 2/2 节点可达
+2026-05-19 12:49:41,292 - WARNING - gpu-deploy - 步骤 44 没有关联的阶段
+2026-05-19 12:49:41,293 - INFO - gpu-deploy - [44] 检查配置状态...
+2026-05-19 12:49:41,293 - WARNING - gpu-deploy - [44] [10.0.16.211] 配置检查异常: 'TestPackagesConfig' object has no attribute 'install_dir'
+2026-05-19 12:49:41,293 - WARNING - gpu-deploy - [44] [10.0.22.143] 配置检查异常: 'TestPackagesConfig' object has no attribute 'install_dir'
+2026-05-19 12:49:41,293 - ERROR - gpu-deploy - [44] 执行异常: 'TestPackagesConfig' object has no attribute 'install_dir'
+2026-05-19 12:49:41,293 - ERROR - gpu-deploy - [44] 代码级错误，跳过重试: AttributeError: 'TestPackagesConfig' object has no attribute 'install_dir'
+2026-05-19 12:49:41,294 - INFO - gpu-deploy - 进度报告已保存: logs/progress_report.json
+2026-05-19 12:49:41,294 - INFO - gpu-deploy - HTML报告已生成: logs/deployment_report.html
+2026-05-19 12:49:41,295 - INFO - gpu-deploy - ============================================================
+2026-05-19 12:49:41,295 - INFO - gpu-deploy - 部署失败
+2026-05-19 12:49:41,296 - INFO - gpu-deploy - ============================================================

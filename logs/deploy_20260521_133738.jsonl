@@ -1,0 +1,12 @@
+{"timestamp": "2026-05-21T13:37:39.085747", "level": "INFO", "logger": "gpu-deploy", "message": "============================================================"}
+{"timestamp": "2026-05-21T13:37:39.085967", "level": "INFO", "logger": "gpu-deploy", "message": "\u5f00\u59cbGPU\u96c6\u7fa4\u73af\u5883\u90e8\u7f72"}
+{"timestamp": "2026-05-21T13:37:39.086069", "level": "INFO", "logger": "gpu-deploy", "message": "============================================================"}
+{"timestamp": "2026-05-21T13:37:39.086166", "level": "INFO", "logger": "gpu-deploy", "message": "\u6b63\u5728\u52a0\u8f7d\u914d\u7f6e..."}
+{"timestamp": "2026-05-21T13:37:39.098590", "level": "INFO", "logger": "gpu-deploy", "message": "\u914d\u7f6e\u52a0\u8f7d\u6210\u529f: gpu-test-cluster"}
+{"timestamp": "2026-05-21T13:37:39.098728", "level": "INFO", "logger": "gpu-deploy", "message": "\u8282\u70b9\u6570\u91cf: 2"}
+{"timestamp": "2026-05-21T13:37:39.098820", "level": "INFO", "logger": "gpu-deploy", "message": "\u6b63\u5728\u521d\u59cb\u5316SSH\u8fde\u63a5..."}
+{"timestamp": "2026-05-21T13:37:39.325942", "level": "INFO", "logger": "gpu-deploy", "message": "SSH\u521d\u59cb\u5316\u6210\u529f"}
+{"timestamp": "2026-05-21T13:37:39.326203", "level": "INFO", "logger": "gpu-deploy", "message": "\u6b63\u5728\u68c0\u67e5\u8282\u70b9\u8fde\u901a\u6027..."}
+{"timestamp": "2026-05-21T13:37:42.822054", "level": "INFO", "logger": "gpu-deploy", "message": "\u8fde\u901a\u6027\u68c0\u67e5\u5b8c\u6210: 1/2 \u8282\u70b9\u53ef\u8fbe"}
+{"timestamp": "2026-05-21T13:37:42.822291", "level": "WARNING", "logger": "gpu-deploy", "message": "\u4e0d\u53ef\u8fbe\u8282\u70b9: ['10.0.22.143']"}
+{"timestamp": "2026-05-21T13:37:42.822426", "level": "WARNING", "logger": "gpu-deploy", "message": "\u90e8\u5206\u8282\u70b9\u4e0d\u53ef\u8fbe\uff0c\u662f\u5426\u7ee7\u7eed? [y/N]"}

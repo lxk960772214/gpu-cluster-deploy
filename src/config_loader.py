@@ -91,6 +91,19 @@ class OpenSSHConfig:
 
 
 @dataclass
+class AptMirrorConfig:
+    """APT镜像源配置"""
+    enabled: bool = False  # 是否启用换源
+    mirror: str = "tuna"  # 镜像源: tuna, aliyun, ustc, 或自定义URL
+    # 预定义镜像源URL模板
+    MIRRORS = {
+        "tuna": "https://mirrors.tuna.tsinghua.edu.cn/ubuntu/",
+        "aliyun": "https://mirrors.aliyun.com/ubuntu/",
+        "ustc": "https://mirrors.ustc.edu.cn/ubuntu/",
+    }
+
+
+@dataclass
 class NCCLConfig:
     """NCCL配置"""
     enabled: bool = False
@@ -98,6 +111,26 @@ class NCCLConfig:
     install_path: str = "/home/ubuntu/nccl"
     local_file: Optional[str] = None  # 本地tar.gz文件路径
     download_url: Optional[str] = None  # 下载URL
+    compile_jobs: Optional[int] = None  # 编译并行进程数，None表示使用nproc自动检测
+
+
+@dataclass
+class TestPackagesConfig:
+    """性能测试软件包配置"""
+    packages_dir: str = "packages"  # 工具包目录
+    cublas_bench: Optional[str] = None  # CUBLAS测试工具
+    gpu_burn: Optional[str] = None  # GPU Burn测试工具包
+    nccl_tests: Optional[str] = None  # NCCL-tests测试工具包
+    openmpi: Optional[str] = None  # OpenMPI包（多机测试）
+    build_dir: str = "/tmp/gpu-test-build"  # 本地编译目录
+    toolkit_dir: str = "/opt/gpu-test/toolkit"  # 共享工具目录
+    result_dir: str = "/opt/gpu-test/result"  # 测试结果目录
+    log_dir: str = "/opt/gpu-test/logs"  # 编译日志目录
+    gpuburn_duration: int = 600  # GPU Burn测试时长(秒)
+    nccl_test_size: str = "8G"  # NCCL测试数据大小
+    compile_jobs: Optional[int] = None  # 编译并行进程数，None表示自动(nproc)
+    compile_strategy: str = "single_node"  # 编译策略: local, single_node, role_based
+    compile_role: str = "test_compile"  # 编译角色名称（role_based模式）
 
 
 @dataclass
@@ -108,7 +141,9 @@ class VersionsConfig:
     mlnx_ofed: MlnxOfedConfig = field(default_factory=MlnxOfedConfig)
     kernel: KernelConfig = field(default_factory=KernelConfig)
     openssh: OpenSSHConfig = field(default_factory=OpenSSHConfig)
+    apt_mirror: AptMirrorConfig = field(default_factory=AptMirrorConfig)
     nccl: NCCLConfig = field(default_factory=NCCLConfig)
+    test_packages: TestPackagesConfig = field(default_factory=TestPackagesConfig)
 
 
 class ConfigLoader:
@@ -674,6 +709,13 @@ class ConfigLoader:
             auto_upgrade=openssh_raw.get("auto_upgrade", True)
         )
 
+        # 解析APT镜像源
+        apt_mirror_raw = raw.get("apt_mirror", {})
+        apt_mirror = AptMirrorConfig(
+            enabled=apt_mirror_raw.get("enabled", False),
+            mirror=apt_mirror_raw.get("mirror", "tuna")
+        )
+
         # 解析NCCL
         nccl_raw = raw.get("nccl", {})
         nccl = NCCLConfig(
@@ -681,7 +723,27 @@ class ConfigLoader:
             install_method=nccl_raw.get("install_method", "source"),
             install_path=nccl_raw.get("install_path", "/home/ubuntu/nccl"),
             local_file=nccl_raw.get("local_file", None),
-            download_url=nccl_raw.get("download_url", None)
+            download_url=nccl_raw.get("download_url", None),
+            compile_jobs=nccl_raw.get("compile_jobs", None)
+        )
+
+        # 解析性能测试软件包配置
+        test_raw = raw.get("test_packages", {})
+        test_packages = TestPackagesConfig(
+            packages_dir=test_raw.get("packages_dir", "packages"),
+            cublas_bench=test_raw.get("cublas_bench", None),
+            gpu_burn=test_raw.get("gpu_burn", None),
+            nccl_tests=test_raw.get("nccl_tests", None),
+            openmpi=test_raw.get("openmpi", None),
+            build_dir=test_raw.get("build_dir", "/tmp/gpu-test-build"),
+            toolkit_dir=test_raw.get("toolkit_dir", "/opt/gpu-test/toolkit"),
+            result_dir=test_raw.get("result_dir", "/opt/gpu-test/result"),
+            log_dir=test_raw.get("log_dir", "/opt/gpu-test/logs"),
+            gpuburn_duration=test_raw.get("gpuburn_duration", 600),
+            nccl_test_size=test_raw.get("nccl_test_size", "8G"),
+            compile_jobs=test_raw.get("compile_jobs", None),
+            compile_strategy=test_raw.get("compile_strategy", "single_node"),
+            compile_role=test_raw.get("compile_role", "test_compile")
         )
 
         return VersionsConfig(
@@ -690,7 +752,9 @@ class ConfigLoader:
             mlnx_ofed=mlnx_ofed,
             kernel=kernel,
             openssh=openssh,
-            nccl=nccl
+            apt_mirror=apt_mirror,
+            nccl=nccl,
+            test_packages=test_packages
         )
 
     def validate(self) -> List[str]:

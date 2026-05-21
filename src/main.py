@@ -375,8 +375,8 @@ class GPUClusterDeploy:
                     success = False
                     break
 
-        # 执行最终验证（部署完成后）
-        if success and "99" in self.steps:
+        # 执行最终验证（仅在完整部署时执行）
+        if success and "99" in self.steps and not steps and not phases:
             self.logger.info("\n" + "=" * 60)
             self.logger.info("执行最终验证...")
             self.logger.info("=" * 60)

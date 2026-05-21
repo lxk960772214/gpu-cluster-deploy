@@ -1,0 +1,165 @@
+2026-05-18 17:29:19,225 - INFO - gpu-deploy - ============================================================
+2026-05-18 17:29:19,225 - INFO - gpu-deploy - 开始GPU集群环境部署
+2026-05-18 17:29:19,225 - INFO - gpu-deploy - ============================================================
+2026-05-18 17:29:19,225 - INFO - gpu-deploy - 正在加载配置...
+2026-05-18 17:29:19,231 - INFO - gpu-deploy - 配置加载成功: gpu-test-cluster
+2026-05-18 17:29:19,231 - INFO - gpu-deploy - 节点数量: 2
+2026-05-18 17:29:19,231 - INFO - gpu-deploy - 正在初始化SSH连接...
+2026-05-18 17:29:19,336 - INFO - gpu-deploy - SSH初始化成功
+2026-05-18 17:29:19,336 - INFO - gpu-deploy - 正在检查节点连通性...
+2026-05-18 17:29:20,295 - INFO - gpu-deploy - 连通性检查完成: 2/2 节点可达
+2026-05-18 17:29:20,296 - WARNING - gpu-deploy - 步骤 01 没有关联的阶段
+2026-05-18 17:29:20,297 - INFO - gpu-deploy - [01] 检查配置状态...
+2026-05-18 17:29:20,297 - INFO - gpu-deploy - [01] [10.0.16.211] 执行: dpkg -l build-essential 2>/dev/null | grep '^ii' && echo 'installed' || echo 'not_installed'
+2026-05-18 17:29:20,383 - INFO - gpu-deploy - [01] [10.0.16.211] stdout:
+2026-05-18 17:29:20,384 - INFO - gpu-deploy -   ii  build-essential 12.9ubuntu3  amd64        Informational list of build-essential packages
+2026-05-18 17:29:20,384 - INFO - gpu-deploy -   installed
+2026-05-18 17:29:20,385 - INFO - gpu-deploy - [01] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:29:20,385 - INFO - gpu-deploy - [01] [10.0.16.211] 执行: dpkg -l gcc 2>/dev/null | grep '^ii' && echo 'installed' || echo 'not_installed'
+2026-05-18 17:29:20,471 - INFO - gpu-deploy - [01] [10.0.16.211] stdout:
+2026-05-18 17:29:20,471 - INFO - gpu-deploy -   ii  gcc            4:11.2.0-1ubuntu1 amd64        GNU C compiler
+2026-05-18 17:29:20,472 - INFO - gpu-deploy -   installed
+2026-05-18 17:29:20,472 - INFO - gpu-deploy - [01] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:29:20,473 - INFO - gpu-deploy - [01] [10.0.16.211] 执行: dpkg -l make 2>/dev/null | grep '^ii' && echo 'installed' || echo 'not_installed'
+2026-05-18 17:29:20,559 - INFO - gpu-deploy - [01] [10.0.16.211] stdout:
+2026-05-18 17:29:20,559 - INFO - gpu-deploy -   ii  make           4.3-4.1build1 amd64        utility for directing compilation
+2026-05-18 17:29:20,560 - INFO - gpu-deploy -   installed
+2026-05-18 17:29:20,560 - INFO - gpu-deploy - [01] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:29:20,561 - INFO - gpu-deploy - [01] [10.0.16.211] 执行: dpkg -l dkms 2>/dev/null | grep '^ii' && echo 'installed' || echo 'not_installed'
+2026-05-18 17:29:20,647 - INFO - gpu-deploy - [01] [10.0.16.211] stdout:
+2026-05-18 17:29:20,648 - INFO - gpu-deploy -   ii  dkms           2.8.7-2ubuntu2.2 all          Dynamic Kernel Module Support Framework
+2026-05-18 17:29:20,648 - INFO - gpu-deploy -   installed
+2026-05-18 17:29:20,648 - INFO - gpu-deploy - [01] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:29:20,649 - INFO - gpu-deploy - [01] [10.0.16.211] 执行: dpkg -l pdsh 2>/dev/null | grep '^ii' && echo 'installed' || echo 'not_installed'
+2026-05-18 17:29:20,735 - INFO - gpu-deploy - [01] [10.0.16.211] stdout:
+2026-05-18 17:29:20,736 - INFO - gpu-deploy -   not_installed
+2026-05-18 17:29:20,736 - INFO - gpu-deploy - [01] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:29:20,736 - INFO - gpu-deploy - [01] [10.0.16.211] 执行: dpkg -l git 2>/dev/null | grep '^ii' && echo 'installed' || echo 'not_installed'
+2026-05-18 17:29:20,823 - INFO - gpu-deploy - [01] [10.0.16.211] stdout:
+2026-05-18 17:29:20,824 - INFO - gpu-deploy -   ii  git            1:2.34.1-1ubuntu1.11 amd64        fast, scalable, distributed revision control system
+2026-05-18 17:29:20,824 - INFO - gpu-deploy -   installed
+2026-05-18 17:29:20,824 - INFO - gpu-deploy - [01] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:29:20,825 - INFO - gpu-deploy - [01] [10.0.16.211] 执行: dpkg -l cmake 2>/dev/null | grep '^ii' && echo 'installed' || echo 'not_installed'
+2026-05-18 17:29:20,911 - INFO - gpu-deploy - [01] [10.0.16.211] stdout:
+2026-05-18 17:29:20,911 - INFO - gpu-deploy -   not_installed
+2026-05-18 17:29:20,912 - INFO - gpu-deploy - [01] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:29:20,912 - INFO - gpu-deploy - [01] [10.0.22.143] 执行: dpkg -l build-essential 2>/dev/null | grep '^ii' && echo 'installed' || echo 'not_installed'
+2026-05-18 17:29:20,999 - INFO - gpu-deploy - [01] [10.0.22.143] stdout:
+2026-05-18 17:29:20,999 - INFO - gpu-deploy -   ii  build-essential 12.9ubuntu3  amd64        Informational list of build-essential packages
+2026-05-18 17:29:21,000 - INFO - gpu-deploy -   installed
+2026-05-18 17:29:21,000 - INFO - gpu-deploy - [01] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:29:21,001 - INFO - gpu-deploy - [01] [10.0.22.143] 执行: dpkg -l gcc 2>/dev/null | grep '^ii' && echo 'installed' || echo 'not_installed'
+2026-05-18 17:29:21,087 - INFO - gpu-deploy - [01] [10.0.22.143] stdout:
+2026-05-18 17:29:21,087 - INFO - gpu-deploy -   ii  gcc            4:11.2.0-1ubuntu1 amd64        GNU C compiler
+2026-05-18 17:29:21,088 - INFO - gpu-deploy -   installed
+2026-05-18 17:29:21,088 - INFO - gpu-deploy - [01] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:29:21,088 - INFO - gpu-deploy - [01] [10.0.22.143] 执行: dpkg -l make 2>/dev/null | grep '^ii' && echo 'installed' || echo 'not_installed'
+2026-05-18 17:29:21,175 - INFO - gpu-deploy - [01] [10.0.22.143] stdout:
+2026-05-18 17:29:21,175 - INFO - gpu-deploy -   ii  make           4.3-4.1build1 amd64        utility for directing compilation
+2026-05-18 17:29:21,176 - INFO - gpu-deploy -   installed
+2026-05-18 17:29:21,176 - INFO - gpu-deploy - [01] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:29:21,176 - INFO - gpu-deploy - [01] [10.0.22.143] 执行: dpkg -l dkms 2>/dev/null | grep '^ii' && echo 'installed' || echo 'not_installed'
+2026-05-18 17:29:21,263 - INFO - gpu-deploy - [01] [10.0.22.143] stdout:
+2026-05-18 17:29:21,264 - INFO - gpu-deploy -   ii  dkms           2.8.7-2ubuntu2.2 all          Dynamic Kernel Module Support Framework
+2026-05-18 17:29:21,264 - INFO - gpu-deploy -   installed
+2026-05-18 17:29:21,264 - INFO - gpu-deploy - [01] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:29:21,264 - INFO - gpu-deploy - [01] [10.0.22.143] 执行: dpkg -l pdsh 2>/dev/null | grep '^ii' && echo 'installed' || echo 'not_installed'
+2026-05-18 17:29:21,351 - INFO - gpu-deploy - [01] [10.0.22.143] stdout:
+2026-05-18 17:29:21,351 - INFO - gpu-deploy -   not_installed
+2026-05-18 17:29:21,352 - INFO - gpu-deploy - [01] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:29:21,352 - INFO - gpu-deploy - [01] [10.0.22.143] 执行: dpkg -l git 2>/dev/null | grep '^ii' && echo 'installed' || echo 'not_installed'
+2026-05-18 17:29:21,439 - INFO - gpu-deploy - [01] [10.0.22.143] stdout:
+2026-05-18 17:29:21,440 - INFO - gpu-deploy -   ii  git            1:2.34.1-1ubuntu1.11 amd64        fast, scalable, distributed revision control system
+2026-05-18 17:29:21,440 - INFO - gpu-deploy -   installed
+2026-05-18 17:29:21,440 - INFO - gpu-deploy - [01] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:29:21,441 - INFO - gpu-deploy - [01] [10.0.22.143] 执行: dpkg -l cmake 2>/dev/null | grep '^ii' && echo 'installed' || echo 'not_installed'
+2026-05-18 17:29:21,527 - INFO - gpu-deploy - [01] [10.0.22.143] stdout:
+2026-05-18 17:29:21,527 - INFO - gpu-deploy -   not_installed
+2026-05-18 17:29:21,528 - INFO - gpu-deploy - [01] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:29:21,528 - INFO - gpu-deploy - 更新apt缓存...
+2026-05-18 17:29:21,528 - INFO - gpu-deploy - [01] 批量执行: pdsh -w 10.0.16.211,10.0.22.143 "sudo DEBIAN_FRONTEND=noninteractive apt update -y"
+2026-05-18 17:29:21,528 - INFO - gpu-deploy - 批量执行: pdsh -w 10.0.16.211,10.0.22.143 "sudo DEBIAN_FRONTEND=noninteractive apt update -y"
+2026-05-18 17:29:27,162 - INFO - gpu-deploy - 10.0.16.211: ✓ exit_code=0, duration=4.23s
+2026-05-18 17:29:27,162 - INFO - gpu-deploy - 10.0.16.211: stdout:
+2026-05-18 17:29:27,162 - INFO - gpu-deploy - 10.0.16.211:   Hit:1 http://security.ubuntu.com/ubuntu jammy-security InRelease
+2026-05-18 17:29:27,162 - INFO - gpu-deploy - 10.0.16.211:   Get:2 http://cn-zhongwei-a.clouds.archive.ubuntu.com/ubuntu jammy InRelease [270 kB]
+2026-05-18 17:29:27,163 - INFO - gpu-deploy - 10.0.16.211:   Hit:3 http://cn-zhongwei-a.clouds.archive.ubuntu.com/ubuntu jammy-updates InRelease
+2026-05-18 17:29:27,163 - INFO - gpu-deploy - 10.0.16.211:   Hit:4 http://cn-zhongwei-a.clouds.archive.ubuntu.com/ubuntu jammy-backports InRelease
+2026-05-18 17:29:27,163 - INFO - gpu-deploy - 10.0.16.211:   Fetched 270 kB in 2s (125 kB/s)
+2026-05-18 17:29:27,163 - INFO - gpu-deploy - 10.0.16.211:   Reading package lists...
+2026-05-18 17:29:27,163 - INFO - gpu-deploy - 10.0.16.211:   Building dependency tree...
+2026-05-18 17:29:27,163 - INFO - gpu-deploy - 10.0.16.211:   Reading state information...
+2026-05-18 17:29:27,163 - INFO - gpu-deploy - 10.0.16.211:   213 packages can be upgraded. Run 'apt list --upgradable' to see them.
+2026-05-18 17:29:27,164 - WARNING - gpu-deploy - 10.0.16.211: stderr:
+2026-05-18 17:29:27,164 - WARNING - gpu-deploy - 10.0.16.211:   WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+2026-05-18 17:29:27,164 - INFO - gpu-deploy - 10.0.22.143: ✓ exit_code=0, duration=5.63s
+2026-05-18 17:29:27,164 - INFO - gpu-deploy - 10.0.22.143: stdout:
+2026-05-18 17:29:27,164 - INFO - gpu-deploy - 10.0.22.143:   Hit:1 http://security.ubuntu.com/ubuntu jammy-security InRelease
+2026-05-18 17:29:27,164 - INFO - gpu-deploy - 10.0.22.143:   Get:2 http://cn-zhongwei-a.clouds.archive.ubuntu.com/ubuntu jammy InRelease [270 kB]
+2026-05-18 17:29:27,164 - INFO - gpu-deploy - 10.0.22.143:   Hit:3 http://cn-zhongwei-a.clouds.archive.ubuntu.com/ubuntu jammy-updates InRelease
+2026-05-18 17:29:27,164 - INFO - gpu-deploy - 10.0.22.143:   Hit:4 http://cn-zhongwei-a.clouds.archive.ubuntu.com/ubuntu jammy-backports InRelease
+2026-05-18 17:29:27,165 - INFO - gpu-deploy - 10.0.22.143:   Fetched 270 kB in 4s (75.3 kB/s)
+2026-05-18 17:29:27,165 - INFO - gpu-deploy - 10.0.22.143:   Reading package lists...
+2026-05-18 17:29:27,165 - INFO - gpu-deploy - 10.0.22.143:   Building dependency tree...
+2026-05-18 17:29:27,165 - INFO - gpu-deploy - 10.0.22.143:   Reading state information...
+2026-05-18 17:29:27,165 - INFO - gpu-deploy - 10.0.22.143:   213 packages can be upgraded. Run 'apt list --upgradable' to see them.
+2026-05-18 17:29:27,165 - WARNING - gpu-deploy - 10.0.22.143: stderr:
+2026-05-18 17:29:27,165 - WARNING - gpu-deploy - 10.0.22.143:   WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+2026-05-18 17:29:27,165 - INFO - gpu-deploy - 执行摘要: 总计=2, 成功=2, 失败=0
+2026-05-18 17:29:27,165 - INFO - gpu-deploy - 安装依赖包组 1/3...
+2026-05-18 17:29:27,166 - INFO - gpu-deploy - [01] 批量执行: pdsh -w 10.0.16.211,10.0.22.143 "sudo DEBIAN_FRONTEND=noninteractive apt install -y build-essential g++ gcc make dkms ntpdate msr-tools traceroute wget sshpass pdsh cpufrequtils sysbench unzip"
+2026-05-18 17:29:27,166 - INFO - gpu-deploy - 批量执行: pdsh -w 10.0.16.211,10.0.22.143 "sudo DEBIAN_FRONTEND=noninteractive apt install -y build-essential g++ gcc make dkms ntpdate msr-tools traceroute wget sshpass pdsh cpufrequtils sysbench unzip"
+2026-05-18 17:29:39,181 - INFO - gpu-deploy - 10.0.16.211: ✓ exit_code=0, duration=11.02s
+2026-05-18 17:29:39,181 - INFO - gpu-deploy - 10.0.16.211: stdout (前20行/共110行):
+2026-05-18 17:29:39,181 - INFO - gpu-deploy - 10.0.16.211:   Reading package lists...
+2026-05-18 17:29:39,181 - INFO - gpu-deploy - 10.0.16.211:   Building dependency tree...
+2026-05-18 17:29:39,182 - INFO - gpu-deploy - 10.0.16.211:   Reading state information...
+2026-05-18 17:29:39,182 - INFO - gpu-deploy - 10.0.16.211:   build-essential is already the newest version (12.9ubuntu3).
+2026-05-18 17:29:39,182 - INFO - gpu-deploy - 10.0.16.211:   g++ is already the newest version (4:11.2.0-1ubuntu1).
+2026-05-18 17:29:39,182 - INFO - gpu-deploy - 10.0.16.211:   g++ set to manually installed.
+2026-05-18 17:29:39,182 - INFO - gpu-deploy - 10.0.16.211:   gcc is already the newest version (4:11.2.0-1ubuntu1).
+2026-05-18 17:29:39,182 - INFO - gpu-deploy - 10.0.16.211:   make is already the newest version (4.3-4.1build1).
+2026-05-18 17:29:39,182 - INFO - gpu-deploy - 10.0.16.211:   cpufrequtils is already the newest version (008-2build1).
+2026-05-18 17:29:39,183 - INFO - gpu-deploy - 10.0.16.211:   dkms is already the newest version (2.8.7-2ubuntu2.2).
+2026-05-18 17:29:39,183 - INFO - gpu-deploy - 10.0.16.211:   unzip is already the newest version (6.0-26ubuntu3.2).
+2026-05-18 17:29:39,183 - INFO - gpu-deploy - 10.0.16.211:   unzip set to manually installed.
+2026-05-18 17:29:39,183 - INFO - gpu-deploy - 10.0.16.211:   wget is already the newest version (1.21.2-2ubuntu1.1).
+2026-05-18 17:29:39,183 - INFO - gpu-deploy - 10.0.16.211:   wget set to manually installed.
+2026-05-18 17:29:39,183 - INFO - gpu-deploy - 10.0.16.211:   Suggested packages:
+2026-05-18 17:29:39,183 - INFO - gpu-deploy - 10.0.16.211:     rdist
+2026-05-18 17:29:39,183 - INFO - gpu-deploy - 10.0.16.211:   The following NEW packages will be installed:
+2026-05-18 17:29:39,183 - INFO - gpu-deploy - 10.0.16.211:     genders libgenders0 libltdl7 libluajit-5.1-2 libluajit-5.1-common
+2026-05-18 17:29:39,184 - INFO - gpu-deploy - 10.0.16.211:     libmysqlclient21 libpq5 msr-tools mysql-common ntpdate pdsh sshpass sysbench
+2026-05-18 17:29:39,184 - INFO - gpu-deploy - 10.0.16.211:     traceroute
+2026-05-18 17:29:39,184 - INFO - gpu-deploy - 10.0.16.211:   ... (省略 90 行)
+2026-05-18 17:29:39,184 - WARNING - gpu-deploy - 10.0.16.211: stderr:
+2026-05-18 17:29:39,184 - WARNING - gpu-deploy - 10.0.16.211:   WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+2026-05-18 17:29:39,184 - INFO - gpu-deploy - 10.0.22.143: ✓ exit_code=0, duration=12.01s
+2026-05-18 17:29:39,184 - INFO - gpu-deploy - 10.0.22.143: stdout (前20行/共110行):
+2026-05-18 17:29:39,184 - INFO - gpu-deploy - 10.0.22.143:   Reading package lists...
+2026-05-18 17:29:39,185 - INFO - gpu-deploy - 10.0.22.143:   Building dependency tree...
+2026-05-18 17:29:39,185 - INFO - gpu-deploy - 10.0.22.143:   Reading state information...
+2026-05-18 17:29:39,185 - INFO - gpu-deploy - 10.0.22.143:   build-essential is already the newest version (12.9ubuntu3).
+2026-05-18 17:29:39,185 - INFO - gpu-deploy - 10.0.22.143:   g++ is already the newest version (4:11.2.0-1ubuntu1).
+2026-05-18 17:29:39,185 - INFO - gpu-deploy - 10.0.22.143:   g++ set to manually installed.
+2026-05-18 17:29:39,185 - INFO - gpu-deploy - 10.0.22.143:   gcc is already the newest version (4:11.2.0-1ubuntu1).
+2026-05-18 17:29:39,185 - INFO - gpu-deploy - 10.0.22.143:   make is already the newest version (4.3-4.1build1).
+2026-05-18 17:29:39,185 - INFO - gpu-deploy - 10.0.22.143:   cpufrequtils is already the newest version (008-2build1).
+2026-05-18 17:29:39,185 - INFO - gpu-deploy - 10.0.22.143:   dkms is already the newest version (2.8.7-2ubuntu2.2).
+2026-05-18 17:29:39,186 - INFO - gpu-deploy - 10.0.22.143:   unzip is already the newest version (6.0-26ubuntu3.2).
+2026-05-18 17:29:39,186 - INFO - gpu-deploy - 10.0.22.143:   unzip set to manually installed.
+2026-05-18 17:29:39,186 - INFO - gpu-deploy - 10.0.22.143:   wget is already the newest version (1.21.2-2ubuntu1.1).
+2026-05-18 17:29:39,186 - INFO - gpu-deploy - 10.0.22.143:   wget set to manually installed.
+2026-05-18 17:29:39,186 - INFO - gpu-deploy - 10.0.22.143:   Suggested packages:
+2026-05-18 17:29:39,186 - INFO - gpu-deploy - 10.0.22.143:     rdist
+2026-05-18 17:29:39,186 - INFO - gpu-deploy - 10.0.22.143:   The following NEW packages will be installed:
+2026-05-18 17:29:39,186 - INFO - gpu-deploy - 10.0.22.143:     genders libgenders0 libltdl7 libluajit-5.1-2 libluajit-5.1-common
+2026-05-18 17:29:39,187 - INFO - gpu-deploy - 10.0.22.143:     libmysqlclient21 libpq5 msr-tools mysql-common ntpdate pdsh sshpass sysbench
+2026-05-18 17:29:39,187 - INFO - gpu-deploy - 10.0.22.143:     traceroute
+2026-05-18 17:29:39,187 - INFO - gpu-deploy - 10.0.22.143:   ... (省略 90 行)
+2026-05-18 17:29:39,187 - WARNING - gpu-deploy - 10.0.22.143: stderr:
+2026-05-18 17:29:39,187 - WARNING - gpu-deploy - 10.0.22.143:   WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+2026-05-18 17:29:39,187 - INFO - gpu-deploy - 执行摘要: 总计=2, 成功=2, 失败=0
+2026-05-18 17:29:39,187 - INFO - gpu-deploy - 安装依赖包组 2/3...
+2026-05-18 17:29:39,187 - INFO - gpu-deploy - [01] 批量执行: pdsh -w 10.0.16.211,10.0.22.143 "sudo DEBIAN_FRONTEND=noninteractive apt install -y cmake debhelper devscripts fakeroot git libaio-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libcurl4-openssl-dev libncurses-dev libnuma-dev lintian libssl-dev uuid-dev zlib1g-dev"
+2026-05-18 17:29:39,188 - INFO - gpu-deploy - 批量执行: pdsh -w 10.0.16.211,10.0.22.143 "sudo DEBIAN_FRONTEND=noninteractive apt install -y cmake debhelper devscripts fakeroot git libaio-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libcurl4-openssl-dev libncurses-dev libnuma-dev lintian libssl-dev uuid-dev zlib1g-dev"

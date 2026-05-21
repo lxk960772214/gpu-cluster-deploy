@@ -1,0 +1,22 @@
+2026-05-18 15:14:34,446 - INFO - gpu-deploy - ============================================================
+2026-05-18 15:14:34,446 - INFO - gpu-deploy - 开始GPU集群环境部署
+2026-05-18 15:14:34,446 - INFO - gpu-deploy - ============================================================
+2026-05-18 15:14:34,446 - INFO - gpu-deploy - 正在加载配置...
+2026-05-18 15:14:34,451 - INFO - gpu-deploy - 配置加载成功: gpu-test-cluster
+2026-05-18 15:14:34,451 - INFO - gpu-deploy - 节点数量: 2
+2026-05-18 15:14:34,451 - INFO - gpu-deploy - [DRY-RUN] 预检查模式，不执行实际部署
+2026-05-18 15:14:34,452 - INFO - gpu-deploy - 
+配置摘要:
+2026-05-18 15:14:34,452 - INFO - gpu-deploy -   集群名称: gpu-test-cluster
+2026-05-18 15:14:34,452 - INFO - gpu-deploy -   节点数量: 2
+2026-05-18 15:14:34,452 - INFO - gpu-deploy -   跳转服务器: 10.0.16.211:22
+2026-05-18 15:14:34,452 - INFO - gpu-deploy - 
+节点列表:
+2026-05-18 15:14:34,452 - INFO - gpu-deploy -   - gpugpugpu2 (10.0.16.211) [nfs_server, time_server, gpu_node]
+2026-05-18 15:14:34,452 - INFO - gpu-deploy -   - gpugpugpu1 (10.0.22.143) [gpu_node]
+2026-05-18 15:14:34,452 - INFO - gpu-deploy - 
+软件版本:
+2026-05-18 15:14:34,452 - INFO - gpu-deploy -   CUDA: 13.0
+2026-05-18 15:14:34,452 - INFO - gpu-deploy -   NVIDIA驱动: 580.142
+2026-05-18 15:14:34,452 - INFO - gpu-deploy -   MLNX_OFED: 24.10-2.1.8.0 (禁用-不安装)
+2026-05-18 15:14:34,452 - INFO - gpu-deploy -   内核模式: keep

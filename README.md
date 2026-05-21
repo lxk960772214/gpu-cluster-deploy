@@ -1346,6 +1346,7 @@ pytest tests/test_ssh_manager.py::TestSSHManager::test_connect -v
 - 失败后重复检测和配置三次
 - nouveau 配置
 - nccltest 自动化测试
+- apt源
 
 
 ## 许可证

@@ -1,31 +1,31 @@
-我新开了两台云主机
-内网
-10.0.22.182
-外网
-36.103.236.48
-ubuntu@gt-ubuntu22-04-cmd-v3-0-32gb-25m
-密码 taL1eqvYiv.fmI7o
-vdb     252:16   0    20G  0 disk
-内网
-10.0.16.39
-外网
-36.103.177.190
-ubuntu@gt-ubuntu22-04-cmd-v3-0-32gb-25m
-密码 j.uUPLJJFN0h7Vbg
-vdb     252:16   0    20G  0 disk
-我要执行以下模块
-cluster_batch_example.yaml 172-182 9 29   21,   24, 25, 27  7, 8, 12, 13, 15, 16, 17, 18, 19, 30
-cuda安装13.0 wget https://developer.download.nvidia.com/compute/cuda/13.0.0/local_installers/cuda_13.0.0_580.65.06_linux.run 驱动用本地文件 /tmp/NVIDIA-Linux-x86_64-580.159.03.run
-nfs 和 内网时间同步要做，第一台是server。
-nfs server端配置为数据盘挂载在的/ssd/nfs目录，worker也挂载到/ssd/nfs
+1、step1 添加apt换源，也允许客户在config设置开启和关闭
+
+ubuntu22.04
+sudo bash -c "cat << EOF > /etc/apt/sources.list && apt update 
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-updates main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-updates main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-backports main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-backports main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-security main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ jammy-security main restricted universe multiverse
+EOF"
+
+ubuntu24.04
+sudo bash -c "cat << EOF > /etc/apt/sources.list && apt update 
+# 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble-updates main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble-updates main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble-backports main restricted universe multiverse
+# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ noble-backports main restricted universe multiverse
+EOF"
 
 
-1、登录到36.103.236.48去执行命令报错了
-python src/main.py --dry-run
-[2026-05-13 17:23:47] INFO     gpu-deploy: ============================================================
-[2026-05-13 17:23:47] INFO     gpu-deploy: 开始GPU集群环境部署
-[2026-05-13 17:23:47] INFO     gpu-deploy: ============================================================
-[2026-05-13 17:23:47] INFO     gpu-deploy: 正在加载配置...
-[2026-05-13 17:23:47] ERROR    gpu-deploy: 配置错误: 跳转服务器配置缺失
 
-2、/tmp/NVIDIA-Linux-x86_64-580.159.03.run 可以自动从10.0.22.182拷贝到10.0.16.39吗。
+
+2、配置完成后仅检查和重试一次，不要重复3次
+
+

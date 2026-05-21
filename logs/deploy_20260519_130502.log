@@ -1,0 +1,51 @@
+2026-05-19 13:05:02,844 - INFO - gpu-deploy - ============================================================
+2026-05-19 13:05:02,844 - INFO - gpu-deploy - 开始GPU集群环境部署
+2026-05-19 13:05:02,844 - INFO - gpu-deploy - ============================================================
+2026-05-19 13:05:02,844 - INFO - gpu-deploy - 正在加载配置...
+2026-05-19 13:05:02,851 - INFO - gpu-deploy - 配置加载成功: gpu-test-cluster
+2026-05-19 13:05:02,851 - INFO - gpu-deploy - 节点数量: 2
+2026-05-19 13:05:02,851 - INFO - gpu-deploy - 正在初始化SSH连接...
+2026-05-19 13:05:03,050 - INFO - gpu-deploy - SSH初始化成功
+2026-05-19 13:05:03,050 - INFO - gpu-deploy - 正在检查节点连通性...
+2026-05-19 13:05:03,763 - INFO - gpu-deploy - 连通性检查完成: 2/2 节点可达
+2026-05-19 13:05:03,764 - WARNING - gpu-deploy - 步骤 44 没有关联的阶段
+2026-05-19 13:05:03,764 - INFO - gpu-deploy - [44] 检查配置状态...
+2026-05-19 13:05:03,764 - INFO - gpu-deploy - [44] [10.0.16.211] 执行: test -f /ssd/nfs/gpu-test/toolkit/gpu-burn-master/gpu_burn && echo 'exists' || echo 'not_exists'
+2026-05-19 13:05:03,851 - INFO - gpu-deploy - [44] [10.0.16.211] stdout:
+2026-05-19 13:05:03,852 - INFO - gpu-deploy -   not_exists
+2026-05-19 13:05:03,852 - INFO - gpu-deploy - [44] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-19 13:05:03,852 - INFO - gpu-deploy - [44] [10.0.22.143] 执行: test -f /ssd/nfs/gpu-test/toolkit/gpu-burn-master/gpu_burn && echo 'exists' || echo 'not_exists'
+2026-05-19 13:05:03,939 - INFO - gpu-deploy - [44] [10.0.22.143] stdout:
+2026-05-19 13:05:03,939 - INFO - gpu-deploy -   not_exists
+2026-05-19 13:05:03,940 - INFO - gpu-deploy - [44] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-19 13:05:03,940 - INFO - gpu-deploy - [10.0.16.211] 开始GPU Burn测试...
+2026-05-19 13:05:03,940 - INFO - gpu-deploy - [44] [10.0.16.211] 执行: nvidia-smi --query-gpu=compute_cap --format=csv,noheader | head -1
+2026-05-19 13:05:04,027 - INFO - gpu-deploy - [44] [10.0.16.211] stdout:
+2026-05-19 13:05:04,027 - INFO - gpu-deploy -   8.6
+2026-05-19 13:05:04,028 - INFO - gpu-deploy - [44] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-19 13:05:04,028 - INFO - gpu-deploy - [44] [10.0.16.211] 执行: nvcc --version | grep release | awk '{print $5}' | cut -d',' -f1
+2026-05-19 13:05:04,115 - WARNING - gpu-deploy - [44] [10.0.16.211] stderr:
+2026-05-19 13:05:04,116 - WARNING - gpu-deploy -   bash: line 1: nvcc: command not found
+2026-05-19 13:05:04,116 - INFO - gpu-deploy - [44] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-19 13:05:04,116 - INFO - gpu-deploy - [44] [10.0.16.211] 执行: nvidia-smi --query-gpu=count --format=csv,noheader | head -1
+2026-05-19 13:05:04,203 - INFO - gpu-deploy - [44] [10.0.16.211] stdout:
+2026-05-19 13:05:04,204 - INFO - gpu-deploy -   1
+2026-05-19 13:05:04,204 - INFO - gpu-deploy - [44] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-19 13:05:04,204 - INFO - gpu-deploy - [10.0.22.143] 开始GPU Burn测试...
+2026-05-19 13:05:04,205 - INFO - gpu-deploy - [44] [10.0.22.143] 执行: nvidia-smi --query-gpu=compute_cap --format=csv,noheader | head -1
+2026-05-19 13:05:04,291 - INFO - gpu-deploy - [44] [10.0.22.143] stdout:
+2026-05-19 13:05:04,291 - INFO - gpu-deploy -   8.6
+2026-05-19 13:05:04,292 - INFO - gpu-deploy - [44] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-19 13:05:04,292 - INFO - gpu-deploy - [44] [10.0.22.143] 执行: nvcc --version | grep release | awk '{print $5}' | cut -d',' -f1
+2026-05-19 13:05:04,379 - WARNING - gpu-deploy - [44] [10.0.22.143] stderr:
+2026-05-19 13:05:04,380 - WARNING - gpu-deploy -   bash: line 1: nvcc: command not found
+2026-05-19 13:05:04,380 - INFO - gpu-deploy - [44] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-19 13:05:04,380 - INFO - gpu-deploy - [44] [10.0.22.143] 执行: nvidia-smi --query-gpu=count --format=csv,noheader | head -1
+2026-05-19 13:05:04,467 - INFO - gpu-deploy - [44] [10.0.22.143] stdout:
+2026-05-19 13:05:04,467 - INFO - gpu-deploy -   1
+2026-05-19 13:05:04,468 - INFO - gpu-deploy - [44] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-19 13:05:04,468 - INFO - gpu-deploy - 进度报告已保存: logs/progress_report.json
+2026-05-19 13:05:04,468 - INFO - gpu-deploy - HTML报告已生成: logs/deployment_report.html
+2026-05-19 13:05:04,469 - INFO - gpu-deploy - ============================================================
+2026-05-19 13:05:04,470 - INFO - gpu-deploy - 部署失败
+2026-05-19 13:05:04,470 - INFO - gpu-deploy - ============================================================

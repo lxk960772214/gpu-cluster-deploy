@@ -1,0 +1,659 @@
+{"timestamp": "2026-05-18T17:22:42.999255", "level": "INFO", "logger": "gpu-deploy", "message": "============================================================"}
+{"timestamp": "2026-05-18T17:22:42.999396", "level": "INFO", "logger": "gpu-deploy", "message": "\u5f00\u59cbGPU\u96c6\u7fa4\u73af\u5883\u90e8\u7f72"}
+{"timestamp": "2026-05-18T17:22:42.999472", "level": "INFO", "logger": "gpu-deploy", "message": "============================================================"}
+{"timestamp": "2026-05-18T17:22:42.999535", "level": "INFO", "logger": "gpu-deploy", "message": "\u6b63\u5728\u52a0\u8f7d\u914d\u7f6e..."}
+{"timestamp": "2026-05-18T17:22:43.004791", "level": "INFO", "logger": "gpu-deploy", "message": "\u914d\u7f6e\u52a0\u8f7d\u6210\u529f: gpu-test-cluster"}
+{"timestamp": "2026-05-18T17:22:43.004909", "level": "INFO", "logger": "gpu-deploy", "message": "\u8282\u70b9\u6570\u91cf: 2"}
+{"timestamp": "2026-05-18T17:22:43.004978", "level": "INFO", "logger": "gpu-deploy", "message": "\u6b63\u5728\u521d\u59cb\u5316SSH\u8fde\u63a5..."}
+{"timestamp": "2026-05-18T17:22:43.157511", "level": "INFO", "logger": "gpu-deploy", "message": "SSH\u521d\u59cb\u5316\u6210\u529f"}
+{"timestamp": "2026-05-18T17:22:43.157736", "level": "INFO", "logger": "gpu-deploy", "message": "\u6b63\u5728\u68c0\u67e5\u8282\u70b9\u8fde\u901a\u6027..."}
+{"timestamp": "2026-05-18T17:22:44.164273", "level": "INFO", "logger": "gpu-deploy", "message": "\u8fde\u901a\u6027\u68c0\u67e5\u5b8c\u6210: 2/2 \u8282\u70b9\u53ef\u8fbe"}
+{"timestamp": "2026-05-18T17:22:44.164790", "level": "INFO", "logger": "gpu-deploy", "message": "\n============================================================"}
+{"timestamp": "2026-05-18T17:22:44.164951", "level": "INFO", "logger": "gpu-deploy", "message": "\u6267\u884c\u6700\u7ec8\u9a8c\u8bc1..."}
+{"timestamp": "2026-05-18T17:22:44.165089", "level": "INFO", "logger": "gpu-deploy", "message": "============================================================"}
+{"timestamp": "2026-05-18T17:22:44.165253", "level": "WARNING", "logger": "gpu-deploy", "message": "\u6b65\u9aa4 99 \u6ca1\u6709\u5173\u8054\u7684\u9636\u6bb5"}
+{"timestamp": "2026-05-18T17:22:44.165392", "level": "INFO", "logger": "gpu-deploy", "message": "============================================================"}
+{"timestamp": "2026-05-18T17:22:44.165516", "level": "INFO", "logger": "gpu-deploy", "message": "\u5f00\u59cb\u6700\u7ec8\u9a8c\u8bc1..."}
+{"timestamp": "2026-05-18T17:22:44.165636", "level": "INFO", "logger": "gpu-deploy", "message": "============================================================"}
+{"timestamp": "2026-05-18T17:22:44.165774", "level": "INFO", "logger": "gpu-deploy", "message": "\n[1/4] \u68c0\u67e5\u7f51\u7edc\u8fde\u901a\u6027..."}
+{"timestamp": "2026-05-18T17:22:44.165902", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] \u6267\u884c: ping -c 1 -W 2 8.8.8.8 > /dev/null 2>&1 && echo 'ok' || echo 'fail'"}
+{"timestamp": "2026-05-18T17:22:46.215286", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:22:46.215493", "level": "INFO", "logger": "gpu-deploy", "message": "  fail"}
+{"timestamp": "2026-05-18T17:22:46.215642", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=2.05s"}
+{"timestamp": "2026-05-18T17:22:46.216049", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] \u6267\u884c: ping -c 1 -W 2 8.8.8.8 > /dev/null 2>&1 && echo 'ok' || echo 'fail'"}
+{"timestamp": "2026-05-18T17:22:48.269035", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:22:48.269290", "level": "INFO", "logger": "gpu-deploy", "message": "  fail"}
+{"timestamp": "2026-05-18T17:22:48.269488", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=2.05s"}
+{"timestamp": "2026-05-18T17:22:48.269680", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] \u6267\u884c: nslookup github.com > /dev/null 2>&1 && echo 'ok' || echo 'fail'"}
+{"timestamp": "2026-05-18T17:22:48.408897", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:22:48.409244", "level": "INFO", "logger": "gpu-deploy", "message": "  ok"}
+{"timestamp": "2026-05-18T17:22:48.409496", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.14s"}
+{"timestamp": "2026-05-18T17:22:48.409748", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] \u6267\u884c: nslookup github.com > /dev/null 2>&1 && echo 'ok' || echo 'fail'"}
+{"timestamp": "2026-05-18T17:22:48.558467", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:22:48.558756", "level": "INFO", "logger": "gpu-deploy", "message": "  ok"}
+{"timestamp": "2026-05-18T17:22:48.558955", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.15s"}
+{"timestamp": "2026-05-18T17:22:48.559115", "level": "INFO", "logger": "gpu-deploy", "message": "    \u7f51\u7edc\u72b6\u6001: unreachable"}
+{"timestamp": "2026-05-18T17:22:48.559254", "level": "INFO", "logger": "gpu-deploy", "message": "\n[2/4] \u68c0\u67e5\u8bbe\u5907\u72b6\u6001..."}
+{"timestamp": "2026-05-18T17:22:48.559398", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] \u6267\u884c: nvidia-smi -L 2>/dev/null | wc -l"}
+{"timestamp": "2026-05-18T17:22:50.444941", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:22:50.445148", "level": "INFO", "logger": "gpu-deploy", "message": "  1"}
+{"timestamp": "2026-05-18T17:22:50.445286", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=1.89s"}
+{"timestamp": "2026-05-18T17:22:50.445459", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] \u6267\u884c: ibdev2netdev 2>/dev/null | grep -v down | wc -l"}
+{"timestamp": "2026-05-18T17:22:50.531670", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:22:50.532113", "level": "INFO", "logger": "gpu-deploy", "message": "  0"}
+{"timestamp": "2026-05-18T17:22:50.532251", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:22:50.532382", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] \u6267\u884c: ip link show up 2>/dev/null | grep -E '^[0-9]+:' | wc -l"}
+{"timestamp": "2026-05-18T17:22:50.623643", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:22:50.623968", "level": "INFO", "logger": "gpu-deploy", "message": "  2"}
+{"timestamp": "2026-05-18T17:22:50.624322", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:22:50.625040", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] \u6267\u884c: nvidia-smi -L 2>/dev/null | wc -l"}
+{"timestamp": "2026-05-18T17:22:52.540185", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:22:52.540736", "level": "INFO", "logger": "gpu-deploy", "message": "  1"}
+{"timestamp": "2026-05-18T17:22:52.541122", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=1.91s"}
+{"timestamp": "2026-05-18T17:22:52.541305", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] \u6267\u884c: ibdev2netdev 2>/dev/null | grep -v down | wc -l"}
+{"timestamp": "2026-05-18T17:22:52.627435", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:22:52.627903", "level": "INFO", "logger": "gpu-deploy", "message": "  0"}
+{"timestamp": "2026-05-18T17:22:52.628368", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:22:52.628808", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] \u6267\u884c: ip link show up 2>/dev/null | grep -E '^[0-9]+:' | wc -l"}
+{"timestamp": "2026-05-18T17:22:52.715711", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:22:52.716192", "level": "INFO", "logger": "gpu-deploy", "message": "  2"}
+{"timestamp": "2026-05-18T17:22:52.716613", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:22:52.717042", "level": "INFO", "logger": "gpu-deploy", "message": "    \u8bbe\u5907\u72b6\u6001: all_ok"}
+{"timestamp": "2026-05-18T17:22:52.717566", "level": "INFO", "logger": "gpu-deploy", "message": "\n[3/4] \u68c0\u67e5\u90e8\u7f72\u6b65\u9aa4\u914d\u7f6e\u72b6\u6001..."}
+{"timestamp": "2026-05-18T17:22:52.718646", "level": "INFO", "logger": "gpu-deploy", "message": "    [\u2713] 00 \u8bbe\u5907\u4e00\u81f4\u6027\u68c0\u67e5: \u6240\u6709\u8282\u70b9\u5df2\u914d\u7f6e"}
+{"timestamp": "2026-05-18T17:22:52.719272", "level": "INFO", "logger": "gpu-deploy", "message": "    [\u2713] 0b \u7f51\u7edc\u8fde\u901a\u6027\u68c0\u67e5: \u6240\u6709\u8282\u70b9\u5df2\u914d\u7f6e"}
+{"timestamp": "2026-05-18T17:22:52.719539", "level": "INFO", "logger": "gpu-deploy", "message": "[01] [10.0.16.211] \u6267\u884c: dpkg -l build-essential 2>/dev/null | grep '^ii' && echo 'installed' || echo 'not_installed'"}
+{"timestamp": "2026-05-18T17:22:52.803656", "level": "INFO", "logger": "gpu-deploy", "message": "[01] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:22:52.804060", "level": "INFO", "logger": "gpu-deploy", "message": "  ii  build-essential 12.9ubuntu3  amd64        Informational list of build-essential packages"}
+{"timestamp": "2026-05-18T17:22:52.804304", "level": "INFO", "logger": "gpu-deploy", "message": "  installed"}
+{"timestamp": "2026-05-18T17:22:52.804502", "level": "INFO", "logger": "gpu-deploy", "message": "[01] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.08s"}
+{"timestamp": "2026-05-18T17:22:52.804655", "level": "INFO", "logger": "gpu-deploy", "message": "[01] [10.0.16.211] \u6267\u884c: dpkg -l gcc 2>/dev/null | grep '^ii' && echo 'installed' || echo 'not_installed'"}
+{"timestamp": "2026-05-18T17:22:52.891474", "level": "INFO", "logger": "gpu-deploy", "message": "[01] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:22:52.891864", "level": "INFO", "logger": "gpu-deploy", "message": "  ii  gcc            4:11.2.0-1ubuntu1 amd64        GNU C compiler"}
+{"timestamp": "2026-05-18T17:22:52.892139", "level": "INFO", "logger": "gpu-deploy", "message": "  installed"}
+{"timestamp": "2026-05-18T17:22:52.892416", "level": "INFO", "logger": "gpu-deploy", "message": "[01] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:22:52.892699", "level": "INFO", "logger": "gpu-deploy", "message": "[01] [10.0.16.211] \u6267\u884c: dpkg -l make 2>/dev/null | grep '^ii' && echo 'installed' || echo 'not_installed'"}
+{"timestamp": "2026-05-18T17:22:52.979486", "level": "INFO", "logger": "gpu-deploy", "message": "[01] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:22:52.979865", "level": "INFO", "logger": "gpu-deploy", "message": "  ii  make           4.3-4.1build1 amd64        utility for directing compilation"}
+{"timestamp": "2026-05-18T17:22:52.980139", "level": "INFO", "logger": "gpu-deploy", "message": "  installed"}
+{"timestamp": "2026-05-18T17:22:52.980414", "level": "INFO", "logger": "gpu-deploy", "message": "[01] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:22:52.980698", "level": "INFO", "logger": "gpu-deploy", "message": "[01] [10.0.16.211] \u6267\u884c: dpkg -l dkms 2>/dev/null | grep '^ii' && echo 'installed' || echo 'not_installed'"}
+{"timestamp": "2026-05-18T17:22:53.067558", "level": "INFO", "logger": "gpu-deploy", "message": "[01] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:22:53.067922", "level": "INFO", "logger": "gpu-deploy", "message": "  ii  dkms           2.8.7-2ubuntu2.2 all          Dynamic Kernel Module Support Framework"}
+{"timestamp": "2026-05-18T17:22:53.068203", "level": "INFO", "logger": "gpu-deploy", "message": "  installed"}
+{"timestamp": "2026-05-18T17:22:53.068418", "level": "INFO", "logger": "gpu-deploy", "message": "[01] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:22:53.068583", "level": "INFO", "logger": "gpu-deploy", "message": "[01] [10.0.16.211] \u6267\u884c: dpkg -l pdsh 2>/dev/null | grep '^ii' && echo 'installed' || echo 'not_installed'"}
+{"timestamp": "2026-05-18T17:22:53.155346", "level": "INFO", "logger": "gpu-deploy", "message": "[01] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:22:53.155781", "level": "INFO", "logger": "gpu-deploy", "message": "  not_installed"}
+{"timestamp": "2026-05-18T17:22:53.156066", "level": "INFO", "logger": "gpu-deploy", "message": "[01] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:22:53.156369", "level": "INFO", "logger": "gpu-deploy", "message": "[01] [10.0.16.211] \u6267\u884c: dpkg -l git 2>/dev/null | grep '^ii' && echo 'installed' || echo 'not_installed'"}
+{"timestamp": "2026-05-18T17:22:53.243497", "level": "INFO", "logger": "gpu-deploy", "message": "[01] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:22:53.243896", "level": "INFO", "logger": "gpu-deploy", "message": "  ii  git            1:2.34.1-1ubuntu1.11 amd64        fast, scalable, distributed revision control system"}
+{"timestamp": "2026-05-18T17:22:53.244141", "level": "INFO", "logger": "gpu-deploy", "message": "  installed"}
+{"timestamp": "2026-05-18T17:22:53.244289", "level": "INFO", "logger": "gpu-deploy", "message": "[01] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:22:53.244438", "level": "INFO", "logger": "gpu-deploy", "message": "[01] [10.0.16.211] \u6267\u884c: dpkg -l cmake 2>/dev/null | grep '^ii' && echo 'installed' || echo 'not_installed'"}
+{"timestamp": "2026-05-18T17:22:53.331406", "level": "INFO", "logger": "gpu-deploy", "message": "[01] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:22:53.331782", "level": "INFO", "logger": "gpu-deploy", "message": "  not_installed"}
+{"timestamp": "2026-05-18T17:22:53.331936", "level": "INFO", "logger": "gpu-deploy", "message": "[01] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:22:53.332114", "level": "INFO", "logger": "gpu-deploy", "message": "[01] [10.0.22.143] \u6267\u884c: dpkg -l build-essential 2>/dev/null | grep '^ii' && echo 'installed' || echo 'not_installed'"}
+{"timestamp": "2026-05-18T17:22:53.419710", "level": "INFO", "logger": "gpu-deploy", "message": "[01] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:22:53.420096", "level": "INFO", "logger": "gpu-deploy", "message": "  ii  build-essential 12.9ubuntu3  amd64        Informational list of build-essential packages"}
+{"timestamp": "2026-05-18T17:22:53.420381", "level": "INFO", "logger": "gpu-deploy", "message": "  installed"}
+{"timestamp": "2026-05-18T17:22:53.420664", "level": "INFO", "logger": "gpu-deploy", "message": "[01] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:22:53.420864", "level": "INFO", "logger": "gpu-deploy", "message": "[01] [10.0.22.143] \u6267\u884c: dpkg -l gcc 2>/dev/null | grep '^ii' && echo 'installed' || echo 'not_installed'"}
+{"timestamp": "2026-05-18T17:22:53.507855", "level": "INFO", "logger": "gpu-deploy", "message": "[01] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:22:53.508299", "level": "INFO", "logger": "gpu-deploy", "message": "  ii  gcc            4:11.2.0-1ubuntu1 amd64        GNU C compiler"}
+{"timestamp": "2026-05-18T17:22:53.508700", "level": "INFO", "logger": "gpu-deploy", "message": "  installed"}
+{"timestamp": "2026-05-18T17:22:53.509106", "level": "INFO", "logger": "gpu-deploy", "message": "[01] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:22:53.509518", "level": "INFO", "logger": "gpu-deploy", "message": "[01] [10.0.22.143] \u6267\u884c: dpkg -l make 2>/dev/null | grep '^ii' && echo 'installed' || echo 'not_installed'"}
+{"timestamp": "2026-05-18T17:22:53.595890", "level": "INFO", "logger": "gpu-deploy", "message": "[01] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:22:53.596208", "level": "INFO", "logger": "gpu-deploy", "message": "  ii  make           4.3-4.1build1 amd64        utility for directing compilation"}
+{"timestamp": "2026-05-18T17:22:53.596473", "level": "INFO", "logger": "gpu-deploy", "message": "  installed"}
+{"timestamp": "2026-05-18T17:22:53.596744", "level": "INFO", "logger": "gpu-deploy", "message": "[01] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:22:53.597019", "level": "INFO", "logger": "gpu-deploy", "message": "[01] [10.0.22.143] \u6267\u884c: dpkg -l dkms 2>/dev/null | grep '^ii' && echo 'installed' || echo 'not_installed'"}
+{"timestamp": "2026-05-18T17:22:53.683858", "level": "INFO", "logger": "gpu-deploy", "message": "[01] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:22:53.684055", "level": "INFO", "logger": "gpu-deploy", "message": "  ii  dkms           2.8.7-2ubuntu2.2 all          Dynamic Kernel Module Support Framework"}
+{"timestamp": "2026-05-18T17:22:53.684347", "level": "INFO", "logger": "gpu-deploy", "message": "  installed"}
+{"timestamp": "2026-05-18T17:22:53.684556", "level": "INFO", "logger": "gpu-deploy", "message": "[01] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:22:53.684706", "level": "INFO", "logger": "gpu-deploy", "message": "[01] [10.0.22.143] \u6267\u884c: dpkg -l pdsh 2>/dev/null | grep '^ii' && echo 'installed' || echo 'not_installed'"}
+{"timestamp": "2026-05-18T17:22:53.771536", "level": "INFO", "logger": "gpu-deploy", "message": "[01] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:22:53.771917", "level": "INFO", "logger": "gpu-deploy", "message": "  not_installed"}
+{"timestamp": "2026-05-18T17:22:53.772145", "level": "INFO", "logger": "gpu-deploy", "message": "[01] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:22:53.772388", "level": "INFO", "logger": "gpu-deploy", "message": "[01] [10.0.22.143] \u6267\u884c: dpkg -l git 2>/dev/null | grep '^ii' && echo 'installed' || echo 'not_installed'"}
+{"timestamp": "2026-05-18T17:22:53.859821", "level": "INFO", "logger": "gpu-deploy", "message": "[01] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:22:53.860034", "level": "INFO", "logger": "gpu-deploy", "message": "  ii  git            1:2.34.1-1ubuntu1.11 amd64        fast, scalable, distributed revision control system"}
+{"timestamp": "2026-05-18T17:22:53.860326", "level": "INFO", "logger": "gpu-deploy", "message": "  installed"}
+{"timestamp": "2026-05-18T17:22:53.860538", "level": "INFO", "logger": "gpu-deploy", "message": "[01] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:22:53.860811", "level": "INFO", "logger": "gpu-deploy", "message": "[01] [10.0.22.143] \u6267\u884c: dpkg -l cmake 2>/dev/null | grep '^ii' && echo 'installed' || echo 'not_installed'"}
+{"timestamp": "2026-05-18T17:22:53.947685", "level": "INFO", "logger": "gpu-deploy", "message": "[01] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:22:53.947906", "level": "INFO", "logger": "gpu-deploy", "message": "  not_installed"}
+{"timestamp": "2026-05-18T17:22:53.948043", "level": "INFO", "logger": "gpu-deploy", "message": "[01] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:22:53.948219", "level": "INFO", "logger": "gpu-deploy", "message": "    [\u2717] 01 \u4f9d\u8d56\u8f6f\u4ef6\u5305: \u672a\u914d\u7f6e"}
+{"timestamp": "2026-05-18T17:22:53.948398", "level": "INFO", "logger": "gpu-deploy", "message": "[02] [10.0.16.211] \u6267\u884c: uname -r"}
+{"timestamp": "2026-05-18T17:22:54.035393", "level": "INFO", "logger": "gpu-deploy", "message": "[02] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:22:54.035771", "level": "INFO", "logger": "gpu-deploy", "message": "  5.15.0-128-generic"}
+{"timestamp": "2026-05-18T17:22:54.036068", "level": "INFO", "logger": "gpu-deploy", "message": "[02] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:22:54.036312", "level": "INFO", "logger": "gpu-deploy", "message": "[02] [10.0.22.143] \u6267\u884c: uname -r"}
+{"timestamp": "2026-05-18T17:22:54.123730", "level": "INFO", "logger": "gpu-deploy", "message": "[02] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:22:54.124211", "level": "INFO", "logger": "gpu-deploy", "message": "  5.15.0-128-generic"}
+{"timestamp": "2026-05-18T17:22:54.124512", "level": "INFO", "logger": "gpu-deploy", "message": "[02] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:22:54.124757", "level": "INFO", "logger": "gpu-deploy", "message": "    [\u2713] 02 \u5185\u6838\u7248\u672c\u68c0\u67e5: \u6240\u6709\u8282\u70b9\u5df2\u914d\u7f6e"}
+{"timestamp": "2026-05-18T17:22:54.124919", "level": "INFO", "logger": "gpu-deploy", "message": "[03] [10.0.16.211] \u6267\u884c: ldd --version | grep GLIBC | head -1"}
+{"timestamp": "2026-05-18T17:22:54.211503", "level": "INFO", "logger": "gpu-deploy", "message": "[03] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:22:54.211702", "level": "INFO", "logger": "gpu-deploy", "message": "  ldd (Ubuntu GLIBC 2.35-0ubuntu3.8) 2.35"}
+{"timestamp": "2026-05-18T17:22:54.212139", "level": "INFO", "logger": "gpu-deploy", "message": "[03] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:22:54.212302", "level": "INFO", "logger": "gpu-deploy", "message": "[03] [10.0.22.143] \u6267\u884c: ldd --version | grep GLIBC | head -1"}
+{"timestamp": "2026-05-18T17:22:54.299444", "level": "INFO", "logger": "gpu-deploy", "message": "[03] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:22:54.299888", "level": "INFO", "logger": "gpu-deploy", "message": "  ldd (Ubuntu GLIBC 2.35-0ubuntu3.8) 2.35"}
+{"timestamp": "2026-05-18T17:22:54.300103", "level": "INFO", "logger": "gpu-deploy", "message": "[03] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:22:54.300259", "level": "INFO", "logger": "gpu-deploy", "message": "    [\u2713] 03 glibc\u7248\u672c\u68c0\u67e5: \u6240\u6709\u8282\u70b9\u5df2\u914d\u7f6e"}
+{"timestamp": "2026-05-18T17:22:54.300405", "level": "INFO", "logger": "gpu-deploy", "message": "[04] [10.0.16.211] \u6267\u884c: dpkg -l | grep 'openssh-client' | awk '{print $3}'"}
+{"timestamp": "2026-05-18T17:22:54.387558", "level": "INFO", "logger": "gpu-deploy", "message": "[04] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:22:54.388148", "level": "INFO", "logger": "gpu-deploy", "message": "  1:8.9p1-3ubuntu0.10"}
+{"timestamp": "2026-05-18T17:22:54.388507", "level": "INFO", "logger": "gpu-deploy", "message": "[04] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:22:54.389247", "level": "INFO", "logger": "gpu-deploy", "message": "[04] [10.0.22.143] \u6267\u884c: dpkg -l | grep 'openssh-client' | awk '{print $3}'"}
+{"timestamp": "2026-05-18T17:22:54.475486", "level": "INFO", "logger": "gpu-deploy", "message": "[04] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:22:54.475735", "level": "INFO", "logger": "gpu-deploy", "message": "  1:8.9p1-3ubuntu0.10"}
+{"timestamp": "2026-05-18T17:22:54.476236", "level": "INFO", "logger": "gpu-deploy", "message": "[04] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:22:54.476584", "level": "INFO", "logger": "gpu-deploy", "message": "    [\u2713] 04 OpenSSH\u7248\u672c\u68c0\u67e5: \u6240\u6709\u8282\u70b9\u5df2\u914d\u7f6e"}
+{"timestamp": "2026-05-18T17:22:54.476925", "level": "INFO", "logger": "gpu-deploy", "message": "[05] [10.0.16.211] \u6267\u884c: whoami"}
+{"timestamp": "2026-05-18T17:22:54.563371", "level": "INFO", "logger": "gpu-deploy", "message": "[05] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:22:54.563852", "level": "INFO", "logger": "gpu-deploy", "message": "  ubuntu"}
+{"timestamp": "2026-05-18T17:22:54.564011", "level": "INFO", "logger": "gpu-deploy", "message": "[05] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:22:54.564196", "level": "INFO", "logger": "gpu-deploy", "message": "[05] [10.0.16.211] \u6267\u884c: sudo -n true 2>/dev/null && echo 'ok' || echo 'need_password'"}
+{"timestamp": "2026-05-18T17:22:54.651524", "level": "INFO", "logger": "gpu-deploy", "message": "[05] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:22:54.651907", "level": "INFO", "logger": "gpu-deploy", "message": "  ok"}
+{"timestamp": "2026-05-18T17:22:54.652155", "level": "INFO", "logger": "gpu-deploy", "message": "[05] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:22:54.652314", "level": "INFO", "logger": "gpu-deploy", "message": "[05] [10.0.22.143] \u6267\u884c: whoami"}
+{"timestamp": "2026-05-18T17:22:54.739651", "level": "INFO", "logger": "gpu-deploy", "message": "[05] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:22:54.739830", "level": "INFO", "logger": "gpu-deploy", "message": "  ubuntu"}
+{"timestamp": "2026-05-18T17:22:54.739972", "level": "INFO", "logger": "gpu-deploy", "message": "[05] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:22:54.740117", "level": "INFO", "logger": "gpu-deploy", "message": "[05] [10.0.22.143] \u6267\u884c: sudo -n true 2>/dev/null && echo 'ok' || echo 'need_password'"}
+{"timestamp": "2026-05-18T17:22:54.827512", "level": "INFO", "logger": "gpu-deploy", "message": "[05] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:22:54.827676", "level": "INFO", "logger": "gpu-deploy", "message": "  ok"}
+{"timestamp": "2026-05-18T17:22:54.827834", "level": "INFO", "logger": "gpu-deploy", "message": "[05] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:22:54.827995", "level": "INFO", "logger": "gpu-deploy", "message": "    [\u2713] 05 sudo\u514d\u5bc6: \u6240\u6709\u8282\u70b9\u5df2\u914d\u7f6e"}
+{"timestamp": "2026-05-18T17:22:54.828156", "level": "INFO", "logger": "gpu-deploy", "message": "[06] [10.0.16.211] \u6267\u884c: mountpoint -q /ssd && echo 'mounted' || echo 'not_mounted'"}
+{"timestamp": "2026-05-18T17:22:54.915459", "level": "INFO", "logger": "gpu-deploy", "message": "[06] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:22:54.915668", "level": "INFO", "logger": "gpu-deploy", "message": "  mounted"}
+{"timestamp": "2026-05-18T17:22:54.915821", "level": "INFO", "logger": "gpu-deploy", "message": "[06] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:22:54.916005", "level": "INFO", "logger": "gpu-deploy", "message": "[06] [10.0.22.143] \u6267\u884c: mountpoint -q /ssd && echo 'mounted' || echo 'not_mounted'"}
+{"timestamp": "2026-05-18T17:22:55.003581", "level": "INFO", "logger": "gpu-deploy", "message": "[06] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:22:55.003790", "level": "INFO", "logger": "gpu-deploy", "message": "  mounted"}
+{"timestamp": "2026-05-18T17:22:55.003927", "level": "INFO", "logger": "gpu-deploy", "message": "[06] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:22:55.004080", "level": "INFO", "logger": "gpu-deploy", "message": "    [\u2713] 06 \u6570\u636e\u76d8\u6302\u8f7d: \u6240\u6709\u8282\u70b9\u5df2\u914d\u7f6e"}
+{"timestamp": "2026-05-18T17:22:55.004283", "level": "INFO", "logger": "gpu-deploy", "message": "[07] [10.0.16.211] \u6267\u884c: cat /proc/cpuinfo | grep 'model name' | head -1"}
+{"timestamp": "2026-05-18T17:22:55.095515", "level": "INFO", "logger": "gpu-deploy", "message": "[07] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:22:55.095687", "level": "INFO", "logger": "gpu-deploy", "message": "  model name\t: AMD EPYC 7402 24-Core Processor"}
+{"timestamp": "2026-05-18T17:22:55.095845", "level": "INFO", "logger": "gpu-deploy", "message": "[07] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:22:55.095988", "level": "INFO", "logger": "gpu-deploy", "message": "[07] [10.0.16.211] \u6267\u884c: nvidia-smi --query-gpu=name --format=csv,noheader 2>/dev/null | head -1 || echo 'unknown'"}
+{"timestamp": "2026-05-18T17:22:56.993277", "level": "INFO", "logger": "gpu-deploy", "message": "[07] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:22:56.993634", "level": "INFO", "logger": "gpu-deploy", "message": "  NVIDIA GeForce RTX 3090"}
+{"timestamp": "2026-05-18T17:22:56.993852", "level": "INFO", "logger": "gpu-deploy", "message": "[07] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=1.90s"}
+{"timestamp": "2026-05-18T17:22:56.994012", "level": "INFO", "logger": "gpu-deploy", "message": "[07] [10.0.22.143] \u6267\u884c: cat /proc/cpuinfo | grep 'model name' | head -1"}
+{"timestamp": "2026-05-18T17:22:57.079407", "level": "INFO", "logger": "gpu-deploy", "message": "[07] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:22:57.079741", "level": "INFO", "logger": "gpu-deploy", "message": "  model name\t: AMD EPYC 7402 24-Core Processor"}
+{"timestamp": "2026-05-18T17:22:57.079890", "level": "INFO", "logger": "gpu-deploy", "message": "[07] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:22:57.080030", "level": "INFO", "logger": "gpu-deploy", "message": "[07] [10.0.22.143] \u6267\u884c: nvidia-smi --query-gpu=name --format=csv,noheader 2>/dev/null | head -1 || echo 'unknown'"}
+{"timestamp": "2026-05-18T17:22:58.988782", "level": "INFO", "logger": "gpu-deploy", "message": "[07] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:22:58.989038", "level": "INFO", "logger": "gpu-deploy", "message": "  NVIDIA GeForce RTX 3090"}
+{"timestamp": "2026-05-18T17:22:58.989200", "level": "INFO", "logger": "gpu-deploy", "message": "[07] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=1.91s"}
+{"timestamp": "2026-05-18T17:22:58.989353", "level": "INFO", "logger": "gpu-deploy", "message": "    [\u2713] 07 MSR\u8bbe\u7f6e: \u6240\u6709\u8282\u70b9\u5df2\u914d\u7f6e"}
+{"timestamp": "2026-05-18T17:22:58.989501", "level": "INFO", "logger": "gpu-deploy", "message": "[08] [10.0.16.211] \u6267\u884c: test -x /etc/rc.local && echo 'exists' || echo 'not_found'"}
+{"timestamp": "2026-05-18T17:22:59.075643", "level": "INFO", "logger": "gpu-deploy", "message": "[08] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:22:59.075878", "level": "INFO", "logger": "gpu-deploy", "message": "  exists"}
+{"timestamp": "2026-05-18T17:22:59.076031", "level": "INFO", "logger": "gpu-deploy", "message": "[08] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:22:59.076165", "level": "INFO", "logger": "gpu-deploy", "message": "[08] [10.0.16.211] \u6267\u884c: systemctl is-enabled rc-local.service 2>/dev/null || echo 'disabled'"}
+{"timestamp": "2026-05-18T17:22:59.163395", "level": "INFO", "logger": "gpu-deploy", "message": "[08] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:22:59.163783", "level": "INFO", "logger": "gpu-deploy", "message": "  enabled"}
+{"timestamp": "2026-05-18T17:22:59.163937", "level": "INFO", "logger": "gpu-deploy", "message": "[08] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:22:59.164128", "level": "INFO", "logger": "gpu-deploy", "message": "[08] [10.0.22.143] \u6267\u884c: test -x /etc/rc.local && echo 'exists' || echo 'not_found'"}
+{"timestamp": "2026-05-18T17:22:59.251514", "level": "INFO", "logger": "gpu-deploy", "message": "[08] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:22:59.251707", "level": "INFO", "logger": "gpu-deploy", "message": "  exists"}
+{"timestamp": "2026-05-18T17:22:59.251931", "level": "INFO", "logger": "gpu-deploy", "message": "[08] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:22:59.252109", "level": "INFO", "logger": "gpu-deploy", "message": "[08] [10.0.22.143] \u6267\u884c: systemctl is-enabled rc-local.service 2>/dev/null || echo 'disabled'"}
+{"timestamp": "2026-05-18T17:22:59.339499", "level": "INFO", "logger": "gpu-deploy", "message": "[08] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:22:59.339771", "level": "INFO", "logger": "gpu-deploy", "message": "  enabled"}
+{"timestamp": "2026-05-18T17:22:59.339971", "level": "INFO", "logger": "gpu-deploy", "message": "[08] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:22:59.340229", "level": "INFO", "logger": "gpu-deploy", "message": "    [\u2713] 08 rc.local\u914d\u7f6e: \u6240\u6709\u8282\u70b9\u5df2\u914d\u7f6e"}
+{"timestamp": "2026-05-18T17:22:59.340461", "level": "INFO", "logger": "gpu-deploy", "message": "[09] [10.0.16.211] \u6267\u884c: hostname"}
+{"timestamp": "2026-05-18T17:22:59.427509", "level": "INFO", "logger": "gpu-deploy", "message": "[09] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:22:59.427943", "level": "INFO", "logger": "gpu-deploy", "message": "  gpugpugpu2"}
+{"timestamp": "2026-05-18T17:22:59.428235", "level": "INFO", "logger": "gpu-deploy", "message": "[09] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:22:59.428457", "level": "INFO", "logger": "gpu-deploy", "message": "[09] [10.0.16.211] \u6267\u884c: grep -q 'gpugpugpu2' /etc/hosts && echo 'found' || echo 'not_found'"}
+{"timestamp": "2026-05-18T17:22:59.515648", "level": "INFO", "logger": "gpu-deploy", "message": "[09] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:22:59.515852", "level": "INFO", "logger": "gpu-deploy", "message": "  found"}
+{"timestamp": "2026-05-18T17:22:59.516102", "level": "INFO", "logger": "gpu-deploy", "message": "[09] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:22:59.516246", "level": "INFO", "logger": "gpu-deploy", "message": "[09] [10.0.22.143] \u6267\u884c: hostname"}
+{"timestamp": "2026-05-18T17:22:59.603558", "level": "INFO", "logger": "gpu-deploy", "message": "[09] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:22:59.603736", "level": "INFO", "logger": "gpu-deploy", "message": "  gpugpugpu1"}
+{"timestamp": "2026-05-18T17:22:59.603948", "level": "INFO", "logger": "gpu-deploy", "message": "[09] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:22:59.604153", "level": "INFO", "logger": "gpu-deploy", "message": "[09] [10.0.22.143] \u6267\u884c: grep -q 'gpugpugpu1' /etc/hosts && echo 'found' || echo 'not_found'"}
+{"timestamp": "2026-05-18T17:22:59.691623", "level": "INFO", "logger": "gpu-deploy", "message": "[09] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:22:59.692094", "level": "INFO", "logger": "gpu-deploy", "message": "  found"}
+{"timestamp": "2026-05-18T17:22:59.692500", "level": "INFO", "logger": "gpu-deploy", "message": "[09] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:22:59.692924", "level": "INFO", "logger": "gpu-deploy", "message": "    [\u2713] 09 \u4e3b\u673a\u540d\u548chosts: \u6240\u6709\u8282\u70b9\u5df2\u914d\u7f6e"}
+{"timestamp": "2026-05-18T17:22:59.693348", "level": "INFO", "logger": "gpu-deploy", "message": "[10] [10.0.16.211] \u6267\u884c: id ubuntu 2>/dev/null && echo 'exists' || echo 'not_exists'"}
+{"timestamp": "2026-05-18T17:22:59.779709", "level": "INFO", "logger": "gpu-deploy", "message": "[10] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:22:59.780183", "level": "INFO", "logger": "gpu-deploy", "message": "  uid=1000(ubuntu) gid=1000(ubuntu) groups=1000(ubuntu),4(adm),20(dialout),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),119(netdev),120(lxd)"}
+{"timestamp": "2026-05-18T17:22:59.780588", "level": "INFO", "logger": "gpu-deploy", "message": "  exists"}
+{"timestamp": "2026-05-18T17:22:59.780991", "level": "INFO", "logger": "gpu-deploy", "message": "[10] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:22:59.781401", "level": "INFO", "logger": "gpu-deploy", "message": "[10] [10.0.16.211] \u6267\u884c: sudo -u ubuntu sudo -n true 2>/dev/null && echo 'ok' || echo 'need_password'"}
+{"timestamp": "2026-05-18T17:22:59.867990", "level": "INFO", "logger": "gpu-deploy", "message": "[10] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:22:59.868475", "level": "INFO", "logger": "gpu-deploy", "message": "  ok"}
+{"timestamp": "2026-05-18T17:22:59.868885", "level": "INFO", "logger": "gpu-deploy", "message": "[10] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:22:59.869321", "level": "INFO", "logger": "gpu-deploy", "message": "[10] [10.0.22.143] \u6267\u884c: id ubuntu 2>/dev/null && echo 'exists' || echo 'not_exists'"}
+{"timestamp": "2026-05-18T17:22:59.955481", "level": "INFO", "logger": "gpu-deploy", "message": "[10] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:22:59.955944", "level": "INFO", "logger": "gpu-deploy", "message": "  uid=1000(ubuntu) gid=1000(ubuntu) groups=1000(ubuntu),4(adm),20(dialout),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),119(netdev),120(lxd)"}
+{"timestamp": "2026-05-18T17:22:59.956352", "level": "INFO", "logger": "gpu-deploy", "message": "  exists"}
+{"timestamp": "2026-05-18T17:22:59.956764", "level": "INFO", "logger": "gpu-deploy", "message": "[10] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:22:59.957175", "level": "INFO", "logger": "gpu-deploy", "message": "[10] [10.0.22.143] \u6267\u884c: sudo -u ubuntu sudo -n true 2>/dev/null && echo 'ok' || echo 'need_password'"}
+{"timestamp": "2026-05-18T17:23:00.043454", "level": "INFO", "logger": "gpu-deploy", "message": "[10] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:23:00.043920", "level": "INFO", "logger": "gpu-deploy", "message": "  ok"}
+{"timestamp": "2026-05-18T17:23:00.044331", "level": "INFO", "logger": "gpu-deploy", "message": "[10] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:00.044756", "level": "INFO", "logger": "gpu-deploy", "message": "    [\u2713] 10 ubuntu\u7528\u6237: \u6240\u6709\u8282\u70b9\u5df2\u914d\u7f6e"}
+{"timestamp": "2026-05-18T17:23:00.045187", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] \u6267\u884c: test -s ~/.ssh/authorized_keys && test -f ~/.ssh/id_rsa && echo 'configured' || echo 'not_configured'"}
+{"timestamp": "2026-05-18T17:23:00.131784", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:23:00.132263", "level": "INFO", "logger": "gpu-deploy", "message": "  configured"}
+{"timestamp": "2026-05-18T17:23:00.132669", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:00.133087", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] \u6267\u884c: test -s ~/.ssh/authorized_keys && test -f ~/.ssh/id_rsa && echo 'configured' || echo 'not_configured'"}
+{"timestamp": "2026-05-18T17:23:00.219542", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:23:00.219989", "level": "INFO", "logger": "gpu-deploy", "message": "  configured"}
+{"timestamp": "2026-05-18T17:23:00.220400", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:00.220831", "level": "INFO", "logger": "gpu-deploy", "message": "    [\u2713] 11 SSH\u514d\u5bc6\u767b\u5f55: \u6240\u6709\u8282\u70b9\u5df2\u914d\u7f6e"}
+{"timestamp": "2026-05-18T17:23:00.221254", "level": "INFO", "logger": "gpu-deploy", "message": "[12] [10.0.16.211] \u6267\u884c: test -d /sys/devices/system/cpu/cpu0/cpufreq"}
+{"timestamp": "2026-05-18T17:23:00.307635", "level": "INFO", "logger": "gpu-deploy", "message": "[12] [10.0.16.211] \u2717 exit_code=1, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:00.308129", "level": "INFO", "logger": "gpu-deploy", "message": "[12] [10.0.22.143] \u6267\u884c: test -d /sys/devices/system/cpu/cpu0/cpufreq"}
+{"timestamp": "2026-05-18T17:23:00.395463", "level": "INFO", "logger": "gpu-deploy", "message": "[12] [10.0.22.143] \u2717 exit_code=1, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:00.395938", "level": "INFO", "logger": "gpu-deploy", "message": "    [\u2713] 12 CPU\u6027\u80fd\u6a21\u5f0f: \u6240\u6709\u8282\u70b9\u5df2\u914d\u7f6e"}
+{"timestamp": "2026-05-18T17:23:00.396343", "level": "INFO", "logger": "gpu-deploy", "message": "[13] [10.0.16.211] \u6267\u884c: grep -c 'nofile 1000000' /etc/security/limits.conf 2>/dev/null || echo 0"}
+{"timestamp": "2026-05-18T17:23:00.483627", "level": "INFO", "logger": "gpu-deploy", "message": "[13] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:23:00.484102", "level": "INFO", "logger": "gpu-deploy", "message": "  0"}
+{"timestamp": "2026-05-18T17:23:00.484527", "level": "INFO", "logger": "gpu-deploy", "message": "  0"}
+{"timestamp": "2026-05-18T17:23:00.484933", "level": "INFO", "logger": "gpu-deploy", "message": "[13] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:00.485414", "level": "INFO", "logger": "gpu-deploy", "message": "[13] [10.0.22.143] \u6267\u884c: grep -c 'nofile 1000000' /etc/security/limits.conf 2>/dev/null || echo 0"}
+{"timestamp": "2026-05-18T17:23:00.571426", "level": "INFO", "logger": "gpu-deploy", "message": "[13] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:23:00.571838", "level": "INFO", "logger": "gpu-deploy", "message": "  0"}
+{"timestamp": "2026-05-18T17:23:00.572101", "level": "INFO", "logger": "gpu-deploy", "message": "  0"}
+{"timestamp": "2026-05-18T17:23:00.572321", "level": "INFO", "logger": "gpu-deploy", "message": "[13] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:00.572494", "level": "INFO", "logger": "gpu-deploy", "message": "    [\u2717] 13 \u6587\u4ef6\u63cf\u8ff0\u7b26: \u672a\u914d\u7f6e"}
+{"timestamp": "2026-05-18T17:23:00.572655", "level": "INFO", "logger": "gpu-deploy", "message": "[15] [10.0.16.211] \u6267\u884c: systemctl is-enabled unattended-upgrades.service 2>/dev/null || echo 'disabled'"}
+{"timestamp": "2026-05-18T17:23:00.659717", "level": "INFO", "logger": "gpu-deploy", "message": "[15] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:23:00.659977", "level": "INFO", "logger": "gpu-deploy", "message": "  disabled"}
+{"timestamp": "2026-05-18T17:23:00.660108", "level": "INFO", "logger": "gpu-deploy", "message": "  disabled"}
+{"timestamp": "2026-05-18T17:23:00.660246", "level": "INFO", "logger": "gpu-deploy", "message": "[15] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:00.660402", "level": "INFO", "logger": "gpu-deploy", "message": "[15] [10.0.16.211] \u6267\u884c: test -f /etc/apt/preferences.d/nolinuxupgrades"}
+{"timestamp": "2026-05-18T17:23:00.747354", "level": "INFO", "logger": "gpu-deploy", "message": "[15] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:00.747733", "level": "INFO", "logger": "gpu-deploy", "message": "[15] [10.0.22.143] \u6267\u884c: systemctl is-enabled unattended-upgrades.service 2>/dev/null || echo 'disabled'"}
+{"timestamp": "2026-05-18T17:23:00.835518", "level": "INFO", "logger": "gpu-deploy", "message": "[15] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:23:00.836036", "level": "INFO", "logger": "gpu-deploy", "message": "  disabled"}
+{"timestamp": "2026-05-18T17:23:00.836320", "level": "INFO", "logger": "gpu-deploy", "message": "  disabled"}
+{"timestamp": "2026-05-18T17:23:00.836537", "level": "INFO", "logger": "gpu-deploy", "message": "[15] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:00.836701", "level": "INFO", "logger": "gpu-deploy", "message": "[15] [10.0.22.143] \u6267\u884c: test -f /etc/apt/preferences.d/nolinuxupgrades"}
+{"timestamp": "2026-05-18T17:23:00.923267", "level": "INFO", "logger": "gpu-deploy", "message": "[15] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:00.923463", "level": "INFO", "logger": "gpu-deploy", "message": "    [\u2713] 15 \u7981\u7528\u81ea\u52a8\u66f4\u65b0: \u6240\u6709\u8282\u70b9\u5df2\u914d\u7f6e"}
+{"timestamp": "2026-05-18T17:23:00.924054", "level": "INFO", "logger": "gpu-deploy", "message": "    [\u2713] 16 \u56fa\u5b9a\u5185\u6838\u7248\u672c: \u6240\u6709\u8282\u70b9\u5df2\u914d\u7f6e"}
+{"timestamp": "2026-05-18T17:23:00.924472", "level": "INFO", "logger": "gpu-deploy", "message": "[17] [10.0.16.211] \u6267\u884c: timedatectl show --no-pager 2>/dev/null | grep 'Timezone=' || timedatectl 2>/dev/null | grep 'Time zone'"}
+{"timestamp": "2026-05-18T17:23:01.045774", "level": "INFO", "logger": "gpu-deploy", "message": "[17] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:23:01.046099", "level": "INFO", "logger": "gpu-deploy", "message": "  Timezone=Asia/Shanghai"}
+{"timestamp": "2026-05-18T17:23:01.046387", "level": "INFO", "logger": "gpu-deploy", "message": "[17] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.12s"}
+{"timestamp": "2026-05-18T17:23:01.046565", "level": "INFO", "logger": "gpu-deploy", "message": "[17] [10.0.22.143] \u6267\u884c: timedatectl show --no-pager 2>/dev/null | grep 'Timezone=' || timedatectl 2>/dev/null | grep 'Time zone'"}
+{"timestamp": "2026-05-18T17:23:01.167724", "level": "INFO", "logger": "gpu-deploy", "message": "[17] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:23:01.168072", "level": "INFO", "logger": "gpu-deploy", "message": "  Timezone=Asia/Shanghai"}
+{"timestamp": "2026-05-18T17:23:01.168317", "level": "INFO", "logger": "gpu-deploy", "message": "[17] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.12s"}
+{"timestamp": "2026-05-18T17:23:01.168575", "level": "INFO", "logger": "gpu-deploy", "message": "    [\u2713] 17 \u65f6\u533a\u8bbe\u7f6e: \u6240\u6709\u8282\u70b9\u5df2\u914d\u7f6e"}
+{"timestamp": "2026-05-18T17:23:01.168825", "level": "INFO", "logger": "gpu-deploy", "message": "[18] [10.0.16.211] \u6267\u884c: cat /proc/sys/net/ipv6/conf/all/disable_ipv6"}
+{"timestamp": "2026-05-18T17:23:01.255681", "level": "INFO", "logger": "gpu-deploy", "message": "[18] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:23:01.256087", "level": "INFO", "logger": "gpu-deploy", "message": "  1"}
+{"timestamp": "2026-05-18T17:23:01.256251", "level": "INFO", "logger": "gpu-deploy", "message": "[18] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:01.256383", "level": "INFO", "logger": "gpu-deploy", "message": "[18] [10.0.22.143] \u6267\u884c: cat /proc/sys/net/ipv6/conf/all/disable_ipv6"}
+{"timestamp": "2026-05-18T17:23:01.343564", "level": "INFO", "logger": "gpu-deploy", "message": "[18] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:23:01.343720", "level": "INFO", "logger": "gpu-deploy", "message": "  1"}
+{"timestamp": "2026-05-18T17:23:01.343842", "level": "INFO", "logger": "gpu-deploy", "message": "[18] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:01.343980", "level": "INFO", "logger": "gpu-deploy", "message": "    [\u2713] 18 \u7981\u7528IPv6: \u6240\u6709\u8282\u70b9\u5df2\u914d\u7f6e"}
+{"timestamp": "2026-05-18T17:23:01.344110", "level": "INFO", "logger": "gpu-deploy", "message": "[19] [10.0.16.211] \u6267\u884c: systemctl is-enabled sleep.target 2>/dev/null || echo 'masked'"}
+{"timestamp": "2026-05-18T17:23:01.431587", "level": "INFO", "logger": "gpu-deploy", "message": "[19] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:23:01.431806", "level": "INFO", "logger": "gpu-deploy", "message": "  masked"}
+{"timestamp": "2026-05-18T17:23:01.432010", "level": "INFO", "logger": "gpu-deploy", "message": "  masked"}
+{"timestamp": "2026-05-18T17:23:01.432211", "level": "INFO", "logger": "gpu-deploy", "message": "[19] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:01.432345", "level": "INFO", "logger": "gpu-deploy", "message": "[19] [10.0.16.211] \u6267\u884c: grep -q 'hung_task_panic' /etc/sysctl.conf"}
+{"timestamp": "2026-05-18T17:23:01.523435", "level": "INFO", "logger": "gpu-deploy", "message": "[19] [10.0.16.211] \u2717 exit_code=1, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:01.523677", "level": "INFO", "logger": "gpu-deploy", "message": "[19] [10.0.22.143] \u6267\u884c: systemctl is-enabled sleep.target 2>/dev/null || echo 'masked'"}
+{"timestamp": "2026-05-18T17:23:01.619473", "level": "INFO", "logger": "gpu-deploy", "message": "[19] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:23:01.619656", "level": "INFO", "logger": "gpu-deploy", "message": "  masked"}
+{"timestamp": "2026-05-18T17:23:01.619775", "level": "INFO", "logger": "gpu-deploy", "message": "  masked"}
+{"timestamp": "2026-05-18T17:23:01.619918", "level": "INFO", "logger": "gpu-deploy", "message": "[19] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.10s"}
+{"timestamp": "2026-05-18T17:23:01.620043", "level": "INFO", "logger": "gpu-deploy", "message": "[19] [10.0.22.143] \u6267\u884c: grep -q 'hung_task_panic' /etc/sysctl.conf"}
+{"timestamp": "2026-05-18T17:23:01.711450", "level": "INFO", "logger": "gpu-deploy", "message": "[19] [10.0.22.143] \u2717 exit_code=1, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:01.711980", "level": "INFO", "logger": "gpu-deploy", "message": "    [\u2717] 19 vmcore\u548c\u4f11\u7720: \u672a\u914d\u7f6e"}
+{"timestamp": "2026-05-18T17:23:01.712210", "level": "INFO", "logger": "gpu-deploy", "message": "[20] [10.0.16.211] \u6267\u884c: ofed_info -s 2>/dev/null | head -1"}
+{"timestamp": "2026-05-18T17:23:01.803438", "level": "INFO", "logger": "gpu-deploy", "message": "[20] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:01.803750", "level": "INFO", "logger": "gpu-deploy", "message": "[20] [10.0.22.143] \u6267\u884c: ofed_info -s 2>/dev/null | head -1"}
+{"timestamp": "2026-05-18T17:23:01.899298", "level": "INFO", "logger": "gpu-deploy", "message": "[20] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.10s"}
+{"timestamp": "2026-05-18T17:23:01.899703", "level": "INFO", "logger": "gpu-deploy", "message": "    [\u2717] 20 Mellanox\u9a71\u52a8: \u672a\u914d\u7f6e"}
+{"timestamp": "2026-05-18T17:23:01.900024", "level": "INFO", "logger": "gpu-deploy", "message": "[21] [10.0.16.211] \u6267\u884c: grep -rq 'blacklist nouveau' /etc/modprobe.d/ 2>/dev/null && echo 'found' || echo 'not_found'"}
+{"timestamp": "2026-05-18T17:23:01.995483", "level": "INFO", "logger": "gpu-deploy", "message": "[21] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:23:01.995690", "level": "INFO", "logger": "gpu-deploy", "message": "  not_found"}
+{"timestamp": "2026-05-18T17:23:01.995885", "level": "INFO", "logger": "gpu-deploy", "message": "[21] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.10s"}
+{"timestamp": "2026-05-18T17:23:01.996085", "level": "INFO", "logger": "gpu-deploy", "message": "[21] [10.0.16.211] \u6267\u884c: lsmod | grep -q nouveau && echo 'loaded' || echo 'not_loaded'"}
+{"timestamp": "2026-05-18T17:23:02.087445", "level": "INFO", "logger": "gpu-deploy", "message": "[21] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:23:02.087683", "level": "INFO", "logger": "gpu-deploy", "message": "  not_loaded"}
+{"timestamp": "2026-05-18T17:23:02.087876", "level": "INFO", "logger": "gpu-deploy", "message": "[21] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:02.088076", "level": "INFO", "logger": "gpu-deploy", "message": "[21] [10.0.22.143] \u6267\u884c: grep -rq 'blacklist nouveau' /etc/modprobe.d/ 2>/dev/null && echo 'found' || echo 'not_found'"}
+{"timestamp": "2026-05-18T17:23:02.183560", "level": "INFO", "logger": "gpu-deploy", "message": "[21] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:23:02.183915", "level": "INFO", "logger": "gpu-deploy", "message": "  not_found"}
+{"timestamp": "2026-05-18T17:23:02.184175", "level": "INFO", "logger": "gpu-deploy", "message": "[21] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.10s"}
+{"timestamp": "2026-05-18T17:23:02.184434", "level": "INFO", "logger": "gpu-deploy", "message": "[21] [10.0.22.143] \u6267\u884c: lsmod | grep -q nouveau && echo 'loaded' || echo 'not_loaded'"}
+{"timestamp": "2026-05-18T17:23:02.279725", "level": "INFO", "logger": "gpu-deploy", "message": "[21] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:23:02.279953", "level": "INFO", "logger": "gpu-deploy", "message": "  not_loaded"}
+{"timestamp": "2026-05-18T17:23:02.280204", "level": "INFO", "logger": "gpu-deploy", "message": "[21] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:02.280455", "level": "INFO", "logger": "gpu-deploy", "message": "    [\u2717] 21 \u7981\u7528nouveau: \u672a\u914d\u7f6e"}
+{"timestamp": "2026-05-18T17:23:02.280673", "level": "INFO", "logger": "gpu-deploy", "message": "[22] [10.0.16.211] \u6267\u884c: nvidia-smi --query-gpu=driver_version --format=csv,noheader 2>/dev/null | head -1"}
+{"timestamp": "2026-05-18T17:23:02.691033", "level": "INFO", "logger": "gpu-deploy", "message": "[22] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:23:02.691210", "level": "INFO", "logger": "gpu-deploy", "message": "  580.142"}
+{"timestamp": "2026-05-18T17:23:02.691341", "level": "INFO", "logger": "gpu-deploy", "message": "[22] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.41s"}
+{"timestamp": "2026-05-18T17:23:02.691458", "level": "INFO", "logger": "gpu-deploy", "message": "[22] [10.0.22.143] \u6267\u884c: nvidia-smi --query-gpu=driver_version --format=csv,noheader 2>/dev/null | head -1"}
+{"timestamp": "2026-05-18T17:23:03.920176", "level": "INFO", "logger": "gpu-deploy", "message": "[22] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:23:03.920391", "level": "INFO", "logger": "gpu-deploy", "message": "  580.142"}
+{"timestamp": "2026-05-18T17:23:03.920550", "level": "INFO", "logger": "gpu-deploy", "message": "[22] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=1.23s"}
+{"timestamp": "2026-05-18T17:23:03.920696", "level": "INFO", "logger": "gpu-deploy", "message": "    [\u2713] 22 NVIDIA\u9a71\u52a8: \u6240\u6709\u8282\u70b9\u5df2\u914d\u7f6e"}
+{"timestamp": "2026-05-18T17:23:03.920840", "level": "INFO", "logger": "gpu-deploy", "message": "[23] [10.0.16.211] \u6267\u884c: nvidia-smi nvlink --status 2>/dev/null | grep -q 'GPU' && echo 'yes' || echo 'no'"}
+{"timestamp": "2026-05-18T17:23:05.815681", "level": "INFO", "logger": "gpu-deploy", "message": "[23] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:23:05.815916", "level": "INFO", "logger": "gpu-deploy", "message": "  yes"}
+{"timestamp": "2026-05-18T17:23:05.816068", "level": "INFO", "logger": "gpu-deploy", "message": "[23] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=1.89s"}
+{"timestamp": "2026-05-18T17:23:05.816204", "level": "INFO", "logger": "gpu-deploy", "message": "[23] [10.0.16.211] \u6267\u884c: systemctl is-active nvidia-fabricmanager 2>/dev/null || echo 'inactive'"}
+{"timestamp": "2026-05-18T17:23:05.903582", "level": "INFO", "logger": "gpu-deploy", "message": "[23] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:23:05.903769", "level": "INFO", "logger": "gpu-deploy", "message": "  inactive"}
+{"timestamp": "2026-05-18T17:23:05.903901", "level": "INFO", "logger": "gpu-deploy", "message": "  inactive"}
+{"timestamp": "2026-05-18T17:23:05.904065", "level": "INFO", "logger": "gpu-deploy", "message": "[23] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:05.904195", "level": "INFO", "logger": "gpu-deploy", "message": "[23] [10.0.16.211] \u6267\u884c: which nvidia-fabricmanager 2>/dev/null || which nv-fabricmanager 2>/dev/null || echo 'not_installed'"}
+{"timestamp": "2026-05-18T17:23:05.991544", "level": "INFO", "logger": "gpu-deploy", "message": "[23] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:23:05.991713", "level": "INFO", "logger": "gpu-deploy", "message": "  not_installed"}
+{"timestamp": "2026-05-18T17:23:05.991838", "level": "INFO", "logger": "gpu-deploy", "message": "[23] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:05.991978", "level": "INFO", "logger": "gpu-deploy", "message": "[23] [10.0.22.143] \u6267\u884c: nvidia-smi nvlink --status 2>/dev/null | grep -q 'GPU' && echo 'yes' || echo 'no'"}
+{"timestamp": "2026-05-18T17:23:07.909646", "level": "INFO", "logger": "gpu-deploy", "message": "[23] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:23:07.909872", "level": "INFO", "logger": "gpu-deploy", "message": "  yes"}
+{"timestamp": "2026-05-18T17:23:07.910118", "level": "INFO", "logger": "gpu-deploy", "message": "[23] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=1.92s"}
+{"timestamp": "2026-05-18T17:23:07.910329", "level": "INFO", "logger": "gpu-deploy", "message": "[23] [10.0.22.143] \u6267\u884c: systemctl is-active nvidia-fabricmanager 2>/dev/null || echo 'inactive'"}
+{"timestamp": "2026-05-18T17:23:07.995466", "level": "INFO", "logger": "gpu-deploy", "message": "[23] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:23:07.996063", "level": "INFO", "logger": "gpu-deploy", "message": "  inactive"}
+{"timestamp": "2026-05-18T17:23:07.996421", "level": "INFO", "logger": "gpu-deploy", "message": "  inactive"}
+{"timestamp": "2026-05-18T17:23:07.996657", "level": "INFO", "logger": "gpu-deploy", "message": "[23] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.08s"}
+{"timestamp": "2026-05-18T17:23:07.996908", "level": "INFO", "logger": "gpu-deploy", "message": "[23] [10.0.22.143] \u6267\u884c: which nvidia-fabricmanager 2>/dev/null || which nv-fabricmanager 2>/dev/null || echo 'not_installed'"}
+{"timestamp": "2026-05-18T17:23:08.083653", "level": "INFO", "logger": "gpu-deploy", "message": "[23] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:23:08.083861", "level": "INFO", "logger": "gpu-deploy", "message": "  not_installed"}
+{"timestamp": "2026-05-18T17:23:08.084055", "level": "INFO", "logger": "gpu-deploy", "message": "[23] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:08.084269", "level": "INFO", "logger": "gpu-deploy", "message": "    [\u2717] 23 FabricManager: \u672a\u914d\u7f6e"}
+{"timestamp": "2026-05-18T17:23:08.084499", "level": "INFO", "logger": "gpu-deploy", "message": "[24] [10.0.16.211] \u6267\u884c: /usr/local/cuda/bin/nvcc -V 2>/dev/null | grep 'release' | awk '{print $6}'"}
+{"timestamp": "2026-05-18T17:23:08.171886", "level": "INFO", "logger": "gpu-deploy", "message": "[24] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:23:08.172056", "level": "INFO", "logger": "gpu-deploy", "message": "  V13.0.48"}
+{"timestamp": "2026-05-18T17:23:08.172183", "level": "INFO", "logger": "gpu-deploy", "message": "[24] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:08.172342", "level": "INFO", "logger": "gpu-deploy", "message": "[24] [10.0.22.143] \u6267\u884c: /usr/local/cuda/bin/nvcc -V 2>/dev/null | grep 'release' | awk '{print $6}'"}
+{"timestamp": "2026-05-18T17:23:08.259810", "level": "INFO", "logger": "gpu-deploy", "message": "[24] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:23:08.259978", "level": "INFO", "logger": "gpu-deploy", "message": "  V13.0.48"}
+{"timestamp": "2026-05-18T17:23:08.260105", "level": "INFO", "logger": "gpu-deploy", "message": "[24] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:08.260249", "level": "INFO", "logger": "gpu-deploy", "message": "    [\u2713] 24 CUDA Toolkit: \u6240\u6709\u8282\u70b9\u5df2\u914d\u7f6e"}
+{"timestamp": "2026-05-18T17:23:08.260391", "level": "INFO", "logger": "gpu-deploy", "message": "[25] [10.0.16.211] \u6267\u884c: test -d /usr/local/nccl/lib && ls /usr/local/nccl/lib/ 2>/dev/null | head -3"}
+{"timestamp": "2026-05-18T17:23:08.347705", "level": "INFO", "logger": "gpu-deploy", "message": "[25] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:23:08.347895", "level": "INFO", "logger": "gpu-deploy", "message": "  libnccl.so"}
+{"timestamp": "2026-05-18T17:23:08.348015", "level": "INFO", "logger": "gpu-deploy", "message": "  libnccl.so.2"}
+{"timestamp": "2026-05-18T17:23:08.348125", "level": "INFO", "logger": "gpu-deploy", "message": "  libnccl.so.2.30.4"}
+{"timestamp": "2026-05-18T17:23:08.348381", "level": "INFO", "logger": "gpu-deploy", "message": "[25] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:08.348598", "level": "INFO", "logger": "gpu-deploy", "message": "[25] [10.0.22.143] \u6267\u884c: test -d /usr/local/nccl/lib && ls /usr/local/nccl/lib/ 2>/dev/null | head -3"}
+{"timestamp": "2026-05-18T17:23:08.435623", "level": "INFO", "logger": "gpu-deploy", "message": "[25] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:23:08.435789", "level": "INFO", "logger": "gpu-deploy", "message": "  libnccl.so"}
+{"timestamp": "2026-05-18T17:23:08.435904", "level": "INFO", "logger": "gpu-deploy", "message": "  libnccl.so.2"}
+{"timestamp": "2026-05-18T17:23:08.436014", "level": "INFO", "logger": "gpu-deploy", "message": "  libnccl.so.2.30.4"}
+{"timestamp": "2026-05-18T17:23:08.436151", "level": "INFO", "logger": "gpu-deploy", "message": "[25] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:08.436287", "level": "INFO", "logger": "gpu-deploy", "message": "    [\u2713] 25 NCCL: \u6240\u6709\u8282\u70b9\u5df2\u914d\u7f6e"}
+{"timestamp": "2026-05-18T17:23:08.436420", "level": "INFO", "logger": "gpu-deploy", "message": "[26] [10.0.16.211] \u6267\u884c: rdma dev show 2>/dev/null | grep -E 'mlx5_[0-9]' | wc -l"}
+{"timestamp": "2026-05-18T17:23:08.523713", "level": "INFO", "logger": "gpu-deploy", "message": "[26] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:23:08.523881", "level": "INFO", "logger": "gpu-deploy", "message": "  0"}
+{"timestamp": "2026-05-18T17:23:08.524004", "level": "INFO", "logger": "gpu-deploy", "message": "[26] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:08.524263", "level": "INFO", "logger": "gpu-deploy", "message": "[26] [10.0.16.211] \u6267\u884c: rdma dev show 2>/dev/null | wc -l"}
+{"timestamp": "2026-05-18T17:23:08.611594", "level": "INFO", "logger": "gpu-deploy", "message": "[26] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:23:08.611927", "level": "INFO", "logger": "gpu-deploy", "message": "  0"}
+{"timestamp": "2026-05-18T17:23:08.612083", "level": "INFO", "logger": "gpu-deploy", "message": "[26] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:08.612223", "level": "INFO", "logger": "gpu-deploy", "message": "[26] [10.0.22.143] \u6267\u884c: rdma dev show 2>/dev/null | grep -E 'mlx5_[0-9]' | wc -l"}
+{"timestamp": "2026-05-18T17:23:08.699425", "level": "INFO", "logger": "gpu-deploy", "message": "[26] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:23:08.699592", "level": "INFO", "logger": "gpu-deploy", "message": "  0"}
+{"timestamp": "2026-05-18T17:23:08.699714", "level": "INFO", "logger": "gpu-deploy", "message": "[26] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:08.699844", "level": "INFO", "logger": "gpu-deploy", "message": "[26] [10.0.22.143] \u6267\u884c: rdma dev show 2>/dev/null | wc -l"}
+{"timestamp": "2026-05-18T17:23:08.787669", "level": "INFO", "logger": "gpu-deploy", "message": "[26] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:23:08.788119", "level": "INFO", "logger": "gpu-deploy", "message": "  0"}
+{"timestamp": "2026-05-18T17:23:08.788394", "level": "INFO", "logger": "gpu-deploy", "message": "[26] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:08.788635", "level": "INFO", "logger": "gpu-deploy", "message": "    [\u2713] 26 RDMA\u7f51\u5361\u91cd\u547d\u540d: \u6240\u6709\u8282\u70b9\u5df2\u914d\u7f6e"}
+{"timestamp": "2026-05-18T17:23:08.788879", "level": "INFO", "logger": "gpu-deploy", "message": "    [\u25cb] 26b \u4ee5\u592a\u7f51\u91cd\u547d\u540d: \u8df3\u8fc7\u68c0\u67e5\uff08\u65e0\u68c0\u67e5\u65b9\u6cd5\uff09"}
+{"timestamp": "2026-05-18T17:23:08.789105", "level": "INFO", "logger": "gpu-deploy", "message": "[27] [10.0.16.211] \u6267\u884c: systemctl is-enabled nvidia-persistence-mode.service 2>/dev/null || echo 'disabled'"}
+{"timestamp": "2026-05-18T17:23:08.875644", "level": "INFO", "logger": "gpu-deploy", "message": "[27] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:23:08.875829", "level": "INFO", "logger": "gpu-deploy", "message": "  disabled"}
+{"timestamp": "2026-05-18T17:23:08.875978", "level": "INFO", "logger": "gpu-deploy", "message": "[27] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:08.876102", "level": "INFO", "logger": "gpu-deploy", "message": "[27] [10.0.16.211] \u6267\u884c: nvidia-smi -q 2>/dev/null | grep -c 'Persistence Mode.*Enabled'"}
+{"timestamp": "2026-05-18T17:23:10.862866", "level": "INFO", "logger": "gpu-deploy", "message": "[27] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:23:10.863117", "level": "INFO", "logger": "gpu-deploy", "message": "  0"}
+{"timestamp": "2026-05-18T17:23:10.863401", "level": "INFO", "logger": "gpu-deploy", "message": "[27] [10.0.16.211] \u2717 exit_code=1, \u8017\u65f6=1.99s"}
+{"timestamp": "2026-05-18T17:23:10.863668", "level": "INFO", "logger": "gpu-deploy", "message": "[27] [10.0.22.143] \u6267\u884c: systemctl is-enabled nvidia-persistence-mode.service 2>/dev/null || echo 'disabled'"}
+{"timestamp": "2026-05-18T17:23:10.947581", "level": "INFO", "logger": "gpu-deploy", "message": "[27] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:23:10.947796", "level": "INFO", "logger": "gpu-deploy", "message": "  disabled"}
+{"timestamp": "2026-05-18T17:23:10.948049", "level": "INFO", "logger": "gpu-deploy", "message": "[27] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.08s"}
+{"timestamp": "2026-05-18T17:23:10.948290", "level": "INFO", "logger": "gpu-deploy", "message": "[27] [10.0.22.143] \u6267\u884c: nvidia-smi -q 2>/dev/null | grep -c 'Persistence Mode.*Enabled'"}
+{"timestamp": "2026-05-18T17:23:12.948903", "level": "INFO", "logger": "gpu-deploy", "message": "[27] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:23:12.949139", "level": "INFO", "logger": "gpu-deploy", "message": "  0"}
+{"timestamp": "2026-05-18T17:23:12.949282", "level": "INFO", "logger": "gpu-deploy", "message": "[27] [10.0.22.143] \u2717 exit_code=1, \u8017\u65f6=2.00s"}
+{"timestamp": "2026-05-18T17:23:12.949427", "level": "INFO", "logger": "gpu-deploy", "message": "    [\u2717] 27 GPU\u6301\u4e45\u6a21\u5f0f: \u672a\u914d\u7f6e"}
+{"timestamp": "2026-05-18T17:23:12.949603", "level": "INFO", "logger": "gpu-deploy", "message": "[28] [10.0.16.211] \u6267\u884c: test -f /etc/modules-load.d/nvidia.conf && test -f /etc/modprobe.d/nvidia.conf && echo 'configured' || echo 'not_configured'"}
+{"timestamp": "2026-05-18T17:23:13.035574", "level": "INFO", "logger": "gpu-deploy", "message": "[28] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:23:13.035750", "level": "INFO", "logger": "gpu-deploy", "message": "  not_configured"}
+{"timestamp": "2026-05-18T17:23:13.035877", "level": "INFO", "logger": "gpu-deploy", "message": "[28] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:13.036002", "level": "INFO", "logger": "gpu-deploy", "message": "[28] [10.0.16.211] \u6267\u884c: lsmod | grep -c nvidia_peermem 2>/dev/null || true"}
+{"timestamp": "2026-05-18T17:23:13.123484", "level": "INFO", "logger": "gpu-deploy", "message": "[28] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:23:13.123694", "level": "INFO", "logger": "gpu-deploy", "message": "  0"}
+{"timestamp": "2026-05-18T17:23:13.123831", "level": "INFO", "logger": "gpu-deploy", "message": "[28] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:13.123963", "level": "INFO", "logger": "gpu-deploy", "message": "[28] [10.0.22.143] \u6267\u884c: test -f /etc/modules-load.d/nvidia.conf && test -f /etc/modprobe.d/nvidia.conf && echo 'configured' || echo 'not_configured'"}
+{"timestamp": "2026-05-18T17:23:13.211686", "level": "INFO", "logger": "gpu-deploy", "message": "[28] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:23:13.211875", "level": "INFO", "logger": "gpu-deploy", "message": "  not_configured"}
+{"timestamp": "2026-05-18T17:23:13.212016", "level": "INFO", "logger": "gpu-deploy", "message": "[28] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:13.212149", "level": "INFO", "logger": "gpu-deploy", "message": "[28] [10.0.22.143] \u6267\u884c: lsmod | grep -c nvidia_peermem 2>/dev/null || true"}
+{"timestamp": "2026-05-18T17:23:13.299386", "level": "INFO", "logger": "gpu-deploy", "message": "[28] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:23:13.299675", "level": "INFO", "logger": "gpu-deploy", "message": "  0"}
+{"timestamp": "2026-05-18T17:23:13.299842", "level": "INFO", "logger": "gpu-deploy", "message": "[28] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:13.299993", "level": "INFO", "logger": "gpu-deploy", "message": "    [\u2713] 28 NVIDIA\u5185\u6838\u6a21\u5757: \u6240\u6709\u8282\u70b9\u5df2\u914d\u7f6e"}
+{"timestamp": "2026-05-18T17:23:13.300155", "level": "INFO", "logger": "gpu-deploy", "message": "[29] [10.0.16.211] \u6267\u884c: test -x /usr/local/bin/disable_acs.sh && echo 'script_exists' || echo 'no_script'"}
+{"timestamp": "2026-05-18T17:23:13.387693", "level": "INFO", "logger": "gpu-deploy", "message": "[29] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:23:13.387855", "level": "INFO", "logger": "gpu-deploy", "message": "  no_script"}
+{"timestamp": "2026-05-18T17:23:13.388088", "level": "INFO", "logger": "gpu-deploy", "message": "[29] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:13.388227", "level": "INFO", "logger": "gpu-deploy", "message": "[29] [10.0.22.143] \u6267\u884c: test -x /usr/local/bin/disable_acs.sh && echo 'script_exists' || echo 'no_script'"}
+{"timestamp": "2026-05-18T17:23:13.475435", "level": "INFO", "logger": "gpu-deploy", "message": "[29] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:23:13.475921", "level": "INFO", "logger": "gpu-deploy", "message": "  no_script"}
+{"timestamp": "2026-05-18T17:23:13.476052", "level": "INFO", "logger": "gpu-deploy", "message": "[29] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:13.476196", "level": "INFO", "logger": "gpu-deploy", "message": "    [\u2717] 29 \u7981\u7528ACS: \u672a\u914d\u7f6e"}
+{"timestamp": "2026-05-18T17:23:13.476349", "level": "INFO", "logger": "gpu-deploy", "message": "[30] [10.0.16.211] \u6267\u884c: systemctl is-active chrony 2>/dev/null || true"}
+{"timestamp": "2026-05-18T17:23:13.563920", "level": "INFO", "logger": "gpu-deploy", "message": "[30] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:23:13.564118", "level": "INFO", "logger": "gpu-deploy", "message": "  inactive"}
+{"timestamp": "2026-05-18T17:23:13.564321", "level": "INFO", "logger": "gpu-deploy", "message": "[30] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:13.564482", "level": "INFO", "logger": "gpu-deploy", "message": "[30] [10.0.16.211] \u6267\u884c: which chronyc 2>/dev/null || true"}
+{"timestamp": "2026-05-18T17:23:13.655395", "level": "INFO", "logger": "gpu-deploy", "message": "[30] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:13.655636", "level": "INFO", "logger": "gpu-deploy", "message": "[30] [10.0.22.143] \u6267\u884c: systemctl is-active chrony 2>/dev/null || true"}
+{"timestamp": "2026-05-18T17:23:13.743620", "level": "INFO", "logger": "gpu-deploy", "message": "[30] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:23:13.743910", "level": "INFO", "logger": "gpu-deploy", "message": "  inactive"}
+{"timestamp": "2026-05-18T17:23:13.744122", "level": "INFO", "logger": "gpu-deploy", "message": "[30] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:13.744342", "level": "INFO", "logger": "gpu-deploy", "message": "[30] [10.0.22.143] \u6267\u884c: which chronyc 2>/dev/null || true"}
+{"timestamp": "2026-05-18T17:23:13.831402", "level": "INFO", "logger": "gpu-deploy", "message": "[30] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:13.831667", "level": "INFO", "logger": "gpu-deploy", "message": "    [\u2717] 30 \u65f6\u95f4\u540c\u6b65: \u672a\u914d\u7f6e"}
+{"timestamp": "2026-05-18T17:23:13.831908", "level": "INFO", "logger": "gpu-deploy", "message": "\u4f7f\u7528\u7ba1\u7406\u7f51IP\u914d\u7f6eNFS: 10.0.16.211"}
+{"timestamp": "2026-05-18T17:23:13.832115", "level": "INFO", "logger": "gpu-deploy", "message": "[34] [10.0.16.211] \u6267\u884c: systemctl is-active nfs-server 2>/dev/null || echo 'inactive'"}
+{"timestamp": "2026-05-18T17:23:13.919723", "level": "INFO", "logger": "gpu-deploy", "message": "[34] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:23:13.919996", "level": "INFO", "logger": "gpu-deploy", "message": "  inactive"}
+{"timestamp": "2026-05-18T17:23:13.920191", "level": "INFO", "logger": "gpu-deploy", "message": "  inactive"}
+{"timestamp": "2026-05-18T17:23:13.920377", "level": "INFO", "logger": "gpu-deploy", "message": "[34] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:13.920618", "level": "INFO", "logger": "gpu-deploy", "message": "\u4f7f\u7528\u7ba1\u7406\u7f51IP\u914d\u7f6eNFS: 10.0.16.211"}
+{"timestamp": "2026-05-18T17:23:13.920803", "level": "INFO", "logger": "gpu-deploy", "message": "[34] [10.0.22.143] \u6267\u884c: mountpoint -q /ssd/nfs && echo 'mounted' || echo 'not_mounted'"}
+{"timestamp": "2026-05-18T17:23:14.007516", "level": "INFO", "logger": "gpu-deploy", "message": "[34] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:23:14.007732", "level": "INFO", "logger": "gpu-deploy", "message": "  not_mounted"}
+{"timestamp": "2026-05-18T17:23:14.007892", "level": "INFO", "logger": "gpu-deploy", "message": "[34] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:14.008107", "level": "INFO", "logger": "gpu-deploy", "message": "    [\u2717] 34 NFS\u914d\u7f6e: \u672a\u914d\u7f6e"}
+{"timestamp": "2026-05-18T17:23:14.008290", "level": "INFO", "logger": "gpu-deploy", "message": "\n[4/4] \u8fd0\u884c\u5065\u5eb7\u68c0\u67e5..."}
+{"timestamp": "2026-05-18T17:23:14.008485", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] \u6267\u884c: nvidia-smi -q 2>/dev/null | grep -c 'Persistence Mode.*Enabled' || true"}
+{"timestamp": "2026-05-18T17:23:15.973674", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:23:15.973803", "level": "INFO", "logger": "gpu-deploy", "message": "  0"}
+{"timestamp": "2026-05-18T17:23:15.973860", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=1.96s"}
+{"timestamp": "2026-05-18T17:23:15.973935", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] \u6267\u884c: nvidia-smi -q 2>/dev/null | grep -c 'Persistence Mode.*Enabled' || true"}
+{"timestamp": "2026-05-18T17:23:17.975506", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:23:17.975938", "level": "INFO", "logger": "gpu-deploy", "message": "  0"}
+{"timestamp": "2026-05-18T17:23:17.976102", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=2.00s"}
+{"timestamp": "2026-05-18T17:23:17.976391", "level": "INFO", "logger": "gpu-deploy", "message": "    [\u2717] GPU\u6301\u4e45\u6a21\u5f0f: \u5f02\u5e38\u8282\u70b9: 10.0.16.211(0 GPUs in persistence mode), 10.0.22.143(0 GPUs in persistence mode)"}
+{"timestamp": "2026-05-18T17:23:17.976762", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] \u6267\u884c: nvidia-smi --query-gpu=index,ecc.errors.uncorrected.volatile.total --format=csv,noheader,nounits 2>/dev/null || echo 'error'"}
+{"timestamp": "2026-05-18T17:23:19.885843", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:23:19.886190", "level": "INFO", "logger": "gpu-deploy", "message": "  0, [N/A]"}
+{"timestamp": "2026-05-18T17:23:19.886344", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=1.91s"}
+{"timestamp": "2026-05-18T17:23:19.886695", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] \u6267\u884c: nvidia-smi --query-gpu=index,ecc.errors.uncorrected.volatile.total --format=csv,noheader,nounits 2>/dev/null || echo 'error'"}
+{"timestamp": "2026-05-18T17:23:21.827816", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:23:21.827991", "level": "INFO", "logger": "gpu-deploy", "message": "  0, [N/A]"}
+{"timestamp": "2026-05-18T17:23:21.828122", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=1.94s"}
+{"timestamp": "2026-05-18T17:23:21.828300", "level": "INFO", "logger": "gpu-deploy", "message": "    [\u2713] GPU ECC\u9519\u8bef: \u6240\u6709\u8282\u70b9\u6b63\u5e38"}
+{"timestamp": "2026-05-18T17:23:21.828463", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] \u6267\u884c: nvidia-smi --query-gpu=index,temperature.gpu --format=csv,noheader,nounits 2>/dev/null || echo 'error'"}
+{"timestamp": "2026-05-18T17:23:23.732044", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:23:23.732248", "level": "INFO", "logger": "gpu-deploy", "message": "  0, 41"}
+{"timestamp": "2026-05-18T17:23:23.732375", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=1.90s"}
+{"timestamp": "2026-05-18T17:23:23.732512", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] \u6267\u884c: nvidia-smi --query-gpu=index,temperature.gpu --format=csv,noheader,nounits 2>/dev/null || echo 'error'"}
+{"timestamp": "2026-05-18T17:23:25.653529", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:23:25.653697", "level": "INFO", "logger": "gpu-deploy", "message": "  0, 38"}
+{"timestamp": "2026-05-18T17:23:25.653810", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=1.92s"}
+{"timestamp": "2026-05-18T17:23:25.653965", "level": "INFO", "logger": "gpu-deploy", "message": "    [\u2713] GPU\u6e29\u5ea6: \u6240\u6709\u8282\u70b9\u6b63\u5e38"}
+{"timestamp": "2026-05-18T17:23:25.654082", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] \u6267\u884c: nvidia-smi 2>/dev/null | grep -c 'ERR!' || true"}
+{"timestamp": "2026-05-18T17:23:27.560601", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:23:27.560852", "level": "INFO", "logger": "gpu-deploy", "message": "  0"}
+{"timestamp": "2026-05-18T17:23:27.561278", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=1.91s"}
+{"timestamp": "2026-05-18T17:23:27.561547", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] \u6267\u884c: nvidia-smi 2>/dev/null | grep -c 'ERR!' || true"}
+{"timestamp": "2026-05-18T17:23:29.501882", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:23:29.502071", "level": "INFO", "logger": "gpu-deploy", "message": "  0"}
+{"timestamp": "2026-05-18T17:23:29.502253", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=1.94s"}
+{"timestamp": "2026-05-18T17:23:29.502518", "level": "INFO", "logger": "gpu-deploy", "message": "    [\u2713] GPU\u529f\u7387: \u6240\u6709\u8282\u70b9\u6b63\u5e38"}
+{"timestamp": "2026-05-18T17:23:29.502753", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] \u6267\u884c: ibdev2netdev 2>/dev/null | grep -c -v down || true"}
+{"timestamp": "2026-05-18T17:23:29.587405", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:23:29.587775", "level": "INFO", "logger": "gpu-deploy", "message": "  0"}
+{"timestamp": "2026-05-18T17:23:29.587908", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.08s"}
+{"timestamp": "2026-05-18T17:23:29.588024", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] \u6267\u884c: ibdev2netdev 2>/dev/null | grep -i down | wc -l || true"}
+{"timestamp": "2026-05-18T17:23:29.675530", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:23:29.675751", "level": "INFO", "logger": "gpu-deploy", "message": "  0"}
+{"timestamp": "2026-05-18T17:23:29.675885", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:29.676015", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] \u6267\u884c: ibdev2netdev 2>/dev/null | wc -l || true"}
+{"timestamp": "2026-05-18T17:23:29.763589", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:23:29.763871", "level": "INFO", "logger": "gpu-deploy", "message": "  0"}
+{"timestamp": "2026-05-18T17:23:29.764083", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:29.764292", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] \u6267\u884c: ibdev2netdev 2>/dev/null | grep -c -v down || true"}
+{"timestamp": "2026-05-18T17:23:29.855606", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:23:29.855818", "level": "INFO", "logger": "gpu-deploy", "message": "  0"}
+{"timestamp": "2026-05-18T17:23:29.856024", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:29.856222", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] \u6267\u884c: ibdev2netdev 2>/dev/null | grep -i down | wc -l || true"}
+{"timestamp": "2026-05-18T17:23:29.943583", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:23:29.943803", "level": "INFO", "logger": "gpu-deploy", "message": "  0"}
+{"timestamp": "2026-05-18T17:23:29.944037", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:29.944234", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] \u6267\u884c: ibdev2netdev 2>/dev/null | wc -l || true"}
+{"timestamp": "2026-05-18T17:23:30.031840", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:23:30.032194", "level": "INFO", "logger": "gpu-deploy", "message": "  0"}
+{"timestamp": "2026-05-18T17:23:30.032420", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:30.032596", "level": "INFO", "logger": "gpu-deploy", "message": "    [\u25cb] RDMA\u94fe\u8def\u72b6\u6001: \u6240\u6709\u8282\u70b9\u8df3\u8fc7"}
+{"timestamp": "2026-05-18T17:23:30.032734", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] \u6267\u884c: systemctl is-active nvidia-fabricmanager 2>/dev/null || true"}
+{"timestamp": "2026-05-18T17:23:30.119447", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:23:30.119649", "level": "INFO", "logger": "gpu-deploy", "message": "  inactive"}
+{"timestamp": "2026-05-18T17:23:30.119769", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:30.119896", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] \u6267\u884c: which nv-fabricmanager 2>/dev/null || true"}
+{"timestamp": "2026-05-18T17:23:30.211532", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:30.211745", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] \u6267\u884c: systemctl is-active nvidia-fabricmanager 2>/dev/null || true"}
+{"timestamp": "2026-05-18T17:23:30.299554", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:23:30.299722", "level": "INFO", "logger": "gpu-deploy", "message": "  inactive"}
+{"timestamp": "2026-05-18T17:23:30.299862", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:30.299996", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] \u6267\u884c: which nv-fabricmanager 2>/dev/null || true"}
+{"timestamp": "2026-05-18T17:23:30.387470", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:30.387676", "level": "INFO", "logger": "gpu-deploy", "message": "    [\u25cb] FabricManager\u670d\u52a1: \u6240\u6709\u8282\u70b9\u8df3\u8fc7"}
+{"timestamp": "2026-05-18T17:23:30.387843", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] \u6267\u884c: sudo sh -c \"lspci -vvv 2>/dev/null | grep -c 'ACSCtl.*SrcValid+' || true\""}
+{"timestamp": "2026-05-18T17:23:30.574154", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:23:30.574276", "level": "INFO", "logger": "gpu-deploy", "message": "  0"}
+{"timestamp": "2026-05-18T17:23:30.574349", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.19s"}
+{"timestamp": "2026-05-18T17:23:30.574415", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] \u6267\u884c: sudo sh -c \"lspci -vvv 2>/dev/null | grep -c 'ACSCtl.*SrcValid+' || true\""}
+{"timestamp": "2026-05-18T17:23:30.761224", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:23:30.761434", "level": "INFO", "logger": "gpu-deploy", "message": "  0"}
+{"timestamp": "2026-05-18T17:23:30.761574", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.19s"}
+{"timestamp": "2026-05-18T17:23:30.761741", "level": "INFO", "logger": "gpu-deploy", "message": "    [\u2713] ACS\u72b6\u6001: \u6240\u6709\u8282\u70b9\u6b63\u5e38"}
+{"timestamp": "2026-05-18T17:23:30.761904", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] \u6267\u884c: lsmod | grep -c nvidia_peermem || true"}
+{"timestamp": "2026-05-18T17:23:30.847800", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] stdout:"}
+{"timestamp": "2026-05-18T17:23:30.847971", "level": "INFO", "logger": "gpu-deploy", "message": "  0"}
+{"timestamp": "2026-05-18T17:23:30.848096", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:30.848220", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] \u6267\u884c: test -f /etc/modules-load.d/nvidia.conf && echo 'configured' || true"}
+{"timestamp": "2026-05-18T17:23:30.935408", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:30.935596", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] \u6267\u884c: lsmod | grep -c nvidia_peermem || true"}
+{"timestamp": "2026-05-18T17:23:31.023486", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] stdout:"}
+{"timestamp": "2026-05-18T17:23:31.023653", "level": "INFO", "logger": "gpu-deploy", "message": "  0"}
+{"timestamp": "2026-05-18T17:23:31.023778", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:31.023917", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] \u6267\u884c: test -f /etc/modules-load.d/nvidia.conf && echo 'configured' || true"}
+{"timestamp": "2026-05-18T17:23:31.111635", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:31.111867", "level": "INFO", "logger": "gpu-deploy", "message": "    [\u2717] nvidia_peermem\u6a21\u5757: \u5f02\u5e38\u8282\u70b9: 10.0.16.211(\u672a\u914d\u7f6e), 10.0.22.143(\u672a\u914d\u7f6e)"}
+{"timestamp": "2026-05-18T17:23:31.111935", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] \u6267\u884c: chronyc tracking 2>/dev/null | grep 'Last offset' | awk '{print $4}' || echo 'unknown'"}
+{"timestamp": "2026-05-18T17:23:31.199497", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.16.211] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:31.199866", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] \u6267\u884c: chronyc tracking 2>/dev/null | grep 'Last offset' | awk '{print $4}' || echo 'unknown'"}
+{"timestamp": "2026-05-18T17:23:31.291510", "level": "INFO", "logger": "gpu-deploy", "message": "[99] [10.0.22.143] \u2713 exit_code=0, \u8017\u65f6=0.09s"}
+{"timestamp": "2026-05-18T17:23:31.291883", "level": "INFO", "logger": "gpu-deploy", "message": "    [\u2717] \u65f6\u95f4\u540c\u6b65: \u5f02\u5e38\u8282\u70b9: 10.0.16.211, 10.0.22.143"}
+{"timestamp": "2026-05-18T17:23:31.292268", "level": "INFO", "logger": "gpu-deploy", "message": "\n============================================================"}
+{"timestamp": "2026-05-18T17:23:31.292517", "level": "INFO", "logger": "gpu-deploy", "message": "\u9a8c\u8bc1\u62a5\u544a\u6458\u8981"}
+{"timestamp": "2026-05-18T17:23:31.292728", "level": "INFO", "logger": "gpu-deploy", "message": "============================================================"}
+{"timestamp": "2026-05-18T17:23:31.292930", "level": "INFO", "logger": "gpu-deploy", "message": "\u96c6\u7fa4\u540d\u79f0: gpu-test-cluster"}
+{"timestamp": "2026-05-18T17:23:31.293134", "level": "INFO", "logger": "gpu-deploy", "message": "\u68c0\u67e5\u65f6\u95f4: 2026-05-18T17:22:44.165695"}
+{"timestamp": "2026-05-18T17:23:31.293256", "level": "INFO", "logger": "gpu-deploy", "message": "\u68c0\u67e5\u9879\u603b\u6570: 42"}
+{"timestamp": "2026-05-18T17:23:31.293371", "level": "INFO", "logger": "gpu-deploy", "message": "  \u901a\u8fc7: 26"}
+{"timestamp": "2026-05-18T17:23:31.293486", "level": "INFO", "logger": "gpu-deploy", "message": "  \u5931\u8d25: 13"}
+{"timestamp": "2026-05-18T17:23:31.293707", "level": "INFO", "logger": "gpu-deploy", "message": "  \u8b66\u544a: 0"}
+{"timestamp": "2026-05-18T17:23:31.293828", "level": "INFO", "logger": "gpu-deploy", "message": "  \u8df3\u8fc7: 3"}
+{"timestamp": "2026-05-18T17:23:31.293942", "level": "INFO", "logger": "gpu-deploy", "message": "------------------------------------------------------------"}
+{"timestamp": "2026-05-18T17:23:31.294057", "level": "INFO", "logger": "gpu-deploy", "message": "\u7f51\u7edc\u72b6\u6001: unreachable"}
+{"timestamp": "2026-05-18T17:23:31.294295", "level": "INFO", "logger": "gpu-deploy", "message": "\u8bbe\u5907\u72b6\u6001: all_ok"}
+{"timestamp": "2026-05-18T17:23:31.294417", "level": "INFO", "logger": "gpu-deploy", "message": "============================================================"}
+{"timestamp": "2026-05-18T17:23:31.294530", "level": "INFO", "logger": "gpu-deploy", "message": "\u9a8c\u8bc1\u5931\u8d25: 26 \u901a\u8fc7, 13 \u5931\u8d25, 0 \u8b66\u544a"}
+{"timestamp": "2026-05-18T17:23:31.294738", "level": "INFO", "logger": "gpu-deploy", "message": "============================================================"}
+{"timestamp": "2026-05-18T17:23:31.294872", "level": "INFO", "logger": "gpu-deploy", "message": "\n\u5931\u8d25\u7684\u68c0\u67e5\u9879:"}
+{"timestamp": "2026-05-18T17:23:31.294989", "level": "INFO", "logger": "gpu-deploy", "message": "  - step_01: \u4f9d\u8d56\u8f6f\u4ef6\u5305: \u672a\u914d\u7f6e"}
+{"timestamp": "2026-05-18T17:23:31.295111", "level": "INFO", "logger": "gpu-deploy", "message": "      [10.0.16.211] \u7f3a\u5931\u4f9d\u8d56\u5305: pdsh, cmake"}
+{"timestamp": "2026-05-18T17:23:31.295229", "level": "INFO", "logger": "gpu-deploy", "message": "      [10.0.22.143] \u7f3a\u5931\u4f9d\u8d56\u5305: pdsh, cmake"}
+{"timestamp": "2026-05-18T17:23:31.295344", "level": "INFO", "logger": "gpu-deploy", "message": "  - step_13: \u6587\u4ef6\u63cf\u8ff0\u7b26: \u672a\u914d\u7f6e"}
+{"timestamp": "2026-05-18T17:23:31.295460", "level": "INFO", "logger": "gpu-deploy", "message": "      [10.0.16.211] limits.conf \u68c0\u67e5\u5931\u8d25"}
+{"timestamp": "2026-05-18T17:23:31.295573", "level": "INFO", "logger": "gpu-deploy", "message": "      [10.0.22.143] limits.conf \u68c0\u67e5\u5931\u8d25"}
+{"timestamp": "2026-05-18T17:23:31.295684", "level": "INFO", "logger": "gpu-deploy", "message": "  - step_19: vmcore\u548c\u4f11\u7720: \u672a\u914d\u7f6e"}
+{"timestamp": "2026-05-18T17:23:31.295798", "level": "INFO", "logger": "gpu-deploy", "message": "      [10.0.16.211] vmcore sysctl\u914d\u7f6e\u4e0d\u5b58\u5728"}
+{"timestamp": "2026-05-18T17:23:31.295911", "level": "INFO", "logger": "gpu-deploy", "message": "      [10.0.22.143] vmcore sysctl\u914d\u7f6e\u4e0d\u5b58\u5728"}
+{"timestamp": "2026-05-18T17:23:31.296045", "level": "INFO", "logger": "gpu-deploy", "message": "  - step_20: Mellanox\u9a71\u52a8: \u672a\u914d\u7f6e"}
+{"timestamp": "2026-05-18T17:23:31.296160", "level": "INFO", "logger": "gpu-deploy", "message": "      [10.0.16.211] MLNX_OFED\u672a\u5b89\u88c5"}
+{"timestamp": "2026-05-18T17:23:31.296272", "level": "INFO", "logger": "gpu-deploy", "message": "      [10.0.22.143] MLNX_OFED\u672a\u5b89\u88c5"}
+{"timestamp": "2026-05-18T17:23:31.296385", "level": "INFO", "logger": "gpu-deploy", "message": "  - step_21: \u7981\u7528nouveau: \u672a\u914d\u7f6e"}
+{"timestamp": "2026-05-18T17:23:31.296500", "level": "INFO", "logger": "gpu-deploy", "message": "      [10.0.16.211] nouveau\u9ed1\u540d\u5355\u914d\u7f6e\u4e0d\u5b58\u5728"}
+{"timestamp": "2026-05-18T17:23:31.296613", "level": "INFO", "logger": "gpu-deploy", "message": "      [10.0.22.143] nouveau\u9ed1\u540d\u5355\u914d\u7f6e\u4e0d\u5b58\u5728"}
+{"timestamp": "2026-05-18T17:23:31.296719", "level": "INFO", "logger": "gpu-deploy", "message": "  - step_23: FabricManager: \u672a\u914d\u7f6e"}
+{"timestamp": "2026-05-18T17:23:31.296831", "level": "INFO", "logger": "gpu-deploy", "message": "      [10.0.16.211] \u672a\u5b89\u88c5"}
+{"timestamp": "2026-05-18T17:23:31.296943", "level": "INFO", "logger": "gpu-deploy", "message": "      [10.0.22.143] \u672a\u5b89\u88c5"}
+{"timestamp": "2026-05-18T17:23:31.297048", "level": "INFO", "logger": "gpu-deploy", "message": "  - step_27: GPU\u6301\u4e45\u6a21\u5f0f: \u672a\u914d\u7f6e"}
+{"timestamp": "2026-05-18T17:23:31.297161", "level": "INFO", "logger": "gpu-deploy", "message": "      [10.0.16.211] GPU\u6301\u4e45\u6a21\u5f0f\u672a\u914d\u7f6e"}
+{"timestamp": "2026-05-18T17:23:31.297277", "level": "INFO", "logger": "gpu-deploy", "message": "      [10.0.22.143] GPU\u6301\u4e45\u6a21\u5f0f\u672a\u914d\u7f6e"}
+{"timestamp": "2026-05-18T17:23:31.297390", "level": "INFO", "logger": "gpu-deploy", "message": "  - step_29: \u7981\u7528ACS: \u672a\u914d\u7f6e"}
+{"timestamp": "2026-05-18T17:23:31.297602", "level": "INFO", "logger": "gpu-deploy", "message": "      [10.0.16.211] ACS\u7981\u7528\u811a\u672c\u4e0d\u5b58\u5728"}
+{"timestamp": "2026-05-18T17:23:31.297720", "level": "INFO", "logger": "gpu-deploy", "message": "      [10.0.22.143] ACS\u7981\u7528\u811a\u672c\u4e0d\u5b58\u5728"}
+{"timestamp": "2026-05-18T17:23:31.297832", "level": "INFO", "logger": "gpu-deploy", "message": "  - step_30: \u65f6\u95f4\u540c\u6b65: \u672a\u914d\u7f6e"}
+{"timestamp": "2026-05-18T17:23:31.297944", "level": "INFO", "logger": "gpu-deploy", "message": "      [10.0.16.211] chrony\u672a\u5b89\u88c5"}
+{"timestamp": "2026-05-18T17:23:31.298048", "level": "INFO", "logger": "gpu-deploy", "message": "      [10.0.22.143] chrony\u672a\u5b89\u88c5"}
+{"timestamp": "2026-05-18T17:23:31.298150", "level": "INFO", "logger": "gpu-deploy", "message": "  - step_34: NFS\u914d\u7f6e: \u672a\u914d\u7f6e"}
+{"timestamp": "2026-05-18T17:23:31.298309", "level": "INFO", "logger": "gpu-deploy", "message": "      [10.0.16.211] NFS\u670d\u52a1\u5668\u672a\u8fd0\u884c"}
+{"timestamp": "2026-05-18T17:23:31.298418", "level": "INFO", "logger": "gpu-deploy", "message": "      [10.0.22.143] NFS\u5ba2\u6237\u7aef\u672a\u6302\u8f7d: /ssd/nfs"}
+{"timestamp": "2026-05-18T17:23:31.298514", "level": "INFO", "logger": "gpu-deploy", "message": "  - GPU\u6301\u4e45\u6a21\u5f0f: \u5f02\u5e38\u8282\u70b9: 10.0.16.211(0 GPUs in persistence mode), 10.0.22.143(0 GPUs in persistence mode)"}
+{"timestamp": "2026-05-18T17:23:31.298612", "level": "INFO", "logger": "gpu-deploy", "message": "      [10.0.16.211] 0 GPUs in persistence mode"}
+{"timestamp": "2026-05-18T17:23:31.298731", "level": "INFO", "logger": "gpu-deploy", "message": "      [10.0.22.143] 0 GPUs in persistence mode"}
+{"timestamp": "2026-05-18T17:23:31.298801", "level": "INFO", "logger": "gpu-deploy", "message": "  - nvidia_peermem\u6a21\u5757: \u5f02\u5e38\u8282\u70b9: 10.0.16.211(\u672a\u914d\u7f6e), 10.0.22.143(\u672a\u914d\u7f6e)"}
+{"timestamp": "2026-05-18T17:23:31.298886", "level": "INFO", "logger": "gpu-deploy", "message": "      [10.0.16.211] \u672a\u914d\u7f6e"}
+{"timestamp": "2026-05-18T17:23:31.298959", "level": "INFO", "logger": "gpu-deploy", "message": "      [10.0.22.143] \u672a\u914d\u7f6e"}
+{"timestamp": "2026-05-18T17:23:31.299035", "level": "INFO", "logger": "gpu-deploy", "message": "  - \u65f6\u95f4\u540c\u6b65: \u5f02\u5e38\u8282\u70b9: 10.0.16.211, 10.0.22.143"}
+{"timestamp": "2026-05-18T17:23:31.299108", "level": "INFO", "logger": "gpu-deploy", "message": "      [10.0.16.211] "}
+{"timestamp": "2026-05-18T17:23:31.299180", "level": "INFO", "logger": "gpu-deploy", "message": "      [10.0.22.143] "}
+{"timestamp": "2026-05-18T17:23:31.299876", "level": "INFO", "logger": "gpu-deploy", "message": "HTML\u62a5\u544a\u5df2\u751f\u6210: logs/verification_report.html"}
+{"timestamp": "2026-05-18T17:23:31.300102", "level": "WARNING", "logger": "gpu-deploy", "message": "\u6700\u7ec8\u9a8c\u8bc1\u53d1\u73b0\u95ee\u9898\uff0c\u8bf7\u68c0\u67e5\u62a5\u544a"}
+{"timestamp": "2026-05-18T17:23:31.300415", "level": "INFO", "logger": "gpu-deploy", "message": "\u8fdb\u5ea6\u62a5\u544a\u5df2\u4fdd\u5b58: logs/progress_report.json"}
+{"timestamp": "2026-05-18T17:23:31.300648", "level": "INFO", "logger": "gpu-deploy", "message": "HTML\u62a5\u544a\u5df2\u751f\u6210: logs/deployment_report.html"}
+{"timestamp": "2026-05-18T17:23:31.301056", "level": "INFO", "logger": "gpu-deploy", "message": "============================================================"}
+{"timestamp": "2026-05-18T17:23:31.301616", "level": "INFO", "logger": "gpu-deploy", "message": "\u90e8\u7f72\u6210\u529f"}
+{"timestamp": "2026-05-18T17:23:31.301844", "level": "INFO", "logger": "gpu-deploy", "message": "============================================================"}

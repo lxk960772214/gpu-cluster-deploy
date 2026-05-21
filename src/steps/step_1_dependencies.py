@@ -39,6 +39,27 @@ class InstallDependencies(BaseStep):
         "build-essential", "gcc", "make", "dkms", "pdsh", "git", "cmake"
     ]
 
+    def get_mirror_sources_list(self, mirror_url: str, codename: str) -> str:
+        """
+        根据镜像URL和Ubuntu版本代号生成sources.list内容
+
+        Args:
+            mirror_url: 镜像源URL
+            codename: Ubuntu版本代号 (如 jammy, noble)
+
+        Returns:
+            sources.list内容
+        """
+        return f'''deb {mirror_url} {codename} main restricted universe multiverse
+# deb-src {mirror_url} {codename} main restricted universe multiverse
+deb {mirror_url} {codename}-updates main restricted universe multiverse
+# deb-src {mirror_url} {codename}-updates main restricted universe multiverse
+deb {mirror_url} {codename}-backports main restricted universe multiverse
+# deb-src {mirror_url} {codename}-backports main restricted universe multiverse
+deb {mirror_url} {codename}-security main restricted universe multiverse
+# deb-src {mirror_url} {codename}-security main restricted universe multiverse
+'''
+
     def is_configured(self, host: str) -> tuple:
         """
         检查依赖包是否已安装
@@ -73,6 +94,48 @@ class InstallDependencies(BaseStep):
         """执行安装"""
         all_results = {}
         errors = []
+
+        # 0. 检查是否需要换源
+        apt_mirror_config = getattr(self.versions, 'apt_mirror', None)
+        if apt_mirror_config and apt_mirror_config.enabled:
+            self.logger.info("APT换源已启用...")
+
+            # 获取镜像URL
+            mirror_name = apt_mirror_config.mirror
+            if mirror_name in apt_mirror_config.MIRRORS:
+                mirror_url = apt_mirror_config.MIRRORS[mirror_name]
+            else:
+                # 自定义URL
+                mirror_url = mirror_name
+
+            self.logger.info(f"使用镜像源: {mirror_url}")
+
+            # 获取Ubuntu版本代号
+            for host in hosts:
+                codename_result = self.execute_on_host(host, "lsb_release -cs 2>/dev/null || cat /etc/os-release | grep VERSION_CODENAME | cut -d= -f2")
+                codename = codename_result.get("stdout", "").strip()
+                if not codename:
+                    codename = "jammy"  # 默认使用22.04
+                    self.logger.warning(f"[{host}] 无法获取Ubuntu版本代号，使用默认: {codename}")
+                else:
+                    self.logger.info(f"[{host}] Ubuntu版本代号: {codename}")
+
+                # 生成sources.list内容
+                sources_content = self.get_mirror_sources_list(mirror_url, codename)
+
+                # 替换sources.list
+                sources_list_cmd = f'''cat << 'EOFAPT' > /etc/apt/sources.list
+{sources_content}EOFAPT'''
+                mirror_result = self.execute_on_host(host, sources_list_cmd, sudo=True)
+
+                if not mirror_result.get("success"):
+                    self.logger.error(f"[{host}] APT换源失败")
+                    errors.append(f"[{host}] APT换源失败")
+                    all_results[f"mirror_{host}"] = {"success": False}
+                    continue
+
+                all_results[f"mirror_{host}"] = {"success": True}
+                self.logger.info(f"[{host}] APT换源成功")
 
         # 1. 更新apt缓存
         self.logger.info("更新apt缓存...")

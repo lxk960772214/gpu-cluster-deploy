@@ -1,0 +1,155 @@
+2026-05-21 10:49:41,705 - INFO - gpu-deploy - ============================================================
+2026-05-21 10:49:41,706 - INFO - gpu-deploy - 开始GPU集群环境部署
+2026-05-21 10:49:41,706 - INFO - gpu-deploy - ============================================================
+2026-05-21 10:49:41,706 - INFO - gpu-deploy - 正在加载配置...
+2026-05-21 10:49:41,713 - INFO - gpu-deploy - 配置加载成功: gpu-test-cluster
+2026-05-21 10:49:41,713 - INFO - gpu-deploy - 节点数量: 2
+2026-05-21 10:49:41,713 - INFO - gpu-deploy - 正在初始化SSH连接...
+2026-05-21 10:49:41,909 - INFO - gpu-deploy - SSH初始化成功
+2026-05-21 10:49:41,909 - INFO - gpu-deploy - 正在检查节点连通性...
+2026-05-21 10:49:43,285 - INFO - gpu-deploy - 连通性检查完成: 2/2 节点可达
+2026-05-21 10:49:43,286 - WARNING - gpu-deploy - 步骤 45 没有关联的阶段
+2026-05-21 10:49:43,286 - INFO - gpu-deploy - [45] 检查配置状态...
+2026-05-21 10:49:43,286 - INFO - gpu-deploy - [45] [10.0.16.211] 执行: test -f /ssd/nfs/gpu-test/toolkit/openmpi/bin/mpirun && test -f /ssd/nfs/gpu-test/toolkit/nccl-tests-master/build/all_reduce_perf && ldd /ssd/nfs/gpu-test/toolkit/nccl-tests-master/build/all_reduce_perf 2>/dev/null | grep -q mpi && echo 'ready' || echo 'not_ready'
+2026-05-21 10:49:43,373 - INFO - gpu-deploy - [45] [10.0.16.211] stdout:
+2026-05-21 10:49:43,374 - INFO - gpu-deploy -   not_ready
+2026-05-21 10:49:43,374 - INFO - gpu-deploy - [45] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-21 10:49:43,374 - INFO - gpu-deploy - [45] [10.0.22.143] 执行: test -f /ssd/nfs/gpu-test/toolkit/openmpi/bin/mpirun && test -f /ssd/nfs/gpu-test/toolkit/nccl-tests-master/build/all_reduce_perf && ldd /ssd/nfs/gpu-test/toolkit/nccl-tests-master/build/all_reduce_perf 2>/dev/null | grep -q mpi && echo 'ready' || echo 'not_ready'
+2026-05-21 10:49:43,461 - INFO - gpu-deploy - [45] [10.0.22.143] stdout:
+2026-05-21 10:49:43,461 - INFO - gpu-deploy -   not_ready
+2026-05-21 10:49:43,461 - INFO - gpu-deploy - [45] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-21 10:49:43,462 - INFO - gpu-deploy - 编译策略: role_based, 编译节点: ['10.0.16.211']
+2026-05-21 10:49:43,462 - INFO - gpu-deploy - [10.0.16.211] 开始编译多节点测试所需工具...
+2026-05-21 10:49:43,462 - INFO - gpu-deploy - [45] [10.0.16.211] 执行: nvidia-smi --query-gpu=compute_cap --format=csv,noheader | head -1
+2026-05-21 10:49:43,553 - INFO - gpu-deploy - [45] [10.0.16.211] stdout:
+2026-05-21 10:49:43,553 - INFO - gpu-deploy -   8.6
+2026-05-21 10:49:43,553 - INFO - gpu-deploy - [45] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-21 10:49:43,553 - INFO - gpu-deploy - [10.0.16.211] 计算能力: 86
+2026-05-21 10:49:43,553 - INFO - gpu-deploy - [45] [10.0.16.211] 执行: test -f /ssd/nfs/gpu-test/toolkit/openmpi/bin/mpirun && echo 'exists' || echo 'not_exists'
+2026-05-21 10:49:43,641 - INFO - gpu-deploy - [45] [10.0.16.211] stdout:
+2026-05-21 10:49:43,641 - INFO - gpu-deploy -   not_exists
+2026-05-21 10:49:43,641 - INFO - gpu-deploy - [45] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-21 10:49:43,641 - INFO - gpu-deploy - [45] [10.0.16.211] 执行: mkdir -p /ssd/nfs/gpu-test/toolkit
+2026-05-21 10:49:43,729 - INFO - gpu-deploy - [45] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-21 10:49:43,729 - INFO - gpu-deploy - [45] [10.0.16.211] 执行: test -d /ssd/nfs/gpu-test/toolkit/openmpi-4.1.8 && echo 'exists' || echo 'not_exists'
+2026-05-21 10:49:43,817 - INFO - gpu-deploy - [45] [10.0.16.211] stdout:
+2026-05-21 10:49:43,817 - INFO - gpu-deploy -   not_exists
+2026-05-21 10:49:43,817 - INFO - gpu-deploy - [45] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-21 10:49:43,817 - INFO - gpu-deploy - [45] [10.0.16.211] 执行: test -f /ssd/nfs/gpu-test/toolkit/openmpi-4.1.8.tar.gz && echo 'exists' || echo 'not_exists'
+2026-05-21 10:49:43,905 - INFO - gpu-deploy - [45] [10.0.16.211] stdout:
+2026-05-21 10:49:43,905 - INFO - gpu-deploy -   exists
+2026-05-21 10:49:43,905 - INFO - gpu-deploy - [45] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-21 10:49:43,905 - INFO - gpu-deploy - [10.0.16.211] 解压 openmpi-4.1.8.tar.gz...
+2026-05-21 10:49:43,905 - INFO - gpu-deploy - [45] [10.0.16.211] 执行: sudo sh -c "cd /ssd/nfs/gpu-test/toolkit && tar -zxf /ssd/nfs/gpu-test/toolkit/openmpi-4.1.8.tar.gz"
+2026-05-21 10:49:44,547 - INFO - gpu-deploy - [45] [10.0.16.211] ✓ exit_code=0, 耗时=0.64s
+2026-05-21 10:49:44,548 - INFO - gpu-deploy - [10.0.16.211] 编译OpenMPI (安装路径: /ssd/nfs/gpu-test/toolkit/openmpi)...
+2026-05-21 10:49:44,548 - INFO - gpu-deploy - [45] [10.0.16.211] 执行: mkdir -p /ssd/nfs/gpu-test/toolkit/openmpi /ssd/nfs/gpu-test/logs
+2026-05-21 10:49:44,633 - INFO - gpu-deploy - [45] [10.0.16.211] ✓ exit_code=0, 耗时=0.08s
+2026-05-21 10:49:44,633 - INFO - gpu-deploy - [45] [10.0.16.211] 执行: sudo sh -c "cd /ssd/nfs/gpu-test/toolkit/openmpi-4.1.8 && ./configure --prefix=/ssd/nfs/gpu-test/toolkit/openmpi --with-cuda=/usr/local/cuda --without-fs-gpfs --without-gpfs > /ssd/nfs/gpu-test/logs/build_openmpi_configure.log 2>&1"
+2026-05-21 10:51:36,624 - INFO - gpu-deploy - [45] [10.0.16.211] ✓ exit_code=0, 耗时=111.99s
+2026-05-21 10:51:36,624 - INFO - gpu-deploy - [45] [10.0.16.211] 执行: sudo sh -c "cd /ssd/nfs/gpu-test/toolkit/openmpi-4.1.8 && make -j$(nproc) > /ssd/nfs/gpu-test/logs/build_openmpi_make.log 2>&1"
+2026-05-21 10:53:56,403 - INFO - gpu-deploy - [45] [10.0.16.211] ✓ exit_code=0, 耗时=139.78s
+2026-05-21 10:53:56,403 - INFO - gpu-deploy - [45] [10.0.16.211] 执行: sudo sh -c "cd /ssd/nfs/gpu-test/toolkit/openmpi-4.1.8 && make install > /ssd/nfs/gpu-test/logs/build_openmpi_install.log 2>&1"
+2026-05-21 10:54:43,403 - INFO - gpu-deploy - [45] [10.0.16.211] ✓ exit_code=0, 耗时=47.00s
+2026-05-21 10:54:43,404 - INFO - gpu-deploy - [10.0.16.211] OpenMPI编译安装完成
+2026-05-21 10:54:43,404 - INFO - gpu-deploy - [45] [10.0.16.211] 执行: test -f /ssd/nfs/gpu-test/toolkit/nccl/lib/libnccl.so && echo 'exists' || echo 'not_exists'
+2026-05-21 10:54:43,453 - INFO - gpu-deploy - [45] [10.0.16.211] stdout:
+2026-05-21 10:54:43,453 - INFO - gpu-deploy -   not_exists
+2026-05-21 10:54:43,453 - INFO - gpu-deploy - [45] [10.0.16.211] ✓ exit_code=0, 耗时=0.05s
+2026-05-21 10:54:43,453 - INFO - gpu-deploy - [45] [10.0.16.211] 执行: mkdir -p /ssd/nfs/gpu-test/toolkit
+2026-05-21 10:54:43,541 - INFO - gpu-deploy - [45] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-21 10:54:43,541 - INFO - gpu-deploy - [45] [10.0.16.211] 执行: test -d /ssd/nfs/gpu-test/toolkit/nccl-master && echo 'exists' || echo 'not_exists'
+2026-05-21 10:54:43,629 - INFO - gpu-deploy - [45] [10.0.16.211] stdout:
+2026-05-21 10:54:43,629 - INFO - gpu-deploy -   not_exists
+2026-05-21 10:54:43,629 - INFO - gpu-deploy - [45] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-21 10:54:43,629 - INFO - gpu-deploy - [45] [10.0.16.211] 执行: test -f /ssd/nfs/gpu-test/toolkit/nccl-master.zip && echo 'exists' || echo 'not_exists'
+2026-05-21 10:54:43,717 - INFO - gpu-deploy - [45] [10.0.16.211] stdout:
+2026-05-21 10:54:43,717 - INFO - gpu-deploy -   exists
+2026-05-21 10:54:43,717 - INFO - gpu-deploy - [45] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-21 10:54:43,717 - INFO - gpu-deploy - [10.0.16.211] 解压 nccl-master.zip...
+2026-05-21 10:54:43,717 - INFO - gpu-deploy - [45] [10.0.16.211] 执行: sudo sh -c "cd /ssd/nfs/gpu-test/toolkit && unzip -q /ssd/nfs/gpu-test/toolkit/nccl-master.zip"
+2026-05-21 10:54:43,868 - INFO - gpu-deploy - [45] [10.0.16.211] ✓ exit_code=0, 耗时=0.15s
+2026-05-21 10:54:43,869 - INFO - gpu-deploy - [45] [10.0.16.211] 执行: mkdir -p /ssd/nfs/gpu-test/toolkit/nccl /ssd/nfs/gpu-test/logs
+2026-05-21 10:54:43,953 - INFO - gpu-deploy - [45] [10.0.16.211] ✓ exit_code=0, 耗时=0.08s
+2026-05-21 10:54:43,953 - INFO - gpu-deploy - [45] [10.0.16.211] 执行: sudo sh -c "cd /ssd/nfs/gpu-test/toolkit/nccl-master && make -j$(nproc) src.build BUILDDIR=/ssd/nfs/gpu-test/toolkit/nccl CUDA_HOME=/usr/local/cuda NVCC_GENCODE='-gencode=arch=compute_86,code=sm_86' > /ssd/nfs/gpu-test/logs/build_nccl_multinode.log 2>&1"
+2026-05-21 10:58:02,203 - INFO - gpu-deploy - [45] [10.0.16.211] ✓ exit_code=0, 耗时=198.25s
+2026-05-21 10:58:02,203 - INFO - gpu-deploy - [10.0.16.211] NCCL编译完成
+2026-05-21 10:58:02,203 - INFO - gpu-deploy - [45] [10.0.16.211] 执行: test -f /ssd/nfs/gpu-test/toolkit/nccl-tests-master/build/all_reduce_perf && echo 'exists' || echo 'not_exists'
+2026-05-21 10:58:02,249 - INFO - gpu-deploy - [45] [10.0.16.211] stdout:
+2026-05-21 10:58:02,249 - INFO - gpu-deploy -   exists
+2026-05-21 10:58:02,249 - INFO - gpu-deploy - [45] [10.0.16.211] ✓ exit_code=0, 耗时=0.04s
+2026-05-21 10:58:02,249 - INFO - gpu-deploy - [45] [10.0.16.211] 执行: ldd /ssd/nfs/gpu-test/toolkit/nccl-tests-master/build/all_reduce_perf 2>/dev/null | grep -q mpi && echo 'mpi' || echo 'no_mpi'
+2026-05-21 10:58:02,337 - INFO - gpu-deploy - [45] [10.0.16.211] stdout:
+2026-05-21 10:58:02,337 - INFO - gpu-deploy -   mpi
+2026-05-21 10:58:02,337 - INFO - gpu-deploy - [45] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-21 10:58:02,338 - INFO - gpu-deploy - [10.0.16.211] NCCL-tests(MPI版)已编译，跳过
+2026-05-21 10:58:02,338 - INFO - gpu-deploy - [45] [10.0.16.211] 执行: test -f /ssd/nfs/gpu-test/toolkit/nccl-tests-master/build/all_reduce_perf && test -f /ssd/nfs/gpu-test/toolkit/openmpi/bin/mpirun && echo 'ready' || echo 'not_ready'
+2026-05-21 10:58:02,425 - INFO - gpu-deploy - [45] [10.0.16.211] stdout:
+2026-05-21 10:58:02,425 - INFO - gpu-deploy -   ready
+2026-05-21 10:58:02,425 - INFO - gpu-deploy - [45] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-21 10:58:02,425 - INFO - gpu-deploy - [45] [10.0.22.143] 执行: test -f /ssd/nfs/gpu-test/toolkit/nccl-tests-master/build/all_reduce_perf && test -f /ssd/nfs/gpu-test/toolkit/openmpi/bin/mpirun && echo 'ready' || echo 'not_ready'
+2026-05-21 10:58:02,517 - INFO - gpu-deploy - [45] [10.0.22.143] stdout:
+2026-05-21 10:58:02,517 - INFO - gpu-deploy -   ready
+2026-05-21 10:58:02,517 - INFO - gpu-deploy - [45] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-21 10:58:02,518 - INFO - gpu-deploy - [45] [10.0.16.211] 执行: mkdir -p /ssd/nfs/gpu-test/result
+2026-05-21 10:58:02,605 - INFO - gpu-deploy - [45] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-21 10:58:02,605 - INFO - gpu-deploy - [45] [10.0.22.143] 执行: mkdir -p /ssd/nfs/gpu-test/result
+2026-05-21 10:58:02,693 - INFO - gpu-deploy - [45] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-21 10:58:02,693 - INFO - gpu-deploy - [45] [10.0.16.211] 执行: nvidia-smi --query-gpu=count --format=csv,noheader | head -1
+2026-05-21 10:58:02,781 - INFO - gpu-deploy - [45] [10.0.16.211] stdout:
+2026-05-21 10:58:02,781 - INFO - gpu-deploy -   1
+2026-05-21 10:58:02,781 - INFO - gpu-deploy - [45] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-21 10:58:02,781 - INFO - gpu-deploy - [10.0.16.211] GPU数量: 1
+2026-05-21 10:58:02,782 - INFO - gpu-deploy - [45] [10.0.22.143] 执行: nvidia-smi --query-gpu=count --format=csv,noheader | head -1
+2026-05-21 10:58:02,869 - INFO - gpu-deploy - [45] [10.0.22.143] stdout:
+2026-05-21 10:58:02,869 - INFO - gpu-deploy -   1
+2026-05-21 10:58:02,869 - INFO - gpu-deploy - [45] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-21 10:58:02,870 - INFO - gpu-deploy - [10.0.22.143] GPU数量: 1
+2026-05-21 10:58:02,870 - INFO - gpu-deploy - 各节点GPU最小值: 1，将使用每节点1卡进行多节点测试
+2026-05-21 10:58:02,870 - INFO - gpu-deploy - ===== 开始全节点多GPU测试 (每节点1卡) =====
+2026-05-21 10:58:02,870 - INFO - gpu-deploy - [45] [10.0.16.211] 执行: nvidia-smi --query-gpu=compute_cap --format=csv,noheader | head -1
+2026-05-21 10:58:02,957 - INFO - gpu-deploy - [45] [10.0.16.211] stdout:
+2026-05-21 10:58:02,957 - INFO - gpu-deploy -   8.6
+2026-05-21 10:58:02,957 - INFO - gpu-deploy - [45] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-21 10:58:02,957 - INFO - gpu-deploy - [45] [10.0.16.211] 执行: hostname
+2026-05-21 10:58:03,045 - INFO - gpu-deploy - [45] [10.0.16.211] stdout:
+2026-05-21 10:58:03,045 - INFO - gpu-deploy -   gpugpugpu2
+2026-05-21 10:58:03,045 - INFO - gpu-deploy - [45] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-21 10:58:03,045 - INFO - gpu-deploy - [45] [10.0.22.143] 执行: hostname
+2026-05-21 10:58:03,133 - INFO - gpu-deploy - [45] [10.0.22.143] stdout:
+2026-05-21 10:58:03,133 - INFO - gpu-deploy -   gpugpugpu1
+2026-05-21 10:58:03,133 - INFO - gpu-deploy - [45] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-21 10:58:03,133 - INFO - gpu-deploy - [45] [10.0.16.211] 执行: cat > /ssd/nfs/gpu-test/toolkit/hostfile_multinode_1gpu << 'HOSTFILE_EOF'
+gpugpugpu2 slots=1
+gpugpugpu1 slots=1
+HOSTFILE_EOF
+2026-05-21 10:58:03,220 - INFO - gpu-deploy - [45] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-21 10:58:03,221 - INFO - gpu-deploy - [45] [10.0.16.211] 执行: which ibstatus >/dev/null 2>&1 && ibstatus >/dev/null 2>&1 && echo 'yes' || echo 'no'
+2026-05-21 10:58:03,309 - INFO - gpu-deploy - [45] [10.0.16.211] stdout:
+2026-05-21 10:58:03,309 - INFO - gpu-deploy -   no
+2026-05-21 10:58:03,309 - INFO - gpu-deploy - [45] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-21 10:58:03,310 - INFO - gpu-deploy - [45] [10.0.16.211] 执行: hostname
+2026-05-21 10:58:03,397 - INFO - gpu-deploy - [45] [10.0.16.211] stdout:
+2026-05-21 10:58:03,397 - INFO - gpu-deploy -   gpugpugpu2
+2026-05-21 10:58:03,397 - INFO - gpu-deploy - [45] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-21 10:58:03,397 - INFO - gpu-deploy - [45] [10.0.16.211] 执行: ip -o addr show | awk '{print $2}' | sort -u
+2026-05-21 10:58:03,485 - INFO - gpu-deploy - [45] [10.0.16.211] stdout:
+2026-05-21 10:58:03,485 - INFO - gpu-deploy -   enp3s0
+2026-05-21 10:58:03,486 - INFO - gpu-deploy -   lo
+2026-05-21 10:58:03,486 - INFO - gpu-deploy - [45] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-21 10:58:03,486 - INFO - gpu-deploy - [45] [10.0.16.211] 执行: ip -o addr show | grep '10.0.16.211' | awk '{print $2}'
+2026-05-21 10:58:03,573 - INFO - gpu-deploy - [45] [10.0.16.211] stdout:
+2026-05-21 10:58:03,573 - INFO - gpu-deploy -   enp3s0
+2026-05-21 10:58:03,573 - INFO - gpu-deploy - [45] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-21 10:58:03,573 - INFO - gpu-deploy - [multinode_1gpu] 网络配置: IB=禁用, 网卡=enp3s0
+2026-05-21 10:58:03,574 - INFO - gpu-deploy - [45] [10.0.16.211] 执行: hostname
+2026-05-21 10:58:03,660 - INFO - gpu-deploy - [45] [10.0.16.211] stdout:
+2026-05-21 10:58:03,661 - INFO - gpu-deploy -   gpugpugpu2
+2026-05-21 10:58:03,661 - INFO - gpu-deploy - [45] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-21 10:58:03,661 - INFO - gpu-deploy - [45] [10.0.22.143] 执行: hostname
+2026-05-21 10:58:03,749 - INFO - gpu-deploy - [45] [10.0.22.143] stdout:
+2026-05-21 10:58:03,749 - INFO - gpu-deploy -   gpugpugpu1
+2026-05-21 10:58:03,749 - INFO - gpu-deploy - [45] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-21 10:58:03,749 - INFO - gpu-deploy - [multinode_1gpu] 测试: all_reduce_perf, 节点: ['gpugpugpu2', 'gpugpugpu1'], 每节点GPU: 1, 总进程: 2
+2026-05-21 10:58:03,749 - INFO - gpu-deploy - [multinode_1gpu] 执行: /ssd/nfs/gpu-test/toolkit/openmpi/bin/mpirun -np 2 --hostfile /ssd/nfs/gpu-test/toolkit/hostfile_multinode_1gpu --allow-run-as-root -bind-to numa -map-by slot -x LD_LIBRARY_PATH=/ssd/nfs/gpu-test/tool...
+2026-05-21 10:58:03,750 - INFO - gpu-deploy - [45] [10.0.16.211] 执行: /ssd/nfs/gpu-test/toolkit/openmpi/bin/mpirun -np 2 --hostfile /ssd/nfs/gpu-test/toolkit/hostfile_multinode_1gpu --allow-run-as-root -bind-to numa -map-by slot -x LD_LIBRARY_PATH=/ssd/nfs/gpu-test/toolkit/openmpi/lib:/ssd/nfs/gpu-test/toolkit/nccl/lib:/usr/local/cuda/lib64 -x PATH=$PATH -x NCCL_IB_DISABLE=1 -x NCCL_SOCKET_IFNAME=enp3s0 -x NCCL_DEBUG=WARN -x NCCL_ALGO=Ring -x NCCL_MAX_NCHANNELS=16 -x NCCL_MIN_NCHANNELS=16 -x NCCL_CHECKS_DISABLE=1 -mca coll_hcoll_enable 0 -mca pml ob1 -mca btl_tcp_if_include enp3s0 -mca btl ^openib /ssd/nfs/gpu-test/toolkit/nccl-tests-master/build/all_reduce_perf -b 1M -e 8G -f 2 -g 1 > /ssd/nfs/gpu-test/result/all_reduce_perf_multinode_1gpu.log 2>&1

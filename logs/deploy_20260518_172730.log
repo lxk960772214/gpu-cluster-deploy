@@ -1,0 +1,1026 @@
+2026-05-18 17:27:30,655 - INFO - gpu-deploy - ============================================================
+2026-05-18 17:27:30,655 - INFO - gpu-deploy - 开始GPU集群环境部署
+2026-05-18 17:27:30,655 - INFO - gpu-deploy - ============================================================
+2026-05-18 17:27:30,655 - INFO - gpu-deploy - 正在加载配置...
+2026-05-18 17:27:30,661 - INFO - gpu-deploy - 配置加载成功: gpu-test-cluster
+2026-05-18 17:27:30,661 - INFO - gpu-deploy - 节点数量: 2
+2026-05-18 17:27:30,661 - INFO - gpu-deploy - 正在初始化SSH连接...
+2026-05-18 17:27:30,818 - INFO - gpu-deploy - SSH初始化成功
+2026-05-18 17:27:30,818 - INFO - gpu-deploy - 正在检查节点连通性...
+2026-05-18 17:27:31,787 - INFO - gpu-deploy - 连通性检查完成: 2/2 节点可达
+2026-05-18 17:27:31,788 - WARNING - gpu-deploy - 步骤 0d 没有关联的阶段
+2026-05-18 17:27:31,788 - INFO - gpu-deploy - [0d] 检查配置状态...
+2026-05-18 17:27:31,788 - INFO - gpu-deploy - [0d] [10.0.16.211] 执行: sudo sh -c "test -s /home/ubuntu/.ssh/authorized_keys && echo 'configured' || echo 'not_configured'"
+2026-05-18 17:27:31,963 - INFO - gpu-deploy - [0d] [10.0.16.211] stdout:
+2026-05-18 17:27:31,963 - INFO - gpu-deploy -   configured
+2026-05-18 17:27:31,964 - INFO - gpu-deploy - [0d] [10.0.16.211] ✓ exit_code=0, 耗时=0.17s
+2026-05-18 17:27:31,964 - INFO - gpu-deploy - [0d] [10.0.16.211] 执行: sudo sh -c "test -f /home/ubuntu/.ssh/id_rsa && echo 'exists' || echo 'not_exists'"
+2026-05-18 17:27:32,055 - INFO - gpu-deploy - [0d] [10.0.16.211] stdout:
+2026-05-18 17:27:32,055 - INFO - gpu-deploy -   exists
+2026-05-18 17:27:32,056 - INFO - gpu-deploy - [0d] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:32,056 - INFO - gpu-deploy - [0d] [10.0.16.211] 执行: sudo sh -c "test -s /root/.ssh/authorized_keys && echo 'configured' || echo 'not_configured'"
+2026-05-18 17:27:32,143 - INFO - gpu-deploy - [0d] [10.0.16.211] stdout:
+2026-05-18 17:27:32,143 - INFO - gpu-deploy -   configured
+2026-05-18 17:27:32,144 - INFO - gpu-deploy - [0d] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:32,144 - INFO - gpu-deploy - [0d] [10.0.16.211] 执行: sudo sh -c "test -f /root/.ssh/id_rsa && echo 'exists' || echo 'not_exists'"
+2026-05-18 17:27:32,231 - INFO - gpu-deploy - [0d] [10.0.16.211] stdout:
+2026-05-18 17:27:32,231 - INFO - gpu-deploy -   exists
+2026-05-18 17:27:32,231 - INFO - gpu-deploy - [0d] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:32,231 - INFO - gpu-deploy - [0d] [10.0.16.211] 执行: sudo sh -c "sudo -u ubuntu ssh -o BatchMode=yes -o StrictHostKeyChecking=no -o ConnectTimeout=5 -o PasswordAuthentication=no ubuntu@10.0.22.143 'echo ok' 2>/dev/null"
+2026-05-18 17:27:32,521 - INFO - gpu-deploy - [0d] [10.0.16.211] stdout:
+2026-05-18 17:27:32,521 - INFO - gpu-deploy -   ok
+2026-05-18 17:27:32,521 - INFO - gpu-deploy - [0d] [10.0.16.211] ✓ exit_code=0, 耗时=0.29s
+2026-05-18 17:27:32,521 - INFO - gpu-deploy - [0d] [10.0.22.143] 执行: sudo sh -c "test -s /home/ubuntu/.ssh/authorized_keys && echo 'configured' || echo 'not_configured'"
+2026-05-18 17:27:32,695 - INFO - gpu-deploy - [0d] [10.0.22.143] stdout:
+2026-05-18 17:27:32,695 - INFO - gpu-deploy -   configured
+2026-05-18 17:27:32,696 - INFO - gpu-deploy - [0d] [10.0.22.143] ✓ exit_code=0, 耗时=0.17s
+2026-05-18 17:27:32,696 - INFO - gpu-deploy - [0d] [10.0.22.143] 执行: sudo sh -c "test -f /home/ubuntu/.ssh/id_rsa && echo 'exists' || echo 'not_exists'"
+2026-05-18 17:27:32,783 - INFO - gpu-deploy - [0d] [10.0.22.143] stdout:
+2026-05-18 17:27:32,783 - INFO - gpu-deploy -   exists
+2026-05-18 17:27:32,784 - INFO - gpu-deploy - [0d] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:32,784 - INFO - gpu-deploy - [0d] [10.0.22.143] 执行: sudo sh -c "test -s /root/.ssh/authorized_keys && echo 'configured' || echo 'not_configured'"
+2026-05-18 17:27:32,871 - INFO - gpu-deploy - [0d] [10.0.22.143] stdout:
+2026-05-18 17:27:32,871 - INFO - gpu-deploy -   configured
+2026-05-18 17:27:32,871 - INFO - gpu-deploy - [0d] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:32,872 - INFO - gpu-deploy - [0d] [10.0.22.143] 执行: sudo sh -c "test -f /root/.ssh/id_rsa && echo 'exists' || echo 'not_exists'"
+2026-05-18 17:27:32,959 - INFO - gpu-deploy - [0d] [10.0.22.143] stdout:
+2026-05-18 17:27:32,959 - INFO - gpu-deploy -   exists
+2026-05-18 17:27:32,960 - INFO - gpu-deploy - [0d] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:32,960 - INFO - gpu-deploy - [0d] [10.0.22.143] 执行: sudo sh -c "sudo -u ubuntu ssh -o BatchMode=yes -o StrictHostKeyChecking=no -o ConnectTimeout=5 -o PasswordAuthentication=no ubuntu@10.0.16.211 'echo ok' 2>/dev/null"
+2026-05-18 17:27:33,222 - INFO - gpu-deploy - [0d] [10.0.22.143] stdout:
+2026-05-18 17:27:33,222 - INFO - gpu-deploy -   ok
+2026-05-18 17:27:33,222 - INFO - gpu-deploy - [0d] [10.0.22.143] ✓ exit_code=0, 耗时=0.26s
+2026-05-18 17:27:33,223 - INFO - gpu-deploy - [0d] 2 台主机已配置，跳过: 10.0.16.211, 10.0.22.143
+2026-05-18 17:27:33,223 - WARNING - gpu-deploy - 步骤 06 没有关联的阶段
+2026-05-18 17:27:33,223 - INFO - gpu-deploy - [06] 检查配置状态...
+2026-05-18 17:27:33,223 - INFO - gpu-deploy - [06] [10.0.16.211] 执行: mountpoint -q /ssd && echo 'mounted' || echo 'not_mounted'
+2026-05-18 17:27:33,311 - INFO - gpu-deploy - [06] [10.0.16.211] stdout:
+2026-05-18 17:27:33,312 - INFO - gpu-deploy -   mounted
+2026-05-18 17:27:33,312 - INFO - gpu-deploy - [06] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:33,312 - INFO - gpu-deploy - [06] [10.0.22.143] 执行: mountpoint -q /ssd && echo 'mounted' || echo 'not_mounted'
+2026-05-18 17:27:33,399 - INFO - gpu-deploy - [06] [10.0.22.143] stdout:
+2026-05-18 17:27:33,399 - INFO - gpu-deploy -   mounted
+2026-05-18 17:27:33,400 - INFO - gpu-deploy - [06] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:33,400 - INFO - gpu-deploy - [06] 2 台主机已配置，跳过: 10.0.16.211, 10.0.22.143
+2026-05-18 17:27:33,400 - WARNING - gpu-deploy - 步骤 09 没有关联的阶段
+2026-05-18 17:27:33,400 - INFO - gpu-deploy - [09] 检查配置状态...
+2026-05-18 17:27:33,400 - INFO - gpu-deploy - [09] [10.0.16.211] 执行: hostname
+2026-05-18 17:27:33,487 - INFO - gpu-deploy - [09] [10.0.16.211] stdout:
+2026-05-18 17:27:33,487 - INFO - gpu-deploy -   gpugpugpu2
+2026-05-18 17:27:33,487 - INFO - gpu-deploy - [09] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:33,488 - INFO - gpu-deploy - [09] [10.0.16.211] 执行: grep -q 'gpugpugpu2' /etc/hosts && echo 'found' || echo 'not_found'
+2026-05-18 17:27:33,575 - INFO - gpu-deploy - [09] [10.0.16.211] stdout:
+2026-05-18 17:27:33,575 - INFO - gpu-deploy -   found
+2026-05-18 17:27:33,575 - INFO - gpu-deploy - [09] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:33,576 - INFO - gpu-deploy - [09] [10.0.22.143] 执行: hostname
+2026-05-18 17:27:33,663 - INFO - gpu-deploy - [09] [10.0.22.143] stdout:
+2026-05-18 17:27:33,663 - INFO - gpu-deploy -   gpugpugpu1
+2026-05-18 17:27:33,664 - INFO - gpu-deploy - [09] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:33,664 - INFO - gpu-deploy - [09] [10.0.22.143] 执行: grep -q 'gpugpugpu1' /etc/hosts && echo 'found' || echo 'not_found'
+2026-05-18 17:27:33,751 - INFO - gpu-deploy - [09] [10.0.22.143] stdout:
+2026-05-18 17:27:33,751 - INFO - gpu-deploy -   found
+2026-05-18 17:27:33,752 - INFO - gpu-deploy - [09] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:33,752 - INFO - gpu-deploy - [09] 2 台主机已配置，跳过: 10.0.16.211, 10.0.22.143
+2026-05-18 17:27:33,752 - WARNING - gpu-deploy - 步骤 21 没有关联的阶段
+2026-05-18 17:27:33,752 - INFO - gpu-deploy - [21] 检查配置状态...
+2026-05-18 17:27:33,753 - INFO - gpu-deploy - [21] [10.0.16.211] 执行: grep -rq 'blacklist nouveau' /etc/modprobe.d/ 2>/dev/null && echo 'found' || echo 'not_found'
+2026-05-18 17:27:33,839 - INFO - gpu-deploy - [21] [10.0.16.211] stdout:
+2026-05-18 17:27:33,839 - INFO - gpu-deploy -   not_found
+2026-05-18 17:27:33,840 - INFO - gpu-deploy - [21] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:33,840 - INFO - gpu-deploy - [21] [10.0.16.211] 执行: lsmod | grep -q nouveau && echo 'loaded' || echo 'not_loaded'
+2026-05-18 17:27:33,928 - INFO - gpu-deploy - [21] [10.0.16.211] stdout:
+2026-05-18 17:27:33,928 - INFO - gpu-deploy -   not_loaded
+2026-05-18 17:27:33,928 - INFO - gpu-deploy - [21] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:33,928 - INFO - gpu-deploy - [21] [10.0.22.143] 执行: grep -rq 'blacklist nouveau' /etc/modprobe.d/ 2>/dev/null && echo 'found' || echo 'not_found'
+2026-05-18 17:27:34,015 - INFO - gpu-deploy - [21] [10.0.22.143] stdout:
+2026-05-18 17:27:34,015 - INFO - gpu-deploy -   not_found
+2026-05-18 17:27:34,015 - INFO - gpu-deploy - [21] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:34,016 - INFO - gpu-deploy - [21] [10.0.22.143] 执行: lsmod | grep -q nouveau && echo 'loaded' || echo 'not_loaded'
+2026-05-18 17:27:34,103 - INFO - gpu-deploy - [21] [10.0.22.143] stdout:
+2026-05-18 17:27:34,103 - INFO - gpu-deploy -   not_loaded
+2026-05-18 17:27:34,104 - INFO - gpu-deploy - [21] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:34,104 - INFO - gpu-deploy - [21] 批量执行: pdsh -w 10.0.16.211,10.0.22.143 "grep -q 'blacklist nouveau' /etc/modprobe.d/blacklist.conf 2>/dev/null && echo disabled || echo not_disabled"
+2026-05-18 17:27:34,104 - INFO - gpu-deploy - 批量执行: pdsh -w 10.0.16.211,10.0.22.143 "grep -q 'blacklist nouveau' /etc/modprobe.d/blacklist.conf 2>/dev/null && echo disabled || echo not_disabled"
+2026-05-18 17:27:34,193 - INFO - gpu-deploy - 10.0.16.211: ✓ exit_code=0, duration=0.09s
+2026-05-18 17:27:34,193 - INFO - gpu-deploy - 10.0.16.211: stdout:
+2026-05-18 17:27:34,193 - INFO - gpu-deploy - 10.0.16.211:   not_disabled
+2026-05-18 17:27:34,193 - INFO - gpu-deploy - 10.0.22.143: ✓ exit_code=0, duration=0.09s
+2026-05-18 17:27:34,194 - INFO - gpu-deploy - 10.0.22.143: stdout:
+2026-05-18 17:27:34,194 - INFO - gpu-deploy - 10.0.22.143:   not_disabled
+2026-05-18 17:27:34,194 - INFO - gpu-deploy - 执行摘要: 总计=2, 成功=2, 失败=0
+2026-05-18 17:27:34,194 - INFO - gpu-deploy - [21] 批量执行: pdsh -w 10.0.16.211,10.0.22.143 "lsmod | grep nouveau || echo 'disabled'"
+2026-05-18 17:27:34,194 - INFO - gpu-deploy - 批量执行: pdsh -w 10.0.16.211,10.0.22.143 "lsmod | grep nouveau || echo 'disabled'"
+2026-05-18 17:27:34,281 - INFO - gpu-deploy - 10.0.16.211: ✓ exit_code=0, duration=0.09s
+2026-05-18 17:27:34,281 - INFO - gpu-deploy - 10.0.16.211: stdout:
+2026-05-18 17:27:34,281 - INFO - gpu-deploy - 10.0.16.211:   disabled
+2026-05-18 17:27:34,281 - INFO - gpu-deploy - 10.0.22.143: ✓ exit_code=0, duration=0.09s
+2026-05-18 17:27:34,281 - INFO - gpu-deploy - 10.0.22.143: stdout:
+2026-05-18 17:27:34,282 - INFO - gpu-deploy - 10.0.22.143:   disabled
+2026-05-18 17:27:34,282 - INFO - gpu-deploy - 执行摘要: 总计=2, 成功=2, 失败=0
+2026-05-18 17:27:34,282 - WARNING - gpu-deploy - 步骤 22 没有关联的阶段
+2026-05-18 17:27:34,282 - INFO - gpu-deploy - [22] 检查配置状态...
+2026-05-18 17:27:34,282 - INFO - gpu-deploy - [22] [10.0.16.211] 执行: nvidia-smi --query-gpu=driver_version --format=csv,noheader 2>/dev/null | head -1
+2026-05-18 17:27:34,367 - INFO - gpu-deploy - [22] [10.0.16.211] stdout:
+2026-05-18 17:27:34,368 - INFO - gpu-deploy -   580.142
+2026-05-18 17:27:34,368 - INFO - gpu-deploy - [22] [10.0.16.211] ✓ exit_code=0, 耗时=0.08s
+2026-05-18 17:27:34,368 - INFO - gpu-deploy - [22] [10.0.22.143] 执行: nvidia-smi --query-gpu=driver_version --format=csv,noheader 2>/dev/null | head -1
+2026-05-18 17:27:34,459 - INFO - gpu-deploy - [22] [10.0.22.143] stdout:
+2026-05-18 17:27:34,459 - INFO - gpu-deploy -   580.142
+2026-05-18 17:27:34,460 - INFO - gpu-deploy - [22] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:34,460 - INFO - gpu-deploy - [22] 2 台主机已配置，跳过: 10.0.16.211, 10.0.22.143
+2026-05-18 17:27:34,460 - WARNING - gpu-deploy - 步骤 24 没有关联的阶段
+2026-05-18 17:27:34,460 - INFO - gpu-deploy - [24] 检查配置状态...
+2026-05-18 17:27:34,461 - INFO - gpu-deploy - [24] [10.0.16.211] 执行: /usr/local/cuda/bin/nvcc -V 2>/dev/null | grep 'release' | awk '{print $6}'
+2026-05-18 17:27:34,547 - INFO - gpu-deploy - [24] [10.0.16.211] stdout:
+2026-05-18 17:27:34,547 - INFO - gpu-deploy -   V13.0.48
+2026-05-18 17:27:34,548 - INFO - gpu-deploy - [24] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:34,548 - INFO - gpu-deploy - [24] [10.0.22.143] 执行: /usr/local/cuda/bin/nvcc -V 2>/dev/null | grep 'release' | awk '{print $6}'
+2026-05-18 17:27:34,635 - INFO - gpu-deploy - [24] [10.0.22.143] stdout:
+2026-05-18 17:27:34,635 - INFO - gpu-deploy -   V13.0.48
+2026-05-18 17:27:34,635 - INFO - gpu-deploy - [24] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:34,635 - INFO - gpu-deploy - [24] 2 台主机已配置，跳过: 10.0.16.211, 10.0.22.143
+2026-05-18 17:27:34,636 - WARNING - gpu-deploy - 步骤 25 没有关联的阶段
+2026-05-18 17:27:34,636 - INFO - gpu-deploy - [25] 检查配置状态...
+2026-05-18 17:27:34,636 - INFO - gpu-deploy - [25] [10.0.16.211] 执行: test -d /usr/local/nccl/lib && ls /usr/local/nccl/lib/ 2>/dev/null | head -3
+2026-05-18 17:27:34,723 - INFO - gpu-deploy - [25] [10.0.16.211] stdout:
+2026-05-18 17:27:34,723 - INFO - gpu-deploy -   libnccl.so
+2026-05-18 17:27:34,723 - INFO - gpu-deploy -   libnccl.so.2
+2026-05-18 17:27:34,724 - INFO - gpu-deploy -   libnccl.so.2.30.4
+2026-05-18 17:27:34,724 - INFO - gpu-deploy - [25] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:34,724 - INFO - gpu-deploy - [25] [10.0.22.143] 执行: test -d /usr/local/nccl/lib && ls /usr/local/nccl/lib/ 2>/dev/null | head -3
+2026-05-18 17:27:34,811 - INFO - gpu-deploy - [25] [10.0.22.143] stdout:
+2026-05-18 17:27:34,811 - INFO - gpu-deploy -   libnccl.so
+2026-05-18 17:27:34,811 - INFO - gpu-deploy -   libnccl.so.2
+2026-05-18 17:27:34,811 - INFO - gpu-deploy -   libnccl.so.2.30.4
+2026-05-18 17:27:34,812 - INFO - gpu-deploy - [25] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:34,812 - INFO - gpu-deploy - [25] 2 台主机已配置，跳过: 10.0.16.211, 10.0.22.143
+2026-05-18 17:27:34,812 - WARNING - gpu-deploy - 步骤 27 没有关联的阶段
+2026-05-18 17:27:34,812 - INFO - gpu-deploy - [27] 检查配置状态...
+2026-05-18 17:27:34,812 - INFO - gpu-deploy - [27] [10.0.16.211] 执行: systemctl is-enabled nvidia-persistence-mode.service 2>/dev/null || echo 'disabled'
+2026-05-18 17:27:34,899 - INFO - gpu-deploy - [27] [10.0.16.211] stdout:
+2026-05-18 17:27:34,899 - INFO - gpu-deploy -   enabled
+2026-05-18 17:27:34,900 - INFO - gpu-deploy - [27] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:34,900 - INFO - gpu-deploy - [27] [10.0.16.211] 执行: nvidia-smi -q 2>/dev/null | grep -c 'Persistence Mode.*Enabled'
+2026-05-18 17:27:35,118 - INFO - gpu-deploy - [27] [10.0.16.211] stdout:
+2026-05-18 17:27:35,118 - INFO - gpu-deploy -   1
+2026-05-18 17:27:35,118 - INFO - gpu-deploy - [27] [10.0.16.211] ✓ exit_code=0, 耗时=0.22s
+2026-05-18 17:27:35,118 - INFO - gpu-deploy - [27] [10.0.22.143] 执行: systemctl is-enabled nvidia-persistence-mode.service 2>/dev/null || echo 'disabled'
+2026-05-18 17:27:35,203 - INFO - gpu-deploy - [27] [10.0.22.143] stdout:
+2026-05-18 17:27:35,203 - INFO - gpu-deploy -   enabled
+2026-05-18 17:27:35,204 - INFO - gpu-deploy - [27] [10.0.22.143] ✓ exit_code=0, 耗时=0.08s
+2026-05-18 17:27:35,204 - INFO - gpu-deploy - [27] [10.0.22.143] 执行: nvidia-smi -q 2>/dev/null | grep -c 'Persistence Mode.*Enabled'
+2026-05-18 17:27:35,412 - INFO - gpu-deploy - [27] [10.0.22.143] stdout:
+2026-05-18 17:27:35,412 - INFO - gpu-deploy -   1
+2026-05-18 17:27:35,413 - INFO - gpu-deploy - [27] [10.0.22.143] ✓ exit_code=0, 耗时=0.21s
+2026-05-18 17:27:35,413 - INFO - gpu-deploy - [27] 2 台主机已配置，跳过: 10.0.16.211, 10.0.22.143
+2026-05-18 17:27:35,413 - WARNING - gpu-deploy - 步骤 07 没有关联的阶段
+2026-05-18 17:27:35,413 - INFO - gpu-deploy - [07] 检查配置状态...
+2026-05-18 17:27:35,413 - INFO - gpu-deploy - [07] [10.0.16.211] 执行: cat /proc/cpuinfo | grep 'model name' | head -1
+2026-05-18 17:27:35,499 - INFO - gpu-deploy - [07] [10.0.16.211] stdout:
+2026-05-18 17:27:35,499 - INFO - gpu-deploy -   model name	: AMD EPYC 7402 24-Core Processor
+2026-05-18 17:27:35,500 - INFO - gpu-deploy - [07] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:35,500 - INFO - gpu-deploy - [07] [10.0.16.211] 执行: nvidia-smi --query-gpu=name --format=csv,noheader 2>/dev/null | head -1 || echo 'unknown'
+2026-05-18 17:27:35,587 - INFO - gpu-deploy - [07] [10.0.16.211] stdout:
+2026-05-18 17:27:35,588 - INFO - gpu-deploy -   NVIDIA GeForce RTX 3090
+2026-05-18 17:27:35,588 - INFO - gpu-deploy - [07] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:35,588 - INFO - gpu-deploy - [07] [10.0.22.143] 执行: cat /proc/cpuinfo | grep 'model name' | head -1
+2026-05-18 17:27:35,675 - INFO - gpu-deploy - [07] [10.0.22.143] stdout:
+2026-05-18 17:27:35,675 - INFO - gpu-deploy -   model name	: AMD EPYC 7402 24-Core Processor
+2026-05-18 17:27:35,676 - INFO - gpu-deploy - [07] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:35,676 - INFO - gpu-deploy - [07] [10.0.22.143] 执行: nvidia-smi --query-gpu=name --format=csv,noheader 2>/dev/null | head -1 || echo 'unknown'
+2026-05-18 17:27:35,767 - INFO - gpu-deploy - [07] [10.0.22.143] stdout:
+2026-05-18 17:27:35,767 - INFO - gpu-deploy -   NVIDIA GeForce RTX 3090
+2026-05-18 17:27:35,767 - INFO - gpu-deploy - [07] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:35,767 - INFO - gpu-deploy - [07] 2 台主机已配置，跳过: 10.0.16.211, 10.0.22.143
+2026-05-18 17:27:35,768 - WARNING - gpu-deploy - 步骤 08 没有关联的阶段
+2026-05-18 17:27:35,768 - INFO - gpu-deploy - [08] 检查配置状态...
+2026-05-18 17:27:35,768 - INFO - gpu-deploy - [08] [10.0.16.211] 执行: test -x /etc/rc.local && echo 'exists' || echo 'not_found'
+2026-05-18 17:27:35,855 - INFO - gpu-deploy - [08] [10.0.16.211] stdout:
+2026-05-18 17:27:35,855 - INFO - gpu-deploy -   exists
+2026-05-18 17:27:35,855 - INFO - gpu-deploy - [08] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:35,855 - INFO - gpu-deploy - [08] [10.0.16.211] 执行: systemctl is-enabled rc-local.service 2>/dev/null || echo 'disabled'
+2026-05-18 17:27:35,943 - INFO - gpu-deploy - [08] [10.0.16.211] stdout:
+2026-05-18 17:27:35,943 - INFO - gpu-deploy -   enabled
+2026-05-18 17:27:35,944 - INFO - gpu-deploy - [08] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:35,944 - INFO - gpu-deploy - [08] [10.0.22.143] 执行: test -x /etc/rc.local && echo 'exists' || echo 'not_found'
+2026-05-18 17:27:36,031 - INFO - gpu-deploy - [08] [10.0.22.143] stdout:
+2026-05-18 17:27:36,031 - INFO - gpu-deploy -   exists
+2026-05-18 17:27:36,031 - INFO - gpu-deploy - [08] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:36,031 - INFO - gpu-deploy - [08] [10.0.22.143] 执行: systemctl is-enabled rc-local.service 2>/dev/null || echo 'disabled'
+2026-05-18 17:27:36,119 - INFO - gpu-deploy - [08] [10.0.22.143] stdout:
+2026-05-18 17:27:36,119 - INFO - gpu-deploy -   enabled
+2026-05-18 17:27:36,119 - INFO - gpu-deploy - [08] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:36,119 - INFO - gpu-deploy - [08] 2 台主机已配置，跳过: 10.0.16.211, 10.0.22.143
+2026-05-18 17:27:36,120 - WARNING - gpu-deploy - 步骤 12 没有关联的阶段
+2026-05-18 17:27:36,120 - INFO - gpu-deploy - [12] 检查配置状态...
+2026-05-18 17:27:36,120 - INFO - gpu-deploy - [12] [10.0.16.211] 执行: test -d /sys/devices/system/cpu/cpu0/cpufreq
+2026-05-18 17:27:36,207 - INFO - gpu-deploy - [12] [10.0.16.211] ✗ exit_code=1, 耗时=0.09s
+2026-05-18 17:27:36,207 - INFO - gpu-deploy - [12] [10.0.22.143] 执行: test -d /sys/devices/system/cpu/cpu0/cpufreq
+2026-05-18 17:27:36,295 - INFO - gpu-deploy - [12] [10.0.22.143] ✗ exit_code=1, 耗时=0.09s
+2026-05-18 17:27:36,295 - INFO - gpu-deploy - [12] 2 台主机已配置，跳过: 10.0.16.211, 10.0.22.143
+2026-05-18 17:27:36,295 - WARNING - gpu-deploy - 步骤 13 没有关联的阶段
+2026-05-18 17:27:36,296 - INFO - gpu-deploy - [13] 检查配置状态...
+2026-05-18 17:27:36,296 - INFO - gpu-deploy - [13] [10.0.16.211] 执行: grep -c 'nofile 1000000' /etc/security/limits.conf 2>/dev/null || echo 0
+2026-05-18 17:27:36,383 - INFO - gpu-deploy - [13] [10.0.16.211] stdout:
+2026-05-18 17:27:36,383 - INFO - gpu-deploy -   4
+2026-05-18 17:27:36,384 - INFO - gpu-deploy - [13] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:36,384 - INFO - gpu-deploy - [13] [10.0.16.211] 执行: test -f /etc/systemd/system/user@.service.d/limits.conf && grep -q 'LimitNOFILE=1000000' /etc/systemd/system/user@.service.d/limits.conf
+2026-05-18 17:27:36,471 - INFO - gpu-deploy - [13] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:36,471 - INFO - gpu-deploy - [13] [10.0.16.211] 执行: grep -q 'pam_limits.so' /etc/pam.d/common-session
+2026-05-18 17:27:36,559 - INFO - gpu-deploy - [13] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:36,559 - INFO - gpu-deploy - [13] [10.0.22.143] 执行: grep -c 'nofile 1000000' /etc/security/limits.conf 2>/dev/null || echo 0
+2026-05-18 17:27:36,647 - INFO - gpu-deploy - [13] [10.0.22.143] stdout:
+2026-05-18 17:27:36,647 - INFO - gpu-deploy -   4
+2026-05-18 17:27:36,648 - INFO - gpu-deploy - [13] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:36,648 - INFO - gpu-deploy - [13] [10.0.22.143] 执行: test -f /etc/systemd/system/user@.service.d/limits.conf && grep -q 'LimitNOFILE=1000000' /etc/systemd/system/user@.service.d/limits.conf
+2026-05-18 17:27:36,735 - INFO - gpu-deploy - [13] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:36,735 - INFO - gpu-deploy - [13] [10.0.22.143] 执行: grep -q 'pam_limits.so' /etc/pam.d/common-session
+2026-05-18 17:27:36,823 - INFO - gpu-deploy - [13] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:36,823 - INFO - gpu-deploy - [13] 2 台主机已配置，跳过: 10.0.16.211, 10.0.22.143
+2026-05-18 17:27:36,823 - WARNING - gpu-deploy - 步骤 15 没有关联的阶段
+2026-05-18 17:27:36,824 - INFO - gpu-deploy - [15] 检查配置状态...
+2026-05-18 17:27:36,824 - INFO - gpu-deploy - [15] [10.0.16.211] 执行: systemctl is-enabled unattended-upgrades.service 2>/dev/null || echo 'disabled'
+2026-05-18 17:27:36,911 - INFO - gpu-deploy - [15] [10.0.16.211] stdout:
+2026-05-18 17:27:36,911 - INFO - gpu-deploy -   disabled
+2026-05-18 17:27:36,912 - INFO - gpu-deploy -   disabled
+2026-05-18 17:27:36,912 - INFO - gpu-deploy - [15] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:36,912 - INFO - gpu-deploy - [15] [10.0.16.211] 执行: test -f /etc/apt/preferences.d/nolinuxupgrades
+2026-05-18 17:27:37,003 - INFO - gpu-deploy - [15] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:37,003 - INFO - gpu-deploy - [15] [10.0.22.143] 执行: systemctl is-enabled unattended-upgrades.service 2>/dev/null || echo 'disabled'
+2026-05-18 17:27:37,091 - INFO - gpu-deploy - [15] [10.0.22.143] stdout:
+2026-05-18 17:27:37,092 - INFO - gpu-deploy -   disabled
+2026-05-18 17:27:37,092 - INFO - gpu-deploy -   disabled
+2026-05-18 17:27:37,093 - INFO - gpu-deploy - [15] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:37,093 - INFO - gpu-deploy - [15] [10.0.22.143] 执行: test -f /etc/apt/preferences.d/nolinuxupgrades
+2026-05-18 17:27:37,179 - INFO - gpu-deploy - [15] [10.0.22.143] ✓ exit_code=0, 耗时=0.08s
+2026-05-18 17:27:37,179 - INFO - gpu-deploy - [15] 2 台主机已配置，跳过: 10.0.16.211, 10.0.22.143
+2026-05-18 17:27:37,179 - WARNING - gpu-deploy - 步骤 16 没有关联的阶段
+2026-05-18 17:27:37,180 - INFO - gpu-deploy - [16] 检查配置状态...
+2026-05-18 17:27:37,180 - INFO - gpu-deploy - [16] 2 台主机已配置，跳过: 10.0.16.211, 10.0.22.143
+2026-05-18 17:27:37,180 - WARNING - gpu-deploy - 步骤 17 没有关联的阶段
+2026-05-18 17:27:37,180 - INFO - gpu-deploy - [17] 检查配置状态...
+2026-05-18 17:27:37,180 - INFO - gpu-deploy - [17] [10.0.16.211] 执行: timedatectl show --no-pager 2>/dev/null | grep 'Timezone=' || timedatectl 2>/dev/null | grep 'Time zone'
+2026-05-18 17:27:37,304 - INFO - gpu-deploy - [17] [10.0.16.211] stdout:
+2026-05-18 17:27:37,304 - INFO - gpu-deploy -   Timezone=Asia/Shanghai
+2026-05-18 17:27:37,305 - INFO - gpu-deploy - [17] [10.0.16.211] ✓ exit_code=0, 耗时=0.12s
+2026-05-18 17:27:37,305 - INFO - gpu-deploy - [17] [10.0.22.143] 执行: timedatectl show --no-pager 2>/dev/null | grep 'Timezone=' || timedatectl 2>/dev/null | grep 'Time zone'
+2026-05-18 17:27:37,430 - INFO - gpu-deploy - [17] [10.0.22.143] stdout:
+2026-05-18 17:27:37,431 - INFO - gpu-deploy -   Timezone=Asia/Shanghai
+2026-05-18 17:27:37,431 - INFO - gpu-deploy - [17] [10.0.22.143] ✓ exit_code=0, 耗时=0.13s
+2026-05-18 17:27:37,431 - INFO - gpu-deploy - [17] 2 台主机已配置，跳过: 10.0.16.211, 10.0.22.143
+2026-05-18 17:27:37,432 - WARNING - gpu-deploy - 步骤 18 没有关联的阶段
+2026-05-18 17:27:37,432 - INFO - gpu-deploy - [18] 检查配置状态...
+2026-05-18 17:27:37,432 - INFO - gpu-deploy - [18] [10.0.16.211] 执行: cat /proc/sys/net/ipv6/conf/all/disable_ipv6
+2026-05-18 17:27:37,515 - INFO - gpu-deploy - [18] [10.0.16.211] stdout:
+2026-05-18 17:27:37,515 - INFO - gpu-deploy -   1
+2026-05-18 17:27:37,516 - INFO - gpu-deploy - [18] [10.0.16.211] ✓ exit_code=0, 耗时=0.08s
+2026-05-18 17:27:37,516 - INFO - gpu-deploy - [18] [10.0.22.143] 执行: cat /proc/sys/net/ipv6/conf/all/disable_ipv6
+2026-05-18 17:27:37,603 - INFO - gpu-deploy - [18] [10.0.22.143] stdout:
+2026-05-18 17:27:37,603 - INFO - gpu-deploy -   1
+2026-05-18 17:27:37,604 - INFO - gpu-deploy - [18] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:37,604 - INFO - gpu-deploy - [18] 2 台主机已配置，跳过: 10.0.16.211, 10.0.22.143
+2026-05-18 17:27:37,604 - WARNING - gpu-deploy - 步骤 19 没有关联的阶段
+2026-05-18 17:27:37,604 - INFO - gpu-deploy - [19] 检查配置状态...
+2026-05-18 17:27:37,604 - INFO - gpu-deploy - [19] [10.0.16.211] 执行: systemctl is-enabled sleep.target 2>/dev/null || echo 'masked'
+2026-05-18 17:27:37,691 - INFO - gpu-deploy - [19] [10.0.16.211] stdout:
+2026-05-18 17:27:37,692 - INFO - gpu-deploy -   masked
+2026-05-18 17:27:37,692 - INFO - gpu-deploy -   masked
+2026-05-18 17:27:37,692 - INFO - gpu-deploy - [19] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:37,692 - INFO - gpu-deploy - [19] [10.0.16.211] 执行: grep -q 'hung_task_panic' /etc/sysctl.conf
+2026-05-18 17:27:37,779 - INFO - gpu-deploy - [19] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:37,779 - INFO - gpu-deploy - [19] [10.0.22.143] 执行: systemctl is-enabled sleep.target 2>/dev/null || echo 'masked'
+2026-05-18 17:27:37,871 - INFO - gpu-deploy - [19] [10.0.22.143] stdout:
+2026-05-18 17:27:37,871 - INFO - gpu-deploy -   masked
+2026-05-18 17:27:37,871 - INFO - gpu-deploy -   masked
+2026-05-18 17:27:37,872 - INFO - gpu-deploy - [19] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:37,872 - INFO - gpu-deploy - [19] [10.0.22.143] 执行: grep -q 'hung_task_panic' /etc/sysctl.conf
+2026-05-18 17:27:37,959 - INFO - gpu-deploy - [19] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:37,959 - INFO - gpu-deploy - [19] 2 台主机已配置，跳过: 10.0.16.211, 10.0.22.143
+2026-05-18 17:27:37,959 - WARNING - gpu-deploy - 步骤 29 没有关联的阶段
+2026-05-18 17:27:37,960 - INFO - gpu-deploy - [29] 检查配置状态...
+2026-05-18 17:27:37,960 - INFO - gpu-deploy - [29] [10.0.16.211] 执行: test -x /usr/local/bin/disable_acs.sh && echo 'script_exists' || echo 'no_script'
+2026-05-18 17:27:38,047 - INFO - gpu-deploy - [29] [10.0.16.211] stdout:
+2026-05-18 17:27:38,047 - INFO - gpu-deploy -   script_exists
+2026-05-18 17:27:38,048 - INFO - gpu-deploy - [29] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:38,048 - INFO - gpu-deploy - [29] [10.0.16.211] 执行: sudo sh -c "lspci -vvv 2>/dev/null | grep -c 'ACSCtl.*SrcValid+' || echo 0"
+2026-05-18 17:27:38,143 - INFO - gpu-deploy - [29] [10.0.16.211] stdout:
+2026-05-18 17:27:38,144 - INFO - gpu-deploy -   0
+2026-05-18 17:27:38,144 - INFO - gpu-deploy -   0
+2026-05-18 17:27:38,144 - INFO - gpu-deploy - [29] [10.0.16.211] ✓ exit_code=0, 耗时=0.10s
+2026-05-18 17:27:38,144 - INFO - gpu-deploy - [29] [10.0.22.143] 执行: test -x /usr/local/bin/disable_acs.sh && echo 'script_exists' || echo 'no_script'
+2026-05-18 17:27:38,231 - INFO - gpu-deploy - [29] [10.0.22.143] stdout:
+2026-05-18 17:27:38,231 - INFO - gpu-deploy -   script_exists
+2026-05-18 17:27:38,232 - INFO - gpu-deploy - [29] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:38,232 - INFO - gpu-deploy - [29] [10.0.22.143] 执行: sudo sh -c "lspci -vvv 2>/dev/null | grep -c 'ACSCtl.*SrcValid+' || echo 0"
+2026-05-18 17:27:38,329 - INFO - gpu-deploy - [29] [10.0.22.143] stdout:
+2026-05-18 17:27:38,329 - INFO - gpu-deploy -   0
+2026-05-18 17:27:38,330 - INFO - gpu-deploy -   0
+2026-05-18 17:27:38,330 - INFO - gpu-deploy - [29] [10.0.22.143] ✓ exit_code=0, 耗时=0.10s
+2026-05-18 17:27:38,330 - INFO - gpu-deploy - [29] 2 台主机已配置，跳过: 10.0.16.211, 10.0.22.143
+2026-05-18 17:27:38,330 - WARNING - gpu-deploy - 步骤 30 没有关联的阶段
+2026-05-18 17:27:38,330 - INFO - gpu-deploy - [30] 检查配置状态...
+2026-05-18 17:27:38,330 - INFO - gpu-deploy - [30] [10.0.16.211] 执行: systemctl is-active chrony 2>/dev/null || true
+2026-05-18 17:27:38,415 - INFO - gpu-deploy - [30] [10.0.16.211] stdout:
+2026-05-18 17:27:38,415 - INFO - gpu-deploy -   active
+2026-05-18 17:27:38,416 - INFO - gpu-deploy - [30] [10.0.16.211] ✓ exit_code=0, 耗时=0.08s
+2026-05-18 17:27:38,416 - INFO - gpu-deploy - [30] [10.0.16.211] 执行: cat /etc/chrony/chrony.conf 2>/dev/null
+2026-05-18 17:27:38,503 - INFO - gpu-deploy - [30] [10.0.16.211] stdout:
+2026-05-18 17:27:38,503 - INFO - gpu-deploy -   server 127.127.1.0 iburst
+2026-05-18 17:27:38,504 - INFO - gpu-deploy -   local stratum 10
+2026-05-18 17:27:38,504 - INFO - gpu-deploy -   driftfile /var/lib/chrony/drift
+2026-05-18 17:27:38,504 - INFO - gpu-deploy -   makestep 1.0 3
+2026-05-18 17:27:38,504 - INFO - gpu-deploy -   rtcsync
+2026-05-18 17:27:38,504 - INFO - gpu-deploy -   logdir /var/log/chrony
+2026-05-18 17:27:38,504 - INFO - gpu-deploy -   allow all
+2026-05-18 17:27:38,504 - INFO - gpu-deploy - [30] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:38,505 - INFO - gpu-deploy - [30] [10.0.22.143] 执行: systemctl is-active chrony 2>/dev/null || true
+2026-05-18 17:27:38,591 - INFO - gpu-deploy - [30] [10.0.22.143] stdout:
+2026-05-18 17:27:38,591 - INFO - gpu-deploy -   active
+2026-05-18 17:27:38,592 - INFO - gpu-deploy - [30] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:38,592 - INFO - gpu-deploy - [30] [10.0.22.143] 执行: cat /etc/chrony/chrony.conf 2>/dev/null
+2026-05-18 17:27:38,679 - INFO - gpu-deploy - [30] [10.0.22.143] stdout:
+2026-05-18 17:27:38,679 - INFO - gpu-deploy -   server 10.0.16.211 iburst
+2026-05-18 17:27:38,680 - INFO - gpu-deploy -   driftfile /var/lib/chrony/drift
+2026-05-18 17:27:38,680 - INFO - gpu-deploy -   makestep 1.0 3
+2026-05-18 17:27:38,680 - INFO - gpu-deploy -   rtcsync
+2026-05-18 17:27:38,680 - INFO - gpu-deploy -   logdir /var/log/chrony
+2026-05-18 17:27:38,680 - INFO - gpu-deploy - [30] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:38,680 - INFO - gpu-deploy - [30] 2 台主机已配置，跳过: 10.0.16.211, 10.0.22.143
+2026-05-18 17:27:38,680 - WARNING - gpu-deploy - 步骤 34 没有关联的阶段
+2026-05-18 17:27:38,680 - INFO - gpu-deploy - [34] 检查配置状态...
+2026-05-18 17:27:38,681 - INFO - gpu-deploy - 使用管理网IP配置NFS: 10.0.16.211
+2026-05-18 17:27:38,681 - INFO - gpu-deploy - [34] [10.0.16.211] 执行: systemctl is-active nfs-server 2>/dev/null || echo 'inactive'
+2026-05-18 17:27:38,767 - INFO - gpu-deploy - [34] [10.0.16.211] stdout:
+2026-05-18 17:27:38,767 - INFO - gpu-deploy -   active
+2026-05-18 17:27:38,768 - INFO - gpu-deploy - [34] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:38,768 - INFO - gpu-deploy - 使用管理网IP配置NFS: 10.0.16.211
+2026-05-18 17:27:38,768 - INFO - gpu-deploy - [34] [10.0.22.143] 执行: mountpoint -q /ssd/nfs && echo 'mounted' || echo 'not_mounted'
+2026-05-18 17:27:38,855 - INFO - gpu-deploy - [34] [10.0.22.143] stdout:
+2026-05-18 17:27:38,855 - INFO - gpu-deploy -   mounted
+2026-05-18 17:27:38,856 - INFO - gpu-deploy - [34] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:38,856 - INFO - gpu-deploy - [34] 2 台主机已配置，跳过: 10.0.16.211, 10.0.22.143
+2026-05-18 17:27:38,856 - INFO - gpu-deploy - 
+============================================================
+2026-05-18 17:27:38,856 - INFO - gpu-deploy - 执行最终验证...
+2026-05-18 17:27:38,856 - INFO - gpu-deploy - ============================================================
+2026-05-18 17:27:38,856 - WARNING - gpu-deploy - 步骤 99 没有关联的阶段
+2026-05-18 17:27:38,856 - INFO - gpu-deploy - ============================================================
+2026-05-18 17:27:38,857 - INFO - gpu-deploy - 开始最终验证...
+2026-05-18 17:27:38,857 - INFO - gpu-deploy - ============================================================
+2026-05-18 17:27:38,857 - INFO - gpu-deploy - 
+[1/4] 检查网络连通性...
+2026-05-18 17:27:38,857 - INFO - gpu-deploy - [99] [10.0.16.211] 执行: ping -c 1 -W 2 8.8.8.8 > /dev/null 2>&1 && echo 'ok' || echo 'fail'
+2026-05-18 17:27:39,222 - INFO - gpu-deploy - [99] [10.0.16.211] stdout:
+2026-05-18 17:27:39,222 - INFO - gpu-deploy -   ok
+2026-05-18 17:27:39,223 - INFO - gpu-deploy - [99] [10.0.16.211] ✓ exit_code=0, 耗时=0.36s
+2026-05-18 17:27:39,223 - INFO - gpu-deploy - [99] [10.0.22.143] 执行: ping -c 1 -W 2 8.8.8.8 > /dev/null 2>&1 && echo 'ok' || echo 'fail'
+2026-05-18 17:27:39,595 - INFO - gpu-deploy - [99] [10.0.22.143] stdout:
+2026-05-18 17:27:39,595 - INFO - gpu-deploy -   ok
+2026-05-18 17:27:39,595 - INFO - gpu-deploy - [99] [10.0.22.143] ✓ exit_code=0, 耗时=0.37s
+2026-05-18 17:27:39,595 - INFO - gpu-deploy - [99] [10.0.16.211] 执行: nslookup github.com > /dev/null 2>&1 && echo 'ok' || echo 'fail'
+2026-05-18 17:27:39,704 - INFO - gpu-deploy - [99] [10.0.16.211] stdout:
+2026-05-18 17:27:39,704 - INFO - gpu-deploy -   ok
+2026-05-18 17:27:39,705 - INFO - gpu-deploy - [99] [10.0.16.211] ✓ exit_code=0, 耗时=0.11s
+2026-05-18 17:27:39,705 - INFO - gpu-deploy - [99] [10.0.22.143] 执行: nslookup github.com > /dev/null 2>&1 && echo 'ok' || echo 'fail'
+2026-05-18 17:27:39,818 - INFO - gpu-deploy - [99] [10.0.22.143] stdout:
+2026-05-18 17:27:39,818 - INFO - gpu-deploy -   ok
+2026-05-18 17:27:39,818 - INFO - gpu-deploy - [99] [10.0.22.143] ✓ exit_code=0, 耗时=0.11s
+2026-05-18 17:27:39,818 - INFO - gpu-deploy -     网络状态: all_reachable
+2026-05-18 17:27:39,818 - INFO - gpu-deploy - 
+[2/4] 检查设备状态...
+2026-05-18 17:27:39,818 - INFO - gpu-deploy - [99] [10.0.16.211] 执行: nvidia-smi -L 2>/dev/null | wc -l
+2026-05-18 17:27:39,907 - INFO - gpu-deploy - [99] [10.0.16.211] stdout:
+2026-05-18 17:27:39,907 - INFO - gpu-deploy -   1
+2026-05-18 17:27:39,908 - INFO - gpu-deploy - [99] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:39,908 - INFO - gpu-deploy - [99] [10.0.16.211] 执行: ibdev2netdev 2>/dev/null | grep -v down | wc -l
+2026-05-18 17:27:39,995 - INFO - gpu-deploy - [99] [10.0.16.211] stdout:
+2026-05-18 17:27:39,995 - INFO - gpu-deploy -   0
+2026-05-18 17:27:39,996 - INFO - gpu-deploy - [99] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:39,996 - INFO - gpu-deploy - [99] [10.0.16.211] 执行: ip link show up 2>/dev/null | grep -E '^[0-9]+:' | wc -l
+2026-05-18 17:27:40,083 - INFO - gpu-deploy - [99] [10.0.16.211] stdout:
+2026-05-18 17:27:40,083 - INFO - gpu-deploy -   2
+2026-05-18 17:27:40,083 - INFO - gpu-deploy - [99] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:40,083 - INFO - gpu-deploy - [99] [10.0.22.143] 执行: nvidia-smi -L 2>/dev/null | wc -l
+2026-05-18 17:27:40,171 - INFO - gpu-deploy - [99] [10.0.22.143] stdout:
+2026-05-18 17:27:40,171 - INFO - gpu-deploy -   1
+2026-05-18 17:27:40,171 - INFO - gpu-deploy - [99] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:40,171 - INFO - gpu-deploy - [99] [10.0.22.143] 执行: ibdev2netdev 2>/dev/null | grep -v down | wc -l
+2026-05-18 17:27:40,259 - INFO - gpu-deploy - [99] [10.0.22.143] stdout:
+2026-05-18 17:27:40,259 - INFO - gpu-deploy -   0
+2026-05-18 17:27:40,259 - INFO - gpu-deploy - [99] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:40,260 - INFO - gpu-deploy - [99] [10.0.22.143] 执行: ip link show up 2>/dev/null | grep -E '^[0-9]+:' | wc -l
+2026-05-18 17:27:40,347 - INFO - gpu-deploy - [99] [10.0.22.143] stdout:
+2026-05-18 17:27:40,347 - INFO - gpu-deploy -   2
+2026-05-18 17:27:40,347 - INFO - gpu-deploy - [99] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:40,347 - INFO - gpu-deploy -     设备状态: all_ok
+2026-05-18 17:27:40,348 - INFO - gpu-deploy - 
+[3/4] 检查部署步骤配置状态...
+2026-05-18 17:27:40,348 - INFO - gpu-deploy -     [✓] 00 设备一致性检查: 所有节点已配置
+2026-05-18 17:27:40,349 - INFO - gpu-deploy -     [✓] 0b 网络连通性检查: 所有节点已配置
+2026-05-18 17:27:40,349 - INFO - gpu-deploy - [01] [10.0.16.211] 执行: dpkg -l build-essential 2>/dev/null | grep '^ii' && echo 'installed' || echo 'not_installed'
+2026-05-18 17:27:40,435 - INFO - gpu-deploy - [01] [10.0.16.211] stdout:
+2026-05-18 17:27:40,435 - INFO - gpu-deploy -   ii  build-essential 12.9ubuntu3  amd64        Informational list of build-essential packages
+2026-05-18 17:27:40,435 - INFO - gpu-deploy -   installed
+2026-05-18 17:27:40,436 - INFO - gpu-deploy - [01] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:40,436 - INFO - gpu-deploy - [01] [10.0.16.211] 执行: dpkg -l gcc 2>/dev/null | grep '^ii' && echo 'installed' || echo 'not_installed'
+2026-05-18 17:27:40,523 - INFO - gpu-deploy - [01] [10.0.16.211] stdout:
+2026-05-18 17:27:40,523 - INFO - gpu-deploy -   ii  gcc            4:11.2.0-1ubuntu1 amd64        GNU C compiler
+2026-05-18 17:27:40,524 - INFO - gpu-deploy -   installed
+2026-05-18 17:27:40,524 - INFO - gpu-deploy - [01] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:40,524 - INFO - gpu-deploy - [01] [10.0.16.211] 执行: dpkg -l make 2>/dev/null | grep '^ii' && echo 'installed' || echo 'not_installed'
+2026-05-18 17:27:40,611 - INFO - gpu-deploy - [01] [10.0.16.211] stdout:
+2026-05-18 17:27:40,612 - INFO - gpu-deploy -   ii  make           4.3-4.1build1 amd64        utility for directing compilation
+2026-05-18 17:27:40,612 - INFO - gpu-deploy -   installed
+2026-05-18 17:27:40,612 - INFO - gpu-deploy - [01] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:40,612 - INFO - gpu-deploy - [01] [10.0.16.211] 执行: dpkg -l dkms 2>/dev/null | grep '^ii' && echo 'installed' || echo 'not_installed'
+2026-05-18 17:27:40,699 - INFO - gpu-deploy - [01] [10.0.16.211] stdout:
+2026-05-18 17:27:40,699 - INFO - gpu-deploy -   ii  dkms           2.8.7-2ubuntu2.2 all          Dynamic Kernel Module Support Framework
+2026-05-18 17:27:40,699 - INFO - gpu-deploy -   installed
+2026-05-18 17:27:40,700 - INFO - gpu-deploy - [01] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:40,700 - INFO - gpu-deploy - [01] [10.0.16.211] 执行: dpkg -l pdsh 2>/dev/null | grep '^ii' && echo 'installed' || echo 'not_installed'
+2026-05-18 17:27:40,787 - INFO - gpu-deploy - [01] [10.0.16.211] stdout:
+2026-05-18 17:27:40,787 - INFO - gpu-deploy -   not_installed
+2026-05-18 17:27:40,788 - INFO - gpu-deploy - [01] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:40,788 - INFO - gpu-deploy - [01] [10.0.16.211] 执行: dpkg -l git 2>/dev/null | grep '^ii' && echo 'installed' || echo 'not_installed'
+2026-05-18 17:27:40,875 - INFO - gpu-deploy - [01] [10.0.16.211] stdout:
+2026-05-18 17:27:40,875 - INFO - gpu-deploy -   ii  git            1:2.34.1-1ubuntu1.11 amd64        fast, scalable, distributed revision control system
+2026-05-18 17:27:40,876 - INFO - gpu-deploy -   installed
+2026-05-18 17:27:40,876 - INFO - gpu-deploy - [01] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:40,876 - INFO - gpu-deploy - [01] [10.0.16.211] 执行: dpkg -l cmake 2>/dev/null | grep '^ii' && echo 'installed' || echo 'not_installed'
+2026-05-18 17:27:40,963 - INFO - gpu-deploy - [01] [10.0.16.211] stdout:
+2026-05-18 17:27:40,963 - INFO - gpu-deploy -   not_installed
+2026-05-18 17:27:40,964 - INFO - gpu-deploy - [01] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:40,964 - INFO - gpu-deploy - [01] [10.0.22.143] 执行: dpkg -l build-essential 2>/dev/null | grep '^ii' && echo 'installed' || echo 'not_installed'
+2026-05-18 17:27:41,051 - INFO - gpu-deploy - [01] [10.0.22.143] stdout:
+2026-05-18 17:27:41,052 - INFO - gpu-deploy -   ii  build-essential 12.9ubuntu3  amd64        Informational list of build-essential packages
+2026-05-18 17:27:41,052 - INFO - gpu-deploy -   installed
+2026-05-18 17:27:41,052 - INFO - gpu-deploy - [01] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:41,052 - INFO - gpu-deploy - [01] [10.0.22.143] 执行: dpkg -l gcc 2>/dev/null | grep '^ii' && echo 'installed' || echo 'not_installed'
+2026-05-18 17:27:41,139 - INFO - gpu-deploy - [01] [10.0.22.143] stdout:
+2026-05-18 17:27:41,140 - INFO - gpu-deploy -   ii  gcc            4:11.2.0-1ubuntu1 amd64        GNU C compiler
+2026-05-18 17:27:41,140 - INFO - gpu-deploy -   installed
+2026-05-18 17:27:41,140 - INFO - gpu-deploy - [01] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:41,140 - INFO - gpu-deploy - [01] [10.0.22.143] 执行: dpkg -l make 2>/dev/null | grep '^ii' && echo 'installed' || echo 'not_installed'
+2026-05-18 17:27:41,231 - INFO - gpu-deploy - [01] [10.0.22.143] stdout:
+2026-05-18 17:27:41,232 - INFO - gpu-deploy -   ii  make           4.3-4.1build1 amd64        utility for directing compilation
+2026-05-18 17:27:41,232 - INFO - gpu-deploy -   installed
+2026-05-18 17:27:41,232 - INFO - gpu-deploy - [01] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:41,232 - INFO - gpu-deploy - [01] [10.0.22.143] 执行: dpkg -l dkms 2>/dev/null | grep '^ii' && echo 'installed' || echo 'not_installed'
+2026-05-18 17:27:41,319 - INFO - gpu-deploy - [01] [10.0.22.143] stdout:
+2026-05-18 17:27:41,319 - INFO - gpu-deploy -   ii  dkms           2.8.7-2ubuntu2.2 all          Dynamic Kernel Module Support Framework
+2026-05-18 17:27:41,320 - INFO - gpu-deploy -   installed
+2026-05-18 17:27:41,320 - INFO - gpu-deploy - [01] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:41,320 - INFO - gpu-deploy - [01] [10.0.22.143] 执行: dpkg -l pdsh 2>/dev/null | grep '^ii' && echo 'installed' || echo 'not_installed'
+2026-05-18 17:27:41,407 - INFO - gpu-deploy - [01] [10.0.22.143] stdout:
+2026-05-18 17:27:41,407 - INFO - gpu-deploy -   not_installed
+2026-05-18 17:27:41,407 - INFO - gpu-deploy - [01] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:41,408 - INFO - gpu-deploy - [01] [10.0.22.143] 执行: dpkg -l git 2>/dev/null | grep '^ii' && echo 'installed' || echo 'not_installed'
+2026-05-18 17:27:41,495 - INFO - gpu-deploy - [01] [10.0.22.143] stdout:
+2026-05-18 17:27:41,495 - INFO - gpu-deploy -   ii  git            1:2.34.1-1ubuntu1.11 amd64        fast, scalable, distributed revision control system
+2026-05-18 17:27:41,495 - INFO - gpu-deploy -   installed
+2026-05-18 17:27:41,496 - INFO - gpu-deploy - [01] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:41,496 - INFO - gpu-deploy - [01] [10.0.22.143] 执行: dpkg -l cmake 2>/dev/null | grep '^ii' && echo 'installed' || echo 'not_installed'
+2026-05-18 17:27:41,583 - INFO - gpu-deploy - [01] [10.0.22.143] stdout:
+2026-05-18 17:27:41,583 - INFO - gpu-deploy -   not_installed
+2026-05-18 17:27:41,583 - INFO - gpu-deploy - [01] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:41,584 - INFO - gpu-deploy -     [✗] 01 依赖软件包: 未配置
+2026-05-18 17:27:41,584 - INFO - gpu-deploy - [02] [10.0.16.211] 执行: uname -r
+2026-05-18 17:27:41,671 - INFO - gpu-deploy - [02] [10.0.16.211] stdout:
+2026-05-18 17:27:41,671 - INFO - gpu-deploy -   5.15.0-128-generic
+2026-05-18 17:27:41,672 - INFO - gpu-deploy - [02] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:41,672 - INFO - gpu-deploy - [02] [10.0.22.143] 执行: uname -r
+2026-05-18 17:27:41,759 - INFO - gpu-deploy - [02] [10.0.22.143] stdout:
+2026-05-18 17:27:41,759 - INFO - gpu-deploy -   5.15.0-128-generic
+2026-05-18 17:27:41,759 - INFO - gpu-deploy - [02] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:41,760 - INFO - gpu-deploy -     [✓] 02 内核版本检查: 所有节点已配置
+2026-05-18 17:27:41,760 - INFO - gpu-deploy - [03] [10.0.16.211] 执行: ldd --version | grep GLIBC | head -1
+2026-05-18 17:27:41,847 - INFO - gpu-deploy - [03] [10.0.16.211] stdout:
+2026-05-18 17:27:41,847 - INFO - gpu-deploy -   ldd (Ubuntu GLIBC 2.35-0ubuntu3.8) 2.35
+2026-05-18 17:27:41,847 - INFO - gpu-deploy - [03] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:41,847 - INFO - gpu-deploy - [03] [10.0.22.143] 执行: ldd --version | grep GLIBC | head -1
+2026-05-18 17:27:41,935 - INFO - gpu-deploy - [03] [10.0.22.143] stdout:
+2026-05-18 17:27:41,935 - INFO - gpu-deploy -   ldd (Ubuntu GLIBC 2.35-0ubuntu3.8) 2.35
+2026-05-18 17:27:41,935 - INFO - gpu-deploy - [03] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:41,936 - INFO - gpu-deploy -     [✓] 03 glibc版本检查: 所有节点已配置
+2026-05-18 17:27:41,936 - INFO - gpu-deploy - [04] [10.0.16.211] 执行: dpkg -l | grep 'openssh-client' | awk '{print $3}'
+2026-05-18 17:27:42,023 - INFO - gpu-deploy - [04] [10.0.16.211] stdout:
+2026-05-18 17:27:42,023 - INFO - gpu-deploy -   1:8.9p1-3ubuntu0.10
+2026-05-18 17:27:42,024 - INFO - gpu-deploy - [04] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:42,025 - INFO - gpu-deploy - [04] [10.0.22.143] 执行: dpkg -l | grep 'openssh-client' | awk '{print $3}'
+2026-05-18 17:27:42,111 - INFO - gpu-deploy - [04] [10.0.22.143] stdout:
+2026-05-18 17:27:42,111 - INFO - gpu-deploy -   1:8.9p1-3ubuntu0.10
+2026-05-18 17:27:42,111 - INFO - gpu-deploy - [04] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:42,112 - INFO - gpu-deploy -     [✓] 04 OpenSSH版本检查: 所有节点已配置
+2026-05-18 17:27:42,112 - INFO - gpu-deploy - [05] [10.0.16.211] 执行: whoami
+2026-05-18 17:27:42,199 - INFO - gpu-deploy - [05] [10.0.16.211] stdout:
+2026-05-18 17:27:42,200 - INFO - gpu-deploy -   ubuntu
+2026-05-18 17:27:42,200 - INFO - gpu-deploy - [05] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:42,200 - INFO - gpu-deploy - [05] [10.0.16.211] 执行: sudo -n true 2>/dev/null && echo 'ok' || echo 'need_password'
+2026-05-18 17:27:42,291 - INFO - gpu-deploy - [05] [10.0.16.211] stdout:
+2026-05-18 17:27:42,291 - INFO - gpu-deploy -   ok
+2026-05-18 17:27:42,291 - INFO - gpu-deploy - [05] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:42,292 - INFO - gpu-deploy - [05] [10.0.22.143] 执行: whoami
+2026-05-18 17:27:42,379 - INFO - gpu-deploy - [05] [10.0.22.143] stdout:
+2026-05-18 17:27:42,379 - INFO - gpu-deploy -   ubuntu
+2026-05-18 17:27:42,380 - INFO - gpu-deploy - [05] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:42,380 - INFO - gpu-deploy - [05] [10.0.22.143] 执行: sudo -n true 2>/dev/null && echo 'ok' || echo 'need_password'
+2026-05-18 17:27:42,467 - INFO - gpu-deploy - [05] [10.0.22.143] stdout:
+2026-05-18 17:27:42,467 - INFO - gpu-deploy -   ok
+2026-05-18 17:27:42,467 - INFO - gpu-deploy - [05] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:42,468 - INFO - gpu-deploy -     [✓] 05 sudo免密: 所有节点已配置
+2026-05-18 17:27:42,468 - INFO - gpu-deploy - [06] [10.0.16.211] 执行: mountpoint -q /ssd && echo 'mounted' || echo 'not_mounted'
+2026-05-18 17:27:42,555 - INFO - gpu-deploy - [06] [10.0.16.211] stdout:
+2026-05-18 17:27:42,555 - INFO - gpu-deploy -   mounted
+2026-05-18 17:27:42,556 - INFO - gpu-deploy - [06] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:42,556 - INFO - gpu-deploy - [06] [10.0.22.143] 执行: mountpoint -q /ssd && echo 'mounted' || echo 'not_mounted'
+2026-05-18 17:27:42,643 - INFO - gpu-deploy - [06] [10.0.22.143] stdout:
+2026-05-18 17:27:42,643 - INFO - gpu-deploy -   mounted
+2026-05-18 17:27:42,644 - INFO - gpu-deploy - [06] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:42,644 - INFO - gpu-deploy -     [✓] 06 数据盘挂载: 所有节点已配置
+2026-05-18 17:27:42,645 - INFO - gpu-deploy - [07] [10.0.16.211] 执行: cat /proc/cpuinfo | grep 'model name' | head -1
+2026-05-18 17:27:42,731 - INFO - gpu-deploy - [07] [10.0.16.211] stdout:
+2026-05-18 17:27:42,731 - INFO - gpu-deploy -   model name	: AMD EPYC 7402 24-Core Processor
+2026-05-18 17:27:42,732 - INFO - gpu-deploy - [07] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:42,732 - INFO - gpu-deploy - [07] [10.0.16.211] 执行: nvidia-smi --query-gpu=name --format=csv,noheader 2>/dev/null | head -1 || echo 'unknown'
+2026-05-18 17:27:42,819 - INFO - gpu-deploy - [07] [10.0.16.211] stdout:
+2026-05-18 17:27:42,820 - INFO - gpu-deploy -   NVIDIA GeForce RTX 3090
+2026-05-18 17:27:42,820 - INFO - gpu-deploy - [07] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:42,821 - INFO - gpu-deploy - [07] [10.0.22.143] 执行: cat /proc/cpuinfo | grep 'model name' | head -1
+2026-05-18 17:27:42,907 - INFO - gpu-deploy - [07] [10.0.22.143] stdout:
+2026-05-18 17:27:42,907 - INFO - gpu-deploy -   model name	: AMD EPYC 7402 24-Core Processor
+2026-05-18 17:27:42,908 - INFO - gpu-deploy - [07] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:42,908 - INFO - gpu-deploy - [07] [10.0.22.143] 执行: nvidia-smi --query-gpu=name --format=csv,noheader 2>/dev/null | head -1 || echo 'unknown'
+2026-05-18 17:27:42,995 - INFO - gpu-deploy - [07] [10.0.22.143] stdout:
+2026-05-18 17:27:42,995 - INFO - gpu-deploy -   NVIDIA GeForce RTX 3090
+2026-05-18 17:27:42,996 - INFO - gpu-deploy - [07] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:42,996 - INFO - gpu-deploy -     [✓] 07 MSR设置: 所有节点已配置
+2026-05-18 17:27:42,996 - INFO - gpu-deploy - [08] [10.0.16.211] 执行: test -x /etc/rc.local && echo 'exists' || echo 'not_found'
+2026-05-18 17:27:43,083 - INFO - gpu-deploy - [08] [10.0.16.211] stdout:
+2026-05-18 17:27:43,083 - INFO - gpu-deploy -   exists
+2026-05-18 17:27:43,083 - INFO - gpu-deploy - [08] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:43,083 - INFO - gpu-deploy - [08] [10.0.16.211] 执行: systemctl is-enabled rc-local.service 2>/dev/null || echo 'disabled'
+2026-05-18 17:27:43,171 - INFO - gpu-deploy - [08] [10.0.16.211] stdout:
+2026-05-18 17:27:43,171 - INFO - gpu-deploy -   enabled
+2026-05-18 17:27:43,172 - INFO - gpu-deploy - [08] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:43,172 - INFO - gpu-deploy - [08] [10.0.22.143] 执行: test -x /etc/rc.local && echo 'exists' || echo 'not_found'
+2026-05-18 17:27:43,259 - INFO - gpu-deploy - [08] [10.0.22.143] stdout:
+2026-05-18 17:27:43,259 - INFO - gpu-deploy -   exists
+2026-05-18 17:27:43,259 - INFO - gpu-deploy - [08] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:43,259 - INFO - gpu-deploy - [08] [10.0.22.143] 执行: systemctl is-enabled rc-local.service 2>/dev/null || echo 'disabled'
+2026-05-18 17:27:43,347 - INFO - gpu-deploy - [08] [10.0.22.143] stdout:
+2026-05-18 17:27:43,347 - INFO - gpu-deploy -   enabled
+2026-05-18 17:27:43,348 - INFO - gpu-deploy - [08] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:43,348 - INFO - gpu-deploy -     [✓] 08 rc.local配置: 所有节点已配置
+2026-05-18 17:27:43,348 - INFO - gpu-deploy - [09] [10.0.16.211] 执行: hostname
+2026-05-18 17:27:43,435 - INFO - gpu-deploy - [09] [10.0.16.211] stdout:
+2026-05-18 17:27:43,435 - INFO - gpu-deploy -   gpugpugpu2
+2026-05-18 17:27:43,435 - INFO - gpu-deploy - [09] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:43,436 - INFO - gpu-deploy - [09] [10.0.16.211] 执行: grep -q 'gpugpugpu2' /etc/hosts && echo 'found' || echo 'not_found'
+2026-05-18 17:27:43,523 - INFO - gpu-deploy - [09] [10.0.16.211] stdout:
+2026-05-18 17:27:43,523 - INFO - gpu-deploy -   found
+2026-05-18 17:27:43,523 - INFO - gpu-deploy - [09] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:43,523 - INFO - gpu-deploy - [09] [10.0.22.143] 执行: hostname
+2026-05-18 17:27:43,611 - INFO - gpu-deploy - [09] [10.0.22.143] stdout:
+2026-05-18 17:27:43,611 - INFO - gpu-deploy -   gpugpugpu1
+2026-05-18 17:27:43,611 - INFO - gpu-deploy - [09] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:43,612 - INFO - gpu-deploy - [09] [10.0.22.143] 执行: grep -q 'gpugpugpu1' /etc/hosts && echo 'found' || echo 'not_found'
+2026-05-18 17:27:43,699 - INFO - gpu-deploy - [09] [10.0.22.143] stdout:
+2026-05-18 17:27:43,699 - INFO - gpu-deploy -   found
+2026-05-18 17:27:43,700 - INFO - gpu-deploy - [09] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:43,700 - INFO - gpu-deploy -     [✓] 09 主机名和hosts: 所有节点已配置
+2026-05-18 17:27:43,700 - INFO - gpu-deploy - [10] [10.0.16.211] 执行: id ubuntu 2>/dev/null && echo 'exists' || echo 'not_exists'
+2026-05-18 17:27:43,787 - INFO - gpu-deploy - [10] [10.0.16.211] stdout:
+2026-05-18 17:27:43,788 - INFO - gpu-deploy -   uid=1000(ubuntu) gid=1000(ubuntu) groups=1000(ubuntu),4(adm),20(dialout),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),119(netdev),120(lxd)
+2026-05-18 17:27:43,788 - INFO - gpu-deploy -   exists
+2026-05-18 17:27:43,788 - INFO - gpu-deploy - [10] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:43,788 - INFO - gpu-deploy - [10] [10.0.16.211] 执行: sudo -u ubuntu sudo -n true 2>/dev/null && echo 'ok' || echo 'need_password'
+2026-05-18 17:27:43,875 - INFO - gpu-deploy - [10] [10.0.16.211] stdout:
+2026-05-18 17:27:43,875 - INFO - gpu-deploy -   ok
+2026-05-18 17:27:43,875 - INFO - gpu-deploy - [10] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:43,876 - INFO - gpu-deploy - [10] [10.0.22.143] 执行: id ubuntu 2>/dev/null && echo 'exists' || echo 'not_exists'
+2026-05-18 17:27:43,963 - INFO - gpu-deploy - [10] [10.0.22.143] stdout:
+2026-05-18 17:27:43,963 - INFO - gpu-deploy -   uid=1000(ubuntu) gid=1000(ubuntu) groups=1000(ubuntu),4(adm),20(dialout),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),119(netdev),120(lxd)
+2026-05-18 17:27:43,963 - INFO - gpu-deploy -   exists
+2026-05-18 17:27:43,964 - INFO - gpu-deploy - [10] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:43,964 - INFO - gpu-deploy - [10] [10.0.22.143] 执行: sudo -u ubuntu sudo -n true 2>/dev/null && echo 'ok' || echo 'need_password'
+2026-05-18 17:27:44,051 - INFO - gpu-deploy - [10] [10.0.22.143] stdout:
+2026-05-18 17:27:44,051 - INFO - gpu-deploy -   ok
+2026-05-18 17:27:44,051 - INFO - gpu-deploy - [10] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:44,052 - INFO - gpu-deploy -     [✓] 10 ubuntu用户: 所有节点已配置
+2026-05-18 17:27:44,052 - INFO - gpu-deploy - [99] [10.0.16.211] 执行: test -s ~/.ssh/authorized_keys && test -f ~/.ssh/id_rsa && echo 'configured' || echo 'not_configured'
+2026-05-18 17:27:44,139 - INFO - gpu-deploy - [99] [10.0.16.211] stdout:
+2026-05-18 17:27:44,139 - INFO - gpu-deploy -   configured
+2026-05-18 17:27:44,139 - INFO - gpu-deploy - [99] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:44,139 - INFO - gpu-deploy - [99] [10.0.22.143] 执行: test -s ~/.ssh/authorized_keys && test -f ~/.ssh/id_rsa && echo 'configured' || echo 'not_configured'
+2026-05-18 17:27:44,227 - INFO - gpu-deploy - [99] [10.0.22.143] stdout:
+2026-05-18 17:27:44,227 - INFO - gpu-deploy -   configured
+2026-05-18 17:27:44,227 - INFO - gpu-deploy - [99] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:44,228 - INFO - gpu-deploy -     [✓] 11 SSH免密登录: 所有节点已配置
+2026-05-18 17:27:44,228 - INFO - gpu-deploy - [12] [10.0.16.211] 执行: test -d /sys/devices/system/cpu/cpu0/cpufreq
+2026-05-18 17:27:44,315 - INFO - gpu-deploy - [12] [10.0.16.211] ✗ exit_code=1, 耗时=0.09s
+2026-05-18 17:27:44,315 - INFO - gpu-deploy - [12] [10.0.22.143] 执行: test -d /sys/devices/system/cpu/cpu0/cpufreq
+2026-05-18 17:27:44,403 - INFO - gpu-deploy - [12] [10.0.22.143] ✗ exit_code=1, 耗时=0.09s
+2026-05-18 17:27:44,403 - INFO - gpu-deploy -     [✓] 12 CPU性能模式: 所有节点已配置
+2026-05-18 17:27:44,403 - INFO - gpu-deploy - [13] [10.0.16.211] 执行: grep -c 'nofile 1000000' /etc/security/limits.conf 2>/dev/null || echo 0
+2026-05-18 17:27:44,491 - INFO - gpu-deploy - [13] [10.0.16.211] stdout:
+2026-05-18 17:27:44,491 - INFO - gpu-deploy -   4
+2026-05-18 17:27:44,492 - INFO - gpu-deploy - [13] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:44,492 - INFO - gpu-deploy - [13] [10.0.16.211] 执行: test -f /etc/systemd/system/user@.service.d/limits.conf && grep -q 'LimitNOFILE=1000000' /etc/systemd/system/user@.service.d/limits.conf
+2026-05-18 17:27:44,579 - INFO - gpu-deploy - [13] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:44,579 - INFO - gpu-deploy - [13] [10.0.16.211] 执行: grep -q 'pam_limits.so' /etc/pam.d/common-session
+2026-05-18 17:27:44,667 - INFO - gpu-deploy - [13] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:44,667 - INFO - gpu-deploy - [13] [10.0.22.143] 执行: grep -c 'nofile 1000000' /etc/security/limits.conf 2>/dev/null || echo 0
+2026-05-18 17:27:44,755 - INFO - gpu-deploy - [13] [10.0.22.143] stdout:
+2026-05-18 17:27:44,755 - INFO - gpu-deploy -   4
+2026-05-18 17:27:44,755 - INFO - gpu-deploy - [13] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:44,756 - INFO - gpu-deploy - [13] [10.0.22.143] 执行: test -f /etc/systemd/system/user@.service.d/limits.conf && grep -q 'LimitNOFILE=1000000' /etc/systemd/system/user@.service.d/limits.conf
+2026-05-18 17:27:44,843 - INFO - gpu-deploy - [13] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:44,843 - INFO - gpu-deploy - [13] [10.0.22.143] 执行: grep -q 'pam_limits.so' /etc/pam.d/common-session
+2026-05-18 17:27:44,931 - INFO - gpu-deploy - [13] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:44,931 - INFO - gpu-deploy -     [✓] 13 文件描述符: 所有节点已配置
+2026-05-18 17:27:44,931 - INFO - gpu-deploy - [15] [10.0.16.211] 执行: systemctl is-enabled unattended-upgrades.service 2>/dev/null || echo 'disabled'
+2026-05-18 17:27:45,019 - INFO - gpu-deploy - [15] [10.0.16.211] stdout:
+2026-05-18 17:27:45,019 - INFO - gpu-deploy -   disabled
+2026-05-18 17:27:45,020 - INFO - gpu-deploy -   disabled
+2026-05-18 17:27:45,020 - INFO - gpu-deploy - [15] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:45,020 - INFO - gpu-deploy - [15] [10.0.16.211] 执行: test -f /etc/apt/preferences.d/nolinuxupgrades
+2026-05-18 17:27:45,111 - INFO - gpu-deploy - [15] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:45,111 - INFO - gpu-deploy - [15] [10.0.22.143] 执行: systemctl is-enabled unattended-upgrades.service 2>/dev/null || echo 'disabled'
+2026-05-18 17:27:45,199 - INFO - gpu-deploy - [15] [10.0.22.143] stdout:
+2026-05-18 17:27:45,199 - INFO - gpu-deploy -   disabled
+2026-05-18 17:27:45,199 - INFO - gpu-deploy -   disabled
+2026-05-18 17:27:45,200 - INFO - gpu-deploy - [15] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:45,200 - INFO - gpu-deploy - [15] [10.0.22.143] 执行: test -f /etc/apt/preferences.d/nolinuxupgrades
+2026-05-18 17:27:45,287 - INFO - gpu-deploy - [15] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:45,287 - INFO - gpu-deploy -     [✓] 15 禁用自动更新: 所有节点已配置
+2026-05-18 17:27:45,287 - INFO - gpu-deploy -     [✓] 16 固定内核版本: 所有节点已配置
+2026-05-18 17:27:45,287 - INFO - gpu-deploy - [17] [10.0.16.211] 执行: timedatectl show --no-pager 2>/dev/null | grep 'Timezone=' || timedatectl 2>/dev/null | grep 'Time zone'
+2026-05-18 17:27:45,375 - INFO - gpu-deploy - [17] [10.0.16.211] stdout:
+2026-05-18 17:27:45,375 - INFO - gpu-deploy -   Timezone=Asia/Shanghai
+2026-05-18 17:27:45,375 - INFO - gpu-deploy - [17] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:45,376 - INFO - gpu-deploy - [17] [10.0.22.143] 执行: timedatectl show --no-pager 2>/dev/null | grep 'Timezone=' || timedatectl 2>/dev/null | grep 'Time zone'
+2026-05-18 17:27:45,463 - INFO - gpu-deploy - [17] [10.0.22.143] stdout:
+2026-05-18 17:27:45,463 - INFO - gpu-deploy -   Timezone=Asia/Shanghai
+2026-05-18 17:27:45,463 - INFO - gpu-deploy - [17] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:45,464 - INFO - gpu-deploy -     [✓] 17 时区设置: 所有节点已配置
+2026-05-18 17:27:45,464 - INFO - gpu-deploy - [18] [10.0.16.211] 执行: cat /proc/sys/net/ipv6/conf/all/disable_ipv6
+2026-05-18 17:27:45,551 - INFO - gpu-deploy - [18] [10.0.16.211] stdout:
+2026-05-18 17:27:45,551 - INFO - gpu-deploy -   1
+2026-05-18 17:27:45,552 - INFO - gpu-deploy - [18] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:45,552 - INFO - gpu-deploy - [18] [10.0.22.143] 执行: cat /proc/sys/net/ipv6/conf/all/disable_ipv6
+2026-05-18 17:27:45,639 - INFO - gpu-deploy - [18] [10.0.22.143] stdout:
+2026-05-18 17:27:45,639 - INFO - gpu-deploy -   1
+2026-05-18 17:27:45,639 - INFO - gpu-deploy - [18] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:45,640 - INFO - gpu-deploy -     [✓] 18 禁用IPv6: 所有节点已配置
+2026-05-18 17:27:45,640 - INFO - gpu-deploy - [19] [10.0.16.211] 执行: systemctl is-enabled sleep.target 2>/dev/null || echo 'masked'
+2026-05-18 17:27:45,727 - INFO - gpu-deploy - [19] [10.0.16.211] stdout:
+2026-05-18 17:27:45,727 - INFO - gpu-deploy -   masked
+2026-05-18 17:27:45,727 - INFO - gpu-deploy -   masked
+2026-05-18 17:27:45,728 - INFO - gpu-deploy - [19] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:45,728 - INFO - gpu-deploy - [19] [10.0.16.211] 执行: grep -q 'hung_task_panic' /etc/sysctl.conf
+2026-05-18 17:27:45,815 - INFO - gpu-deploy - [19] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:45,815 - INFO - gpu-deploy - [19] [10.0.22.143] 执行: systemctl is-enabled sleep.target 2>/dev/null || echo 'masked'
+2026-05-18 17:27:45,903 - INFO - gpu-deploy - [19] [10.0.22.143] stdout:
+2026-05-18 17:27:45,904 - INFO - gpu-deploy -   masked
+2026-05-18 17:27:45,904 - INFO - gpu-deploy -   masked
+2026-05-18 17:27:45,904 - INFO - gpu-deploy - [19] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:45,904 - INFO - gpu-deploy - [19] [10.0.22.143] 执行: grep -q 'hung_task_panic' /etc/sysctl.conf
+2026-05-18 17:27:45,991 - INFO - gpu-deploy - [19] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:45,991 - INFO - gpu-deploy -     [✓] 19 vmcore和休眠: 所有节点已配置
+2026-05-18 17:27:45,991 - INFO - gpu-deploy - [20] [10.0.16.211] 执行: ofed_info -s 2>/dev/null | head -1
+2026-05-18 17:27:46,079 - INFO - gpu-deploy - [20] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:46,079 - INFO - gpu-deploy - [20] [10.0.22.143] 执行: ofed_info -s 2>/dev/null | head -1
+2026-05-18 17:27:46,167 - INFO - gpu-deploy - [20] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:46,167 - INFO - gpu-deploy -     [✗] 20 Mellanox驱动: 未配置
+2026-05-18 17:27:46,168 - INFO - gpu-deploy - [21] [10.0.16.211] 执行: grep -rq 'blacklist nouveau' /etc/modprobe.d/ 2>/dev/null && echo 'found' || echo 'not_found'
+2026-05-18 17:27:46,255 - INFO - gpu-deploy - [21] [10.0.16.211] stdout:
+2026-05-18 17:27:46,255 - INFO - gpu-deploy -   not_found
+2026-05-18 17:27:46,256 - INFO - gpu-deploy - [21] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:46,256 - INFO - gpu-deploy - [21] [10.0.16.211] 执行: lsmod | grep -q nouveau && echo 'loaded' || echo 'not_loaded'
+2026-05-18 17:27:46,343 - INFO - gpu-deploy - [21] [10.0.16.211] stdout:
+2026-05-18 17:27:46,344 - INFO - gpu-deploy -   not_loaded
+2026-05-18 17:27:46,344 - INFO - gpu-deploy - [21] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:46,344 - INFO - gpu-deploy - [21] [10.0.22.143] 执行: grep -rq 'blacklist nouveau' /etc/modprobe.d/ 2>/dev/null && echo 'found' || echo 'not_found'
+2026-05-18 17:27:46,431 - INFO - gpu-deploy - [21] [10.0.22.143] stdout:
+2026-05-18 17:27:46,432 - INFO - gpu-deploy -   not_found
+2026-05-18 17:27:46,432 - INFO - gpu-deploy - [21] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:46,432 - INFO - gpu-deploy - [21] [10.0.22.143] 执行: lsmod | grep -q nouveau && echo 'loaded' || echo 'not_loaded'
+2026-05-18 17:27:46,519 - INFO - gpu-deploy - [21] [10.0.22.143] stdout:
+2026-05-18 17:27:46,519 - INFO - gpu-deploy -   not_loaded
+2026-05-18 17:27:46,520 - INFO - gpu-deploy - [21] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:46,520 - INFO - gpu-deploy -     [✗] 21 禁用nouveau: 未配置
+2026-05-18 17:27:46,521 - INFO - gpu-deploy - [22] [10.0.16.211] 执行: nvidia-smi --query-gpu=driver_version --format=csv,noheader 2>/dev/null | head -1
+2026-05-18 17:27:46,607 - INFO - gpu-deploy - [22] [10.0.16.211] stdout:
+2026-05-18 17:27:46,608 - INFO - gpu-deploy -   580.142
+2026-05-18 17:27:46,608 - INFO - gpu-deploy - [22] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:46,608 - INFO - gpu-deploy - [22] [10.0.22.143] 执行: nvidia-smi --query-gpu=driver_version --format=csv,noheader 2>/dev/null | head -1
+2026-05-18 17:27:46,695 - INFO - gpu-deploy - [22] [10.0.22.143] stdout:
+2026-05-18 17:27:46,695 - INFO - gpu-deploy -   580.142
+2026-05-18 17:27:46,696 - INFO - gpu-deploy - [22] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:46,696 - INFO - gpu-deploy -     [✓] 22 NVIDIA驱动: 所有节点已配置
+2026-05-18 17:27:46,696 - INFO - gpu-deploy - [23] [10.0.16.211] 执行: nvidia-smi nvlink --status 2>/dev/null | grep -q 'GPU' && echo 'yes' || echo 'no'
+2026-05-18 17:27:46,792 - INFO - gpu-deploy - [23] [10.0.16.211] stdout:
+2026-05-18 17:27:46,793 - INFO - gpu-deploy -   yes
+2026-05-18 17:27:46,793 - INFO - gpu-deploy - [23] [10.0.16.211] ✓ exit_code=0, 耗时=0.10s
+2026-05-18 17:27:46,793 - INFO - gpu-deploy - [23] [10.0.16.211] 执行: systemctl is-active nvidia-fabricmanager 2>/dev/null || echo 'inactive'
+2026-05-18 17:27:46,879 - INFO - gpu-deploy - [23] [10.0.16.211] stdout:
+2026-05-18 17:27:46,879 - INFO - gpu-deploy -   inactive
+2026-05-18 17:27:46,879 - INFO - gpu-deploy -   inactive
+2026-05-18 17:27:46,880 - INFO - gpu-deploy - [23] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:46,880 - INFO - gpu-deploy - [23] [10.0.16.211] 执行: which nvidia-fabricmanager 2>/dev/null || which nv-fabricmanager 2>/dev/null || echo 'not_installed'
+2026-05-18 17:27:46,967 - INFO - gpu-deploy - [23] [10.0.16.211] stdout:
+2026-05-18 17:27:46,968 - INFO - gpu-deploy -   not_installed
+2026-05-18 17:27:46,968 - INFO - gpu-deploy - [23] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:46,968 - INFO - gpu-deploy - [23] [10.0.22.143] 执行: nvidia-smi nvlink --status 2>/dev/null | grep -q 'GPU' && echo 'yes' || echo 'no'
+2026-05-18 17:27:47,067 - INFO - gpu-deploy - [23] [10.0.22.143] stdout:
+2026-05-18 17:27:47,068 - INFO - gpu-deploy -   yes
+2026-05-18 17:27:47,069 - INFO - gpu-deploy - [23] [10.0.22.143] ✓ exit_code=0, 耗时=0.10s
+2026-05-18 17:27:47,069 - INFO - gpu-deploy - [23] [10.0.22.143] 执行: systemctl is-active nvidia-fabricmanager 2>/dev/null || echo 'inactive'
+2026-05-18 17:27:47,155 - INFO - gpu-deploy - [23] [10.0.22.143] stdout:
+2026-05-18 17:27:47,156 - INFO - gpu-deploy -   inactive
+2026-05-18 17:27:47,156 - INFO - gpu-deploy -   inactive
+2026-05-18 17:27:47,156 - INFO - gpu-deploy - [23] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:47,156 - INFO - gpu-deploy - [23] [10.0.22.143] 执行: which nvidia-fabricmanager 2>/dev/null || which nv-fabricmanager 2>/dev/null || echo 'not_installed'
+2026-05-18 17:27:47,243 - INFO - gpu-deploy - [23] [10.0.22.143] stdout:
+2026-05-18 17:27:47,243 - INFO - gpu-deploy -   not_installed
+2026-05-18 17:27:47,243 - INFO - gpu-deploy - [23] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:47,244 - INFO - gpu-deploy -     [✗] 23 FabricManager: 未配置
+2026-05-18 17:27:47,244 - INFO - gpu-deploy - [24] [10.0.16.211] 执行: /usr/local/cuda/bin/nvcc -V 2>/dev/null | grep 'release' | awk '{print $6}'
+2026-05-18 17:27:47,331 - INFO - gpu-deploy - [24] [10.0.16.211] stdout:
+2026-05-18 17:27:47,331 - INFO - gpu-deploy -   V13.0.48
+2026-05-18 17:27:47,332 - INFO - gpu-deploy - [24] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:47,332 - INFO - gpu-deploy - [24] [10.0.22.143] 执行: /usr/local/cuda/bin/nvcc -V 2>/dev/null | grep 'release' | awk '{print $6}'
+2026-05-18 17:27:47,419 - INFO - gpu-deploy - [24] [10.0.22.143] stdout:
+2026-05-18 17:27:47,419 - INFO - gpu-deploy -   V13.0.48
+2026-05-18 17:27:47,420 - INFO - gpu-deploy - [24] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:47,420 - INFO - gpu-deploy -     [✓] 24 CUDA Toolkit: 所有节点已配置
+2026-05-18 17:27:47,420 - INFO - gpu-deploy - [25] [10.0.16.211] 执行: test -d /usr/local/nccl/lib && ls /usr/local/nccl/lib/ 2>/dev/null | head -3
+2026-05-18 17:27:47,507 - INFO - gpu-deploy - [25] [10.0.16.211] stdout:
+2026-05-18 17:27:47,507 - INFO - gpu-deploy -   libnccl.so
+2026-05-18 17:27:47,508 - INFO - gpu-deploy -   libnccl.so.2
+2026-05-18 17:27:47,508 - INFO - gpu-deploy -   libnccl.so.2.30.4
+2026-05-18 17:27:47,508 - INFO - gpu-deploy - [25] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:47,508 - INFO - gpu-deploy - [25] [10.0.22.143] 执行: test -d /usr/local/nccl/lib && ls /usr/local/nccl/lib/ 2>/dev/null | head -3
+2026-05-18 17:27:47,595 - INFO - gpu-deploy - [25] [10.0.22.143] stdout:
+2026-05-18 17:27:47,595 - INFO - gpu-deploy -   libnccl.so
+2026-05-18 17:27:47,595 - INFO - gpu-deploy -   libnccl.so.2
+2026-05-18 17:27:47,596 - INFO - gpu-deploy -   libnccl.so.2.30.4
+2026-05-18 17:27:47,596 - INFO - gpu-deploy - [25] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:47,596 - INFO - gpu-deploy -     [✓] 25 NCCL: 所有节点已配置
+2026-05-18 17:27:47,596 - INFO - gpu-deploy - [26] [10.0.16.211] 执行: rdma dev show 2>/dev/null | grep -E 'mlx5_[0-9]' | wc -l
+2026-05-18 17:27:47,683 - INFO - gpu-deploy - [26] [10.0.16.211] stdout:
+2026-05-18 17:27:47,683 - INFO - gpu-deploy -   0
+2026-05-18 17:27:47,684 - INFO - gpu-deploy - [26] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:47,684 - INFO - gpu-deploy - [26] [10.0.16.211] 执行: rdma dev show 2>/dev/null | wc -l
+2026-05-18 17:27:47,771 - INFO - gpu-deploy - [26] [10.0.16.211] stdout:
+2026-05-18 17:27:47,771 - INFO - gpu-deploy -   0
+2026-05-18 17:27:47,772 - INFO - gpu-deploy - [26] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:47,772 - INFO - gpu-deploy - [26] [10.0.22.143] 执行: rdma dev show 2>/dev/null | grep -E 'mlx5_[0-9]' | wc -l
+2026-05-18 17:27:47,859 - INFO - gpu-deploy - [26] [10.0.22.143] stdout:
+2026-05-18 17:27:47,859 - INFO - gpu-deploy -   0
+2026-05-18 17:27:47,859 - INFO - gpu-deploy - [26] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:47,860 - INFO - gpu-deploy - [26] [10.0.22.143] 执行: rdma dev show 2>/dev/null | wc -l
+2026-05-18 17:27:47,947 - INFO - gpu-deploy - [26] [10.0.22.143] stdout:
+2026-05-18 17:27:47,947 - INFO - gpu-deploy -   0
+2026-05-18 17:27:47,947 - INFO - gpu-deploy - [26] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:47,947 - INFO - gpu-deploy -     [✓] 26 RDMA网卡重命名: 所有节点已配置
+2026-05-18 17:27:47,948 - INFO - gpu-deploy -     [○] 26b 以太网重命名: 跳过检查（无检查方法）
+2026-05-18 17:27:47,948 - INFO - gpu-deploy - [27] [10.0.16.211] 执行: systemctl is-enabled nvidia-persistence-mode.service 2>/dev/null || echo 'disabled'
+2026-05-18 17:27:48,035 - INFO - gpu-deploy - [27] [10.0.16.211] stdout:
+2026-05-18 17:27:48,035 - INFO - gpu-deploy -   enabled
+2026-05-18 17:27:48,035 - INFO - gpu-deploy - [27] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:48,036 - INFO - gpu-deploy - [27] [10.0.16.211] 执行: nvidia-smi -q 2>/dev/null | grep -c 'Persistence Mode.*Enabled'
+2026-05-18 17:27:48,214 - INFO - gpu-deploy - [27] [10.0.16.211] stdout:
+2026-05-18 17:27:48,215 - INFO - gpu-deploy -   1
+2026-05-18 17:27:48,215 - INFO - gpu-deploy - [27] [10.0.16.211] ✓ exit_code=0, 耗时=0.18s
+2026-05-18 17:27:48,215 - INFO - gpu-deploy - [27] [10.0.22.143] 执行: systemctl is-enabled nvidia-persistence-mode.service 2>/dev/null || echo 'disabled'
+2026-05-18 17:27:48,299 - INFO - gpu-deploy - [27] [10.0.22.143] stdout:
+2026-05-18 17:27:48,300 - INFO - gpu-deploy -   enabled
+2026-05-18 17:27:48,300 - INFO - gpu-deploy - [27] [10.0.22.143] ✓ exit_code=0, 耗时=0.08s
+2026-05-18 17:27:48,300 - INFO - gpu-deploy - [27] [10.0.22.143] 执行: nvidia-smi -q 2>/dev/null | grep -c 'Persistence Mode.*Enabled'
+2026-05-18 17:27:48,483 - INFO - gpu-deploy - [27] [10.0.22.143] stdout:
+2026-05-18 17:27:48,484 - INFO - gpu-deploy -   1
+2026-05-18 17:27:48,484 - INFO - gpu-deploy - [27] [10.0.22.143] ✓ exit_code=0, 耗时=0.18s
+2026-05-18 17:27:48,484 - INFO - gpu-deploy -     [✓] 27 GPU持久模式: 所有节点已配置
+2026-05-18 17:27:48,484 - INFO - gpu-deploy - [28] [10.0.16.211] 执行: test -f /etc/modules-load.d/nvidia.conf && test -f /etc/modprobe.d/nvidia.conf && echo 'configured' || echo 'not_configured'
+2026-05-18 17:27:48,571 - INFO - gpu-deploy - [28] [10.0.16.211] stdout:
+2026-05-18 17:27:48,571 - INFO - gpu-deploy -   not_configured
+2026-05-18 17:27:48,572 - INFO - gpu-deploy - [28] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:48,572 - INFO - gpu-deploy - [28] [10.0.16.211] 执行: lsmod | grep -c nvidia_peermem 2>/dev/null || true
+2026-05-18 17:27:48,659 - INFO - gpu-deploy - [28] [10.0.16.211] stdout:
+2026-05-18 17:27:48,659 - INFO - gpu-deploy -   0
+2026-05-18 17:27:48,659 - INFO - gpu-deploy - [28] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:48,660 - INFO - gpu-deploy - [28] [10.0.22.143] 执行: test -f /etc/modules-load.d/nvidia.conf && test -f /etc/modprobe.d/nvidia.conf && echo 'configured' || echo 'not_configured'
+2026-05-18 17:27:48,747 - INFO - gpu-deploy - [28] [10.0.22.143] stdout:
+2026-05-18 17:27:48,747 - INFO - gpu-deploy -   not_configured
+2026-05-18 17:27:48,748 - INFO - gpu-deploy - [28] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:48,748 - INFO - gpu-deploy - [28] [10.0.22.143] 执行: lsmod | grep -c nvidia_peermem 2>/dev/null || true
+2026-05-18 17:27:48,835 - INFO - gpu-deploy - [28] [10.0.22.143] stdout:
+2026-05-18 17:27:48,835 - INFO - gpu-deploy -   0
+2026-05-18 17:27:48,835 - INFO - gpu-deploy - [28] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:48,836 - INFO - gpu-deploy -     [✓] 28 NVIDIA内核模块: 所有节点已配置
+2026-05-18 17:27:48,836 - INFO - gpu-deploy - [29] [10.0.16.211] 执行: test -x /usr/local/bin/disable_acs.sh && echo 'script_exists' || echo 'no_script'
+2026-05-18 17:27:48,923 - INFO - gpu-deploy - [29] [10.0.16.211] stdout:
+2026-05-18 17:27:48,923 - INFO - gpu-deploy -   script_exists
+2026-05-18 17:27:48,924 - INFO - gpu-deploy - [29] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:48,924 - INFO - gpu-deploy - [29] [10.0.16.211] 执行: sudo sh -c "lspci -vvv 2>/dev/null | grep -c 'ACSCtl.*SrcValid+' || echo 0"
+2026-05-18 17:27:49,018 - INFO - gpu-deploy - [29] [10.0.16.211] stdout:
+2026-05-18 17:27:49,019 - INFO - gpu-deploy -   0
+2026-05-18 17:27:49,019 - INFO - gpu-deploy -   0
+2026-05-18 17:27:49,019 - INFO - gpu-deploy - [29] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:49,019 - INFO - gpu-deploy - [29] [10.0.22.143] 执行: test -x /usr/local/bin/disable_acs.sh && echo 'script_exists' || echo 'no_script'
+2026-05-18 17:27:49,107 - INFO - gpu-deploy - [29] [10.0.22.143] stdout:
+2026-05-18 17:27:49,107 - INFO - gpu-deploy -   script_exists
+2026-05-18 17:27:49,107 - INFO - gpu-deploy - [29] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:49,108 - INFO - gpu-deploy - [29] [10.0.22.143] 执行: sudo sh -c "lspci -vvv 2>/dev/null | grep -c 'ACSCtl.*SrcValid+' || echo 0"
+2026-05-18 17:27:49,207 - INFO - gpu-deploy - [29] [10.0.22.143] stdout:
+2026-05-18 17:27:49,207 - INFO - gpu-deploy -   0
+2026-05-18 17:27:49,208 - INFO - gpu-deploy -   0
+2026-05-18 17:27:49,208 - INFO - gpu-deploy - [29] [10.0.22.143] ✓ exit_code=0, 耗时=0.10s
+2026-05-18 17:27:49,208 - INFO - gpu-deploy -     [✓] 29 禁用ACS: 所有节点已配置
+2026-05-18 17:27:49,208 - INFO - gpu-deploy - [30] [10.0.16.211] 执行: systemctl is-active chrony 2>/dev/null || true
+2026-05-18 17:27:49,295 - INFO - gpu-deploy - [30] [10.0.16.211] stdout:
+2026-05-18 17:27:49,296 - INFO - gpu-deploy -   active
+2026-05-18 17:27:49,296 - INFO - gpu-deploy - [30] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:49,297 - INFO - gpu-deploy - [30] [10.0.16.211] 执行: cat /etc/chrony/chrony.conf 2>/dev/null
+2026-05-18 17:27:49,383 - INFO - gpu-deploy - [30] [10.0.16.211] stdout:
+2026-05-18 17:27:49,383 - INFO - gpu-deploy -   server 127.127.1.0 iburst
+2026-05-18 17:27:49,384 - INFO - gpu-deploy -   local stratum 10
+2026-05-18 17:27:49,384 - INFO - gpu-deploy -   driftfile /var/lib/chrony/drift
+2026-05-18 17:27:49,384 - INFO - gpu-deploy -   makestep 1.0 3
+2026-05-18 17:27:49,384 - INFO - gpu-deploy -   rtcsync
+2026-05-18 17:27:49,385 - INFO - gpu-deploy -   logdir /var/log/chrony
+2026-05-18 17:27:49,385 - INFO - gpu-deploy -   allow all
+2026-05-18 17:27:49,385 - INFO - gpu-deploy - [30] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:49,385 - INFO - gpu-deploy - [30] [10.0.22.143] 执行: systemctl is-active chrony 2>/dev/null || true
+2026-05-18 17:27:49,471 - INFO - gpu-deploy - [30] [10.0.22.143] stdout:
+2026-05-18 17:27:49,471 - INFO - gpu-deploy -   active
+2026-05-18 17:27:49,472 - INFO - gpu-deploy - [30] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:49,472 - INFO - gpu-deploy - [30] [10.0.22.143] 执行: cat /etc/chrony/chrony.conf 2>/dev/null
+2026-05-18 17:27:49,559 - INFO - gpu-deploy - [30] [10.0.22.143] stdout:
+2026-05-18 17:27:49,560 - INFO - gpu-deploy -   server 10.0.16.211 iburst
+2026-05-18 17:27:49,560 - INFO - gpu-deploy -   driftfile /var/lib/chrony/drift
+2026-05-18 17:27:49,560 - INFO - gpu-deploy -   makestep 1.0 3
+2026-05-18 17:27:49,560 - INFO - gpu-deploy -   rtcsync
+2026-05-18 17:27:49,560 - INFO - gpu-deploy -   logdir /var/log/chrony
+2026-05-18 17:27:49,560 - INFO - gpu-deploy - [30] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:49,560 - INFO - gpu-deploy -     [✓] 30 时间同步: 所有节点已配置
+2026-05-18 17:27:49,561 - INFO - gpu-deploy - 使用管理网IP配置NFS: 10.0.16.211
+2026-05-18 17:27:49,561 - INFO - gpu-deploy - [34] [10.0.16.211] 执行: systemctl is-active nfs-server 2>/dev/null || echo 'inactive'
+2026-05-18 17:27:49,647 - INFO - gpu-deploy - [34] [10.0.16.211] stdout:
+2026-05-18 17:27:49,647 - INFO - gpu-deploy -   active
+2026-05-18 17:27:49,648 - INFO - gpu-deploy - [34] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:49,648 - INFO - gpu-deploy - 使用管理网IP配置NFS: 10.0.16.211
+2026-05-18 17:27:49,648 - INFO - gpu-deploy - [34] [10.0.22.143] 执行: mountpoint -q /ssd/nfs && echo 'mounted' || echo 'not_mounted'
+2026-05-18 17:27:49,735 - INFO - gpu-deploy - [34] [10.0.22.143] stdout:
+2026-05-18 17:27:49,735 - INFO - gpu-deploy -   mounted
+2026-05-18 17:27:49,736 - INFO - gpu-deploy - [34] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:49,736 - INFO - gpu-deploy -     [✓] 34 NFS配置: 所有节点已配置
+2026-05-18 17:27:49,736 - INFO - gpu-deploy - 
+[4/4] 运行健康检查...
+2026-05-18 17:27:49,736 - INFO - gpu-deploy - [99] [10.0.16.211] 执行: nvidia-smi -q 2>/dev/null | grep -c 'Persistence Mode.*Enabled' || true
+2026-05-18 17:27:49,913 - INFO - gpu-deploy - [99] [10.0.16.211] stdout:
+2026-05-18 17:27:49,913 - INFO - gpu-deploy -   1
+2026-05-18 17:27:49,914 - INFO - gpu-deploy - [99] [10.0.16.211] ✓ exit_code=0, 耗时=0.18s
+2026-05-18 17:27:49,914 - INFO - gpu-deploy - [99] [10.0.22.143] 执行: nvidia-smi -q 2>/dev/null | grep -c 'Persistence Mode.*Enabled' || true
+2026-05-18 17:27:50,116 - INFO - gpu-deploy - [99] [10.0.22.143] stdout:
+2026-05-18 17:27:50,117 - INFO - gpu-deploy -   1
+2026-05-18 17:27:50,117 - INFO - gpu-deploy - [99] [10.0.22.143] ✓ exit_code=0, 耗时=0.20s
+2026-05-18 17:27:50,117 - INFO - gpu-deploy -     [✓] GPU持久模式: 所有节点正常
+2026-05-18 17:27:50,117 - INFO - gpu-deploy - [99] [10.0.16.211] 执行: nvidia-smi --query-gpu=index,ecc.errors.uncorrected.volatile.total --format=csv,noheader,nounits 2>/dev/null || echo 'error'
+2026-05-18 17:27:50,203 - INFO - gpu-deploy - [99] [10.0.16.211] stdout:
+2026-05-18 17:27:50,203 - INFO - gpu-deploy -   0, [N/A]
+2026-05-18 17:27:50,203 - INFO - gpu-deploy - [99] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:50,204 - INFO - gpu-deploy - [99] [10.0.22.143] 执行: nvidia-smi --query-gpu=index,ecc.errors.uncorrected.volatile.total --format=csv,noheader,nounits 2>/dev/null || echo 'error'
+2026-05-18 17:27:50,291 - INFO - gpu-deploy - [99] [10.0.22.143] stdout:
+2026-05-18 17:27:50,292 - INFO - gpu-deploy -   0, [N/A]
+2026-05-18 17:27:50,292 - INFO - gpu-deploy - [99] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:50,292 - INFO - gpu-deploy -     [✓] GPU ECC错误: 所有节点正常
+2026-05-18 17:27:50,292 - INFO - gpu-deploy - [99] [10.0.16.211] 执行: nvidia-smi --query-gpu=index,temperature.gpu --format=csv,noheader,nounits 2>/dev/null || echo 'error'
+2026-05-18 17:27:50,379 - INFO - gpu-deploy - [99] [10.0.16.211] stdout:
+2026-05-18 17:27:50,379 - INFO - gpu-deploy -   0, 29
+2026-05-18 17:27:50,380 - INFO - gpu-deploy - [99] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:50,380 - INFO - gpu-deploy - [99] [10.0.22.143] 执行: nvidia-smi --query-gpu=index,temperature.gpu --format=csv,noheader,nounits 2>/dev/null || echo 'error'
+2026-05-18 17:27:50,467 - INFO - gpu-deploy - [99] [10.0.22.143] stdout:
+2026-05-18 17:27:50,467 - INFO - gpu-deploy -   0, 27
+2026-05-18 17:27:50,467 - INFO - gpu-deploy - [99] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:50,468 - INFO - gpu-deploy -     [✓] GPU温度: 所有节点正常
+2026-05-18 17:27:50,468 - INFO - gpu-deploy - [99] [10.0.16.211] 执行: nvidia-smi 2>/dev/null | grep -c 'ERR!' || true
+2026-05-18 17:27:50,569 - INFO - gpu-deploy - [99] [10.0.16.211] stdout:
+2026-05-18 17:27:50,569 - INFO - gpu-deploy -   0
+2026-05-18 17:27:50,569 - INFO - gpu-deploy - [99] [10.0.16.211] ✓ exit_code=0, 耗时=0.10s
+2026-05-18 17:27:50,569 - INFO - gpu-deploy - [99] [10.0.22.143] 执行: nvidia-smi 2>/dev/null | grep -c 'ERR!' || true
+2026-05-18 17:27:50,674 - INFO - gpu-deploy - [99] [10.0.22.143] stdout:
+2026-05-18 17:27:50,674 - INFO - gpu-deploy -   0
+2026-05-18 17:27:50,674 - INFO - gpu-deploy - [99] [10.0.22.143] ✓ exit_code=0, 耗时=0.10s
+2026-05-18 17:27:50,674 - INFO - gpu-deploy -     [✓] GPU功率: 所有节点正常
+2026-05-18 17:27:50,674 - INFO - gpu-deploy - [99] [10.0.16.211] 执行: ibdev2netdev 2>/dev/null | grep -c -v down || true
+2026-05-18 17:27:50,759 - INFO - gpu-deploy - [99] [10.0.16.211] stdout:
+2026-05-18 17:27:50,759 - INFO - gpu-deploy -   0
+2026-05-18 17:27:50,760 - INFO - gpu-deploy - [99] [10.0.16.211] ✓ exit_code=0, 耗时=0.08s
+2026-05-18 17:27:50,760 - INFO - gpu-deploy - [99] [10.0.16.211] 执行: ibdev2netdev 2>/dev/null | grep -i down | wc -l || true
+2026-05-18 17:27:50,847 - INFO - gpu-deploy - [99] [10.0.16.211] stdout:
+2026-05-18 17:27:50,847 - INFO - gpu-deploy -   0
+2026-05-18 17:27:50,847 - INFO - gpu-deploy - [99] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:50,847 - INFO - gpu-deploy - [99] [10.0.16.211] 执行: ibdev2netdev 2>/dev/null | wc -l || true
+2026-05-18 17:27:50,935 - INFO - gpu-deploy - [99] [10.0.16.211] stdout:
+2026-05-18 17:27:50,935 - INFO - gpu-deploy -   0
+2026-05-18 17:27:50,936 - INFO - gpu-deploy - [99] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:50,936 - INFO - gpu-deploy - [99] [10.0.22.143] 执行: ibdev2netdev 2>/dev/null | grep -c -v down || true
+2026-05-18 17:27:51,023 - INFO - gpu-deploy - [99] [10.0.22.143] stdout:
+2026-05-18 17:27:51,023 - INFO - gpu-deploy -   0
+2026-05-18 17:27:51,024 - INFO - gpu-deploy - [99] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:51,024 - INFO - gpu-deploy - [99] [10.0.22.143] 执行: ibdev2netdev 2>/dev/null | grep -i down | wc -l || true
+2026-05-18 17:27:51,111 - INFO - gpu-deploy - [99] [10.0.22.143] stdout:
+2026-05-18 17:27:51,111 - INFO - gpu-deploy -   0
+2026-05-18 17:27:51,111 - INFO - gpu-deploy - [99] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:51,111 - INFO - gpu-deploy - [99] [10.0.22.143] 执行: ibdev2netdev 2>/dev/null | wc -l || true
+2026-05-18 17:27:51,199 - INFO - gpu-deploy - [99] [10.0.22.143] stdout:
+2026-05-18 17:27:51,200 - INFO - gpu-deploy -   0
+2026-05-18 17:27:51,200 - INFO - gpu-deploy - [99] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:51,200 - INFO - gpu-deploy -     [○] RDMA链路状态: 所有节点跳过
+2026-05-18 17:27:51,201 - INFO - gpu-deploy - [99] [10.0.16.211] 执行: systemctl is-active nvidia-fabricmanager 2>/dev/null || true
+2026-05-18 17:27:51,287 - INFO - gpu-deploy - [99] [10.0.16.211] stdout:
+2026-05-18 17:27:51,287 - INFO - gpu-deploy -   inactive
+2026-05-18 17:27:51,288 - INFO - gpu-deploy - [99] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:51,288 - INFO - gpu-deploy - [99] [10.0.16.211] 执行: which nv-fabricmanager 2>/dev/null || true
+2026-05-18 17:27:51,375 - INFO - gpu-deploy - [99] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:51,375 - INFO - gpu-deploy - [99] [10.0.22.143] 执行: systemctl is-active nvidia-fabricmanager 2>/dev/null || true
+2026-05-18 17:27:51,463 - INFO - gpu-deploy - [99] [10.0.22.143] stdout:
+2026-05-18 17:27:51,463 - INFO - gpu-deploy -   inactive
+2026-05-18 17:27:51,463 - INFO - gpu-deploy - [99] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:51,463 - INFO - gpu-deploy - [99] [10.0.22.143] 执行: which nv-fabricmanager 2>/dev/null || true
+2026-05-18 17:27:51,551 - INFO - gpu-deploy - [99] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:51,551 - INFO - gpu-deploy -     [○] FabricManager服务: 所有节点跳过
+2026-05-18 17:27:51,551 - INFO - gpu-deploy - [99] [10.0.16.211] 执行: sudo sh -c "lspci -vvv 2>/dev/null | grep -c 'ACSCtl.*SrcValid+' || true"
+2026-05-18 17:27:51,648 - INFO - gpu-deploy - [99] [10.0.16.211] stdout:
+2026-05-18 17:27:51,648 - INFO - gpu-deploy -   0
+2026-05-18 17:27:51,649 - INFO - gpu-deploy - [99] [10.0.16.211] ✓ exit_code=0, 耗时=0.10s
+2026-05-18 17:27:51,649 - INFO - gpu-deploy - [99] [10.0.22.143] 执行: sudo sh -c "lspci -vvv 2>/dev/null | grep -c 'ACSCtl.*SrcValid+' || true"
+2026-05-18 17:27:51,743 - INFO - gpu-deploy - [99] [10.0.22.143] stdout:
+2026-05-18 17:27:51,743 - INFO - gpu-deploy -   0
+2026-05-18 17:27:51,743 - INFO - gpu-deploy - [99] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:51,743 - INFO - gpu-deploy -     [✓] ACS状态: 所有节点正常
+2026-05-18 17:27:51,743 - INFO - gpu-deploy - [99] [10.0.16.211] 执行: lsmod | grep -c nvidia_peermem || true
+2026-05-18 17:27:51,831 - INFO - gpu-deploy - [99] [10.0.16.211] stdout:
+2026-05-18 17:27:51,831 - INFO - gpu-deploy -   0
+2026-05-18 17:27:51,832 - INFO - gpu-deploy - [99] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:51,832 - INFO - gpu-deploy - [99] [10.0.16.211] 执行: test -f /etc/modules-load.d/nvidia.conf && echo 'configured' || true
+2026-05-18 17:27:51,919 - INFO - gpu-deploy - [99] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:51,919 - INFO - gpu-deploy - [99] [10.0.22.143] 执行: lsmod | grep -c nvidia_peermem || true
+2026-05-18 17:27:52,007 - INFO - gpu-deploy - [99] [10.0.22.143] stdout:
+2026-05-18 17:27:52,008 - INFO - gpu-deploy -   0
+2026-05-18 17:27:52,008 - INFO - gpu-deploy - [99] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:52,008 - INFO - gpu-deploy - [99] [10.0.22.143] 执行: test -f /etc/modules-load.d/nvidia.conf && echo 'configured' || true
+2026-05-18 17:27:52,095 - INFO - gpu-deploy - [99] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:52,096 - INFO - gpu-deploy -     [✗] nvidia_peermem模块: 异常节点: 10.0.16.211(未配置), 10.0.22.143(未配置)
+2026-05-18 17:27:52,096 - INFO - gpu-deploy - [99] [10.0.16.211] 执行: chronyc tracking 2>/dev/null | grep 'Last offset' | awk '{print $4}' || echo 'unknown'
+2026-05-18 17:27:52,183 - INFO - gpu-deploy - [99] [10.0.16.211] stdout:
+2026-05-18 17:27:52,183 - INFO - gpu-deploy -   +0.000000000
+2026-05-18 17:27:52,184 - INFO - gpu-deploy - [99] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:52,184 - INFO - gpu-deploy - [99] [10.0.22.143] 执行: chronyc tracking 2>/dev/null | grep 'Last offset' | awk '{print $4}' || echo 'unknown'
+2026-05-18 17:27:52,271 - INFO - gpu-deploy - [99] [10.0.22.143] stdout:
+2026-05-18 17:27:52,271 - INFO - gpu-deploy -   +0.000000000
+2026-05-18 17:27:52,271 - INFO - gpu-deploy - [99] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-18 17:27:52,272 - INFO - gpu-deploy -     [✓] 时间同步: 所有节点正常
+2026-05-18 17:27:52,272 - INFO - gpu-deploy - 
+============================================================
+2026-05-18 17:27:52,272 - INFO - gpu-deploy - 验证报告摘要
+2026-05-18 17:27:52,272 - INFO - gpu-deploy - ============================================================
+2026-05-18 17:27:52,272 - INFO - gpu-deploy - 集群名称: gpu-test-cluster
+2026-05-18 17:27:52,272 - INFO - gpu-deploy - 检查时间: 2026-05-18T17:27:38.857245
+2026-05-18 17:27:52,272 - INFO - gpu-deploy - 检查项总数: 42
+2026-05-18 17:27:52,273 - INFO - gpu-deploy -   通过: 34
+2026-05-18 17:27:52,273 - INFO - gpu-deploy -   失败: 5
+2026-05-18 17:27:52,273 - INFO - gpu-deploy -   警告: 0
+2026-05-18 17:27:52,273 - INFO - gpu-deploy -   跳过: 3
+2026-05-18 17:27:52,273 - INFO - gpu-deploy - ------------------------------------------------------------
+2026-05-18 17:27:52,273 - INFO - gpu-deploy - 网络状态: all_reachable
+2026-05-18 17:27:52,273 - INFO - gpu-deploy - 设备状态: all_ok
+2026-05-18 17:27:52,274 - INFO - gpu-deploy - ============================================================
+2026-05-18 17:27:52,274 - INFO - gpu-deploy - 验证失败: 34 通过, 5 失败, 0 警告
+2026-05-18 17:27:52,274 - INFO - gpu-deploy - ============================================================
+2026-05-18 17:27:52,274 - INFO - gpu-deploy - 
+失败的检查项:
+2026-05-18 17:27:52,274 - INFO - gpu-deploy -   - step_01: 依赖软件包: 未配置
+2026-05-18 17:27:52,274 - INFO - gpu-deploy -       [10.0.16.211] 缺失依赖包: pdsh, cmake
+2026-05-18 17:27:52,274 - INFO - gpu-deploy -       [10.0.22.143] 缺失依赖包: pdsh, cmake
+2026-05-18 17:27:52,275 - INFO - gpu-deploy -   - step_20: Mellanox驱动: 未配置
+2026-05-18 17:27:52,275 - INFO - gpu-deploy -       [10.0.16.211] MLNX_OFED未安装
+2026-05-18 17:27:52,275 - INFO - gpu-deploy -       [10.0.22.143] MLNX_OFED未安装
+2026-05-18 17:27:52,275 - INFO - gpu-deploy -   - step_21: 禁用nouveau: 未配置
+2026-05-18 17:27:52,275 - INFO - gpu-deploy -       [10.0.16.211] nouveau黑名单配置不存在
+2026-05-18 17:27:52,275 - INFO - gpu-deploy -       [10.0.22.143] nouveau黑名单配置不存在
+2026-05-18 17:27:52,276 - INFO - gpu-deploy -   - step_23: FabricManager: 未配置
+2026-05-18 17:27:52,276 - INFO - gpu-deploy -       [10.0.16.211] 未安装
+2026-05-18 17:27:52,276 - INFO - gpu-deploy -       [10.0.22.143] 未安装
+2026-05-18 17:27:52,276 - INFO - gpu-deploy -   - nvidia_peermem模块: 异常节点: 10.0.16.211(未配置), 10.0.22.143(未配置)
+2026-05-18 17:27:52,276 - INFO - gpu-deploy -       [10.0.16.211] 未配置
+2026-05-18 17:27:52,276 - INFO - gpu-deploy -       [10.0.22.143] 未配置
+2026-05-18 17:27:52,277 - INFO - gpu-deploy - HTML报告已生成: logs/verification_report.html
+2026-05-18 17:27:52,278 - WARNING - gpu-deploy - 最终验证发现问题，请检查报告
+2026-05-18 17:27:52,279 - INFO - gpu-deploy - 进度报告已保存: logs/progress_report.json
+2026-05-18 17:27:52,279 - INFO - gpu-deploy - HTML报告已生成: logs/deployment_report.html
+2026-05-18 17:27:52,280 - INFO - gpu-deploy - ============================================================
+2026-05-18 17:27:52,280 - INFO - gpu-deploy - 部署成功
+2026-05-18 17:27:52,280 - INFO - gpu-deploy - ============================================================

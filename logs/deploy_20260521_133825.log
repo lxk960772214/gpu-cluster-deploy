@@ -1,0 +1,68 @@
+2026-05-21 13:38:25,893 - INFO - gpu-deploy - ============================================================
+2026-05-21 13:38:25,893 - INFO - gpu-deploy - 开始GPU集群环境部署
+2026-05-21 13:38:25,893 - INFO - gpu-deploy - ============================================================
+2026-05-21 13:38:25,893 - INFO - gpu-deploy - 正在加载配置...
+2026-05-21 13:38:25,899 - INFO - gpu-deploy - 配置加载成功: gpu-test-cluster
+2026-05-21 13:38:25,899 - INFO - gpu-deploy - 节点数量: 1
+2026-05-21 13:38:25,899 - INFO - gpu-deploy - 正在初始化SSH连接...
+2026-05-21 13:38:26,111 - INFO - gpu-deploy - SSH初始化成功
+2026-05-21 13:38:26,111 - INFO - gpu-deploy - 正在检查节点连通性...
+2026-05-21 13:38:26,623 - INFO - gpu-deploy - 连通性检查完成: 1/1 节点可达
+2026-05-21 13:38:26,624 - WARNING - gpu-deploy - 步骤 41 没有关联的阶段
+2026-05-21 13:38:26,624 - INFO - gpu-deploy - [41] 检查配置状态...
+2026-05-21 13:38:26,624 - INFO - gpu-deploy - [41] [10.0.16.211] 执行: test -f /ssd/nfs/gpu-test/toolkit/nccl-tests/build/all_reduce_perf && echo 'exists' || echo 'not_exists'
+2026-05-21 13:38:26,709 - INFO - gpu-deploy - [41] [10.0.16.211] stdout:
+2026-05-21 13:38:26,709 - INFO - gpu-deploy -   not_exists
+2026-05-21 13:38:26,709 - INFO - gpu-deploy - [41] [10.0.16.211] ✓ exit_code=0, 耗时=0.08s
+2026-05-21 13:38:26,709 - INFO - gpu-deploy - 编译策略: role_based, 编译节点: ['10.0.16.211']
+2026-05-21 13:38:26,709 - INFO - gpu-deploy - [10.0.16.211] 开始编译NCCL和NCCL-tests...
+2026-05-21 13:38:26,710 - INFO - gpu-deploy - [41] [10.0.16.211] 执行: nvidia-smi --query-gpu=compute_cap --format=csv,noheader | head -1
+2026-05-21 13:38:26,797 - INFO - gpu-deploy - [41] [10.0.16.211] stdout:
+2026-05-21 13:38:26,797 - INFO - gpu-deploy -   8.6
+2026-05-21 13:38:26,797 - INFO - gpu-deploy - [41] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-21 13:38:26,797 - INFO - gpu-deploy - [10.0.16.211] 计算能力: 86
+2026-05-21 13:38:26,797 - INFO - gpu-deploy - [41] [10.0.16.211] 执行: test -f /ssd/nfs/gpu-test/toolkit/nccl/lib/libnccl.so && echo 'exists' || echo 'not_exists'
+2026-05-21 13:38:26,885 - INFO - gpu-deploy - [41] [10.0.16.211] stdout:
+2026-05-21 13:38:26,885 - INFO - gpu-deploy -   exists
+2026-05-21 13:38:26,885 - INFO - gpu-deploy - [41] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-21 13:38:26,885 - INFO - gpu-deploy - [41] [10.0.16.211] 执行: test -f /ssd/nfs/gpu-test/toolkit/nccl-tests-master/build/all_reduce_perf && echo 'exists' || echo 'not_exists'
+2026-05-21 13:38:26,973 - INFO - gpu-deploy - [41] [10.0.16.211] stdout:
+2026-05-21 13:38:26,973 - INFO - gpu-deploy -   exists
+2026-05-21 13:38:26,973 - INFO - gpu-deploy - [41] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-21 13:38:26,973 - INFO - gpu-deploy - 编译完成，开始运行测试...
+2026-05-21 13:38:26,974 - INFO - gpu-deploy - [41] [10.0.16.211] 执行: nvidia-smi --query-gpu=count --format=csv,noheader | head -1
+2026-05-21 13:38:27,063 - INFO - gpu-deploy - [41] [10.0.16.211] stdout:
+2026-05-21 13:38:27,063 - INFO - gpu-deploy -   2
+2026-05-21 13:38:27,063 - INFO - gpu-deploy - [41] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-21 13:38:27,063 - INFO - gpu-deploy - [10.0.16.211] GPU数量: 2, 开始运行NCCL测试...
+2026-05-21 13:38:27,064 - INFO - gpu-deploy - [41] [10.0.16.211] 执行: mkdir -p /ssd/nfs/gpu-test/result
+2026-05-21 13:38:27,149 - INFO - gpu-deploy - [41] [10.0.16.211] ✓ exit_code=0, 耗时=0.08s
+2026-05-21 13:38:27,149 - INFO - gpu-deploy - [41] [10.0.16.211] 执行: hostname
+2026-05-21 13:38:27,236 - INFO - gpu-deploy - [41] [10.0.16.211] stdout:
+2026-05-21 13:38:27,237 - INFO - gpu-deploy -   gpugpugpu2
+2026-05-21 13:38:27,237 - INFO - gpu-deploy - [41] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-21 13:38:27,237 - INFO - gpu-deploy - [41] [10.0.16.211] 执行: nvidia-smi --query-gpu=compute_cap --format=csv,noheader | head -1
+2026-05-21 13:38:27,325 - INFO - gpu-deploy - [41] [10.0.16.211] stdout:
+2026-05-21 13:38:27,325 - INFO - gpu-deploy -   8.6
+2026-05-21 13:38:27,325 - INFO - gpu-deploy - [41] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-21 13:38:27,326 - INFO - gpu-deploy - [10.0.16.211] 运行 all_reduce_perf 测试...
+2026-05-21 13:38:27,326 - INFO - gpu-deploy - [41] [10.0.16.211] 执行: export LD_LIBRARY_PATH=/ssd/nfs/gpu-test/toolkit/nccl/lib:/usr/local/cuda/lib64:$LD_LIBRARY_PATH && /ssd/nfs/gpu-test/toolkit/nccl-tests-master/build/all_reduce_perf -b 8 -e 1G -f 2 -g 2 > /ssd/nfs/gpu-test/result/all_reduce_perf_gpugpugpu2.log 2>&1
+2026-05-21 13:38:27,412 - INFO - gpu-deploy - [41] [10.0.16.211] ✗ exit_code=127, 耗时=0.09s
+2026-05-21 13:38:27,413 - ERROR - gpu-deploy - [10.0.16.211] all_reduce_perf 测试失败
+2026-05-21 13:38:27,413 - INFO - gpu-deploy - [10.0.16.211] 运行 all_gather_perf 测试...
+2026-05-21 13:38:27,413 - INFO - gpu-deploy - [41] [10.0.16.211] 执行: export LD_LIBRARY_PATH=/ssd/nfs/gpu-test/toolkit/nccl/lib:/usr/local/cuda/lib64:$LD_LIBRARY_PATH && /ssd/nfs/gpu-test/toolkit/nccl-tests-master/build/all_gather_perf -b 8 -e 1G -f 2 -g 2 > /ssd/nfs/gpu-test/result/all_gather_perf_gpugpugpu2.log 2>&1
+2026-05-21 13:38:27,500 - INFO - gpu-deploy - [41] [10.0.16.211] ✗ exit_code=127, 耗时=0.09s
+2026-05-21 13:38:27,501 - ERROR - gpu-deploy - [10.0.16.211] all_gather_perf 测试失败
+2026-05-21 13:38:27,501 - INFO - gpu-deploy - [10.0.16.211] 运行 alltoall_perf 测试...
+2026-05-21 13:38:27,501 - INFO - gpu-deploy - [41] [10.0.16.211] 执行: export LD_LIBRARY_PATH=/ssd/nfs/gpu-test/toolkit/nccl/lib:/usr/local/cuda/lib64:$LD_LIBRARY_PATH && /ssd/nfs/gpu-test/toolkit/nccl-tests-master/build/alltoall_perf -b 8 -e 1G -f 2 -g 2 > /ssd/nfs/gpu-test/result/alltoall_perf_gpugpugpu2.log 2>&1
+2026-05-21 13:38:27,588 - INFO - gpu-deploy - [41] [10.0.16.211] ✗ exit_code=127, 耗时=0.09s
+2026-05-21 13:38:27,589 - ERROR - gpu-deploy - [10.0.16.211] alltoall_perf 测试失败
+2026-05-21 13:38:27,589 - INFO - gpu-deploy - [41] [10.0.16.211] 执行: test -f /ssd/nfs/gpu-test/result/all_reduce_perf_*.log
+2026-05-21 13:38:27,676 - WARNING - gpu-deploy - [41] [10.0.16.211] stderr:
+2026-05-21 13:38:27,677 - WARNING - gpu-deploy -   bash: line 1: test: too many arguments
+2026-05-21 13:38:27,677 - INFO - gpu-deploy - [41] [10.0.16.211] ✗ exit_code=2, 耗时=0.09s
+2026-05-21 13:38:27,678 - INFO - gpu-deploy - 进度报告已保存: logs/progress_report.json
+2026-05-21 13:38:27,678 - INFO - gpu-deploy - HTML报告已生成: logs/deployment_report.html
+2026-05-21 13:38:27,679 - INFO - gpu-deploy - ============================================================
+2026-05-21 13:38:27,679 - INFO - gpu-deploy - 部署失败
+2026-05-21 13:38:27,679 - INFO - gpu-deploy - ============================================================

@@ -1,0 +1,108 @@
+2026-05-19 12:46:59,437 - INFO - gpu-deploy - ============================================================
+2026-05-19 12:46:59,438 - INFO - gpu-deploy - 开始GPU集群环境部署
+2026-05-19 12:46:59,438 - INFO - gpu-deploy - ============================================================
+2026-05-19 12:46:59,438 - INFO - gpu-deploy - 正在加载配置...
+2026-05-19 12:46:59,445 - INFO - gpu-deploy - 配置加载成功: gpu-test-cluster
+2026-05-19 12:46:59,445 - INFO - gpu-deploy - 节点数量: 2
+2026-05-19 12:46:59,445 - INFO - gpu-deploy - 正在初始化SSH连接...
+2026-05-19 12:46:59,643 - INFO - gpu-deploy - SSH初始化成功
+2026-05-19 12:46:59,644 - INFO - gpu-deploy - 正在检查节点连通性...
+2026-05-19 12:47:00,984 - INFO - gpu-deploy - 连通性检查完成: 2/2 节点可达
+2026-05-19 12:47:00,984 - WARNING - gpu-deploy - 步骤 40 没有关联的阶段
+2026-05-19 12:47:00,984 - INFO - gpu-deploy - [40] 检查配置状态...
+2026-05-19 12:47:00,985 - INFO - gpu-deploy - [40] [10.0.16.211] 执行: test -f /ssd/nfs/gpu-test/toolkit/cublasMatmulBench && echo 'exists' || echo 'not_exists'
+2026-05-19 12:47:01,071 - INFO - gpu-deploy - [40] [10.0.16.211] stdout:
+2026-05-19 12:47:01,071 - INFO - gpu-deploy -   not_exists
+2026-05-19 12:47:01,072 - INFO - gpu-deploy - [40] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-19 12:47:01,072 - INFO - gpu-deploy - [40] [10.0.22.143] 执行: test -f /ssd/nfs/gpu-test/toolkit/cublasMatmulBench && echo 'exists' || echo 'not_exists'
+2026-05-19 12:47:01,159 - INFO - gpu-deploy - [40] [10.0.22.143] stdout:
+2026-05-19 12:47:01,159 - INFO - gpu-deploy -   not_exists
+2026-05-19 12:47:01,160 - INFO - gpu-deploy - [40] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-19 12:47:01,160 - INFO - gpu-deploy - 编译策略: role_based, 上传节点: ['10.0.16.211']
+2026-05-19 12:47:01,160 - INFO - gpu-deploy - [40] [10.0.16.211] 执行: test -f /ssd/nfs/gpu-test/toolkit/cublasMatmulBench && echo 'exists' || echo 'not_exists'
+2026-05-19 12:47:01,246 - INFO - gpu-deploy - [40] [10.0.16.211] stdout:
+2026-05-19 12:47:01,247 - INFO - gpu-deploy -   not_exists
+2026-05-19 12:47:01,247 - INFO - gpu-deploy - [40] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-19 12:47:01,247 - INFO - gpu-deploy - [10.0.16.211] 上传CUBLAS测试工具: /home/ubuntu/gpu-cluster-deploy/packages/cublasMatmulBench
+2026-05-19 12:47:01,247 - INFO - gpu-deploy - [40] [10.0.16.211] 执行: mkdir -p /ssd/nfs/gpu-test/toolkit
+2026-05-19 12:47:01,335 - INFO - gpu-deploy - [40] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-19 12:47:01,639 - INFO - gpu-deploy - [40] [10.0.16.211] 执行: chmod +x /ssd/nfs/gpu-test/toolkit/cublasMatmulBench
+2026-05-19 12:47:01,727 - INFO - gpu-deploy - [40] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-19 12:47:01,727 - INFO - gpu-deploy - [10.0.16.211] CUBLAS测试工具上传成功
+2026-05-19 12:47:01,728 - INFO - gpu-deploy - [10.0.16.211] 开始CUBLAS基准测试...
+2026-05-19 12:47:01,728 - INFO - gpu-deploy - [40] [10.0.16.211] 执行: nvidia-smi --query-gpu=count --format=csv,noheader | head -1
+2026-05-19 12:47:01,816 - INFO - gpu-deploy - [40] [10.0.16.211] stdout:
+2026-05-19 12:47:01,816 - INFO - gpu-deploy -   1
+2026-05-19 12:47:01,816 - INFO - gpu-deploy - [40] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-19 12:47:01,816 - INFO - gpu-deploy - [10.0.16.211] GPU数量: 1
+2026-05-19 12:47:01,816 - INFO - gpu-deploy - [40] [10.0.16.211] 执行: mkdir -p /ssd/nfs/gpu-test/result
+2026-05-19 12:47:01,903 - INFO - gpu-deploy - [40] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-19 12:47:01,904 - INFO - gpu-deploy - [10.0.16.211] 测试 GPU 0...
+2026-05-19 12:47:01,904 - INFO - gpu-deploy - [40] [10.0.16.211] 执行: export CUDA_VISIBLE_DEVICES=0 && export PATH=/usr/local/cuda/bin:$PATH && export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH && /ssd/nfs/gpu-test/toolkit/cublasMatmulBench -P=ddd -m=15360 -n=18176 -k=8192 -T=8 -ta=1 -B=0 -p=0 2>/dev/null | grep -i CUDA | awk '{print $10}'
+2026-05-19 12:47:01,991 - INFO - gpu-deploy - [40] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-19 12:47:01,991 - INFO - gpu-deploy - [40] [10.0.16.211] 执行: export CUDA_VISIBLE_DEVICES=0 && export PATH=/usr/local/cuda/bin:$PATH && export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH && /ssd/nfs/gpu-test/toolkit/cublasMatmulBench -P=sss -m=15360 -n=18176 -k=8192 -T=500 -ta=1 -B=0 -p=0 2>/dev/null | grep -i CUDA | awk '{print $10}'
+2026-05-19 12:47:02,079 - INFO - gpu-deploy - [40] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-19 12:47:02,079 - INFO - gpu-deploy - [40] [10.0.16.211] 执行: export CUDA_VISIBLE_DEVICES=0 && export PATH=/usr/local/cuda/bin:$PATH && export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH && /ssd/nfs/gpu-test/toolkit/cublasMatmulBench -P=sss_fast_tf32 -m=15360 -n=18176 -k=8192 -T=500 -ta=1 -B=0 -p=0 2>/dev/null | grep -i CUDA | awk '{print $10}'
+2026-05-19 12:47:02,167 - INFO - gpu-deploy - [40] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-19 12:47:02,167 - INFO - gpu-deploy - [40] [10.0.16.211] 执行: export CUDA_VISIBLE_DEVICES=0 && export PATH=/usr/local/cuda/bin:$PATH && export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH && /ssd/nfs/gpu-test/toolkit/cublasMatmulBench -P=hhh -m=15360 -n=18176 -k=8192 -T=1000 -ta=1 -B=0 -p=0 2>/dev/null | grep -i CUDA | awk '{print $10}'
+2026-05-19 12:47:02,255 - INFO - gpu-deploy - [40] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-19 12:47:02,255 - INFO - gpu-deploy - [40] [10.0.16.211] 执行: export CUDA_VISIBLE_DEVICES=0 && export PATH=/usr/local/cuda/bin:$PATH && export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH && /ssd/nfs/gpu-test/toolkit/cublasMatmulBench -P=hsh -m=15360 -n=18176 -k=8192 -T=1000 -ta=1 -B=0 -p=0 2>/dev/null | grep -i CUDA | awk '{print $10}'
+2026-05-19 12:47:02,343 - INFO - gpu-deploy - [40] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-19 12:47:02,343 - INFO - gpu-deploy - [40] [10.0.16.211] 执行: export CUDA_VISIBLE_DEVICES=0 && export PATH=/usr/local/cuda/bin:$PATH && export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH && /ssd/nfs/gpu-test/toolkit/cublasMatmulBench -P=hss -m=15360 -n=18176 -k=8192 -T=1000 -ta=1 -B=0 -p=0 2>/dev/null | grep -i CUDA | awk '{print $10}'
+2026-05-19 12:47:02,431 - INFO - gpu-deploy - [40] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-19 12:47:02,431 - INFO - gpu-deploy - [40] [10.0.16.211] 执行: export CUDA_VISIBLE_DEVICES=0 && export PATH=/usr/local/cuda/bin:$PATH && export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH && /ssd/nfs/gpu-test/toolkit/cublasMatmulBench -P=tst -m=15360 -n=18176 -k=8192 -T=1000 -ta=1 -B=0 -p=0 2>/dev/null | grep -i CUDA | awk '{print $10}'
+2026-05-19 12:47:02,519 - INFO - gpu-deploy - [40] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-19 12:47:02,519 - INFO - gpu-deploy - [40] [10.0.16.211] 执行: export CUDA_VISIBLE_DEVICES=0 && export PATH=/usr/local/cuda/bin:$PATH && export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH && /ssd/nfs/gpu-test/toolkit/cublasMatmulBench -P=qqssq -m=15360 -n=18176 -k=8192 -T=1000 -ta=1 -B=0 -p=0 2>/dev/null | grep -i CUDA | awk '{print $10}'
+2026-05-19 12:47:02,607 - INFO - gpu-deploy - [40] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-19 12:47:02,607 - INFO - gpu-deploy - [40] [10.0.16.211] 执行: hostname
+2026-05-19 12:47:02,695 - INFO - gpu-deploy - [40] [10.0.16.211] stdout:
+2026-05-19 12:47:02,695 - INFO - gpu-deploy -   gpugpugpu2
+2026-05-19 12:47:02,695 - INFO - gpu-deploy - [40] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-19 12:47:02,695 - INFO - gpu-deploy - [10.0.16.211] GPU 0 | FP64:  | FP32:  | TF32:  | FP16(hhh):  | hsh:  | hss:  | BF16:  | FP8: 
+2026-05-19 12:47:02,696 - INFO - gpu-deploy - [40] [10.0.16.211] 执行: cat > /ssd/nfs/gpu-test/result/cublas_gpugpugpu2.log << 'EOF'
+GPU 0 | FP64:  | FP32:  | TF32:  | FP16(hhh):  | hsh:  | hss:  | BF16:  | FP8: 
+EOF
+2026-05-19 12:47:02,787 - INFO - gpu-deploy - [40] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-19 12:47:02,787 - INFO - gpu-deploy - [10.0.22.143] 开始CUBLAS基准测试...
+2026-05-19 12:47:02,788 - INFO - gpu-deploy - [40] [10.0.22.143] 执行: nvidia-smi --query-gpu=count --format=csv,noheader | head -1
+2026-05-19 12:47:02,875 - INFO - gpu-deploy - [40] [10.0.22.143] stdout:
+2026-05-19 12:47:02,875 - INFO - gpu-deploy -   1
+2026-05-19 12:47:02,876 - INFO - gpu-deploy - [40] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-19 12:47:02,876 - INFO - gpu-deploy - [10.0.22.143] GPU数量: 1
+2026-05-19 12:47:02,876 - INFO - gpu-deploy - [40] [10.0.22.143] 执行: mkdir -p /ssd/nfs/gpu-test/result
+2026-05-19 12:47:02,963 - INFO - gpu-deploy - [40] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-19 12:47:02,963 - INFO - gpu-deploy - [10.0.22.143] 测试 GPU 0...
+2026-05-19 12:47:02,963 - INFO - gpu-deploy - [40] [10.0.22.143] 执行: export CUDA_VISIBLE_DEVICES=0 && export PATH=/usr/local/cuda/bin:$PATH && export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH && /ssd/nfs/gpu-test/toolkit/cublasMatmulBench -P=ddd -m=15360 -n=18176 -k=8192 -T=8 -ta=1 -B=0 -p=0 2>/dev/null | grep -i CUDA | awk '{print $10}'
+2026-05-19 12:47:03,051 - INFO - gpu-deploy - [40] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-19 12:47:03,052 - INFO - gpu-deploy - [40] [10.0.22.143] 执行: export CUDA_VISIBLE_DEVICES=0 && export PATH=/usr/local/cuda/bin:$PATH && export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH && /ssd/nfs/gpu-test/toolkit/cublasMatmulBench -P=sss -m=15360 -n=18176 -k=8192 -T=500 -ta=1 -B=0 -p=0 2>/dev/null | grep -i CUDA | awk '{print $10}'
+2026-05-19 12:47:03,139 - INFO - gpu-deploy - [40] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-19 12:47:03,140 - INFO - gpu-deploy - [40] [10.0.22.143] 执行: export CUDA_VISIBLE_DEVICES=0 && export PATH=/usr/local/cuda/bin:$PATH && export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH && /ssd/nfs/gpu-test/toolkit/cublasMatmulBench -P=sss_fast_tf32 -m=15360 -n=18176 -k=8192 -T=500 -ta=1 -B=0 -p=0 2>/dev/null | grep -i CUDA | awk '{print $10}'
+2026-05-19 12:47:03,227 - INFO - gpu-deploy - [40] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-19 12:47:03,227 - INFO - gpu-deploy - [40] [10.0.22.143] 执行: export CUDA_VISIBLE_DEVICES=0 && export PATH=/usr/local/cuda/bin:$PATH && export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH && /ssd/nfs/gpu-test/toolkit/cublasMatmulBench -P=hhh -m=15360 -n=18176 -k=8192 -T=1000 -ta=1 -B=0 -p=0 2>/dev/null | grep -i CUDA | awk '{print $10}'
+2026-05-19 12:47:03,315 - INFO - gpu-deploy - [40] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-19 12:47:03,315 - INFO - gpu-deploy - [40] [10.0.22.143] 执行: export CUDA_VISIBLE_DEVICES=0 && export PATH=/usr/local/cuda/bin:$PATH && export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH && /ssd/nfs/gpu-test/toolkit/cublasMatmulBench -P=hsh -m=15360 -n=18176 -k=8192 -T=1000 -ta=1 -B=0 -p=0 2>/dev/null | grep -i CUDA | awk '{print $10}'
+2026-05-19 12:47:03,403 - INFO - gpu-deploy - [40] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-19 12:47:03,403 - INFO - gpu-deploy - [40] [10.0.22.143] 执行: export CUDA_VISIBLE_DEVICES=0 && export PATH=/usr/local/cuda/bin:$PATH && export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH && /ssd/nfs/gpu-test/toolkit/cublasMatmulBench -P=hss -m=15360 -n=18176 -k=8192 -T=1000 -ta=1 -B=0 -p=0 2>/dev/null | grep -i CUDA | awk '{print $10}'
+2026-05-19 12:47:03,495 - INFO - gpu-deploy - [40] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-19 12:47:03,495 - INFO - gpu-deploy - [40] [10.0.22.143] 执行: export CUDA_VISIBLE_DEVICES=0 && export PATH=/usr/local/cuda/bin:$PATH && export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH && /ssd/nfs/gpu-test/toolkit/cublasMatmulBench -P=tst -m=15360 -n=18176 -k=8192 -T=1000 -ta=1 -B=0 -p=0 2>/dev/null | grep -i CUDA | awk '{print $10}'
+2026-05-19 12:47:03,583 - INFO - gpu-deploy - [40] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-19 12:47:03,583 - INFO - gpu-deploy - [40] [10.0.22.143] 执行: export CUDA_VISIBLE_DEVICES=0 && export PATH=/usr/local/cuda/bin:$PATH && export LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH && /ssd/nfs/gpu-test/toolkit/cublasMatmulBench -P=qqssq -m=15360 -n=18176 -k=8192 -T=1000 -ta=1 -B=0 -p=0 2>/dev/null | grep -i CUDA | awk '{print $10}'
+2026-05-19 12:47:03,671 - INFO - gpu-deploy - [40] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-19 12:47:03,671 - INFO - gpu-deploy - [40] [10.0.22.143] 执行: hostname
+2026-05-19 12:47:03,759 - INFO - gpu-deploy - [40] [10.0.22.143] stdout:
+2026-05-19 12:47:03,759 - INFO - gpu-deploy -   gpugpugpu1
+2026-05-19 12:47:03,760 - INFO - gpu-deploy - [40] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-19 12:47:03,760 - INFO - gpu-deploy - [10.0.22.143] GPU 0 | FP64:  | FP32:  | TF32:  | FP16(hhh):  | hsh:  | hss:  | BF16:  | FP8: 
+2026-05-19 12:47:03,760 - INFO - gpu-deploy - [40] [10.0.22.143] 执行: cat > /ssd/nfs/gpu-test/result/cublas_gpugpugpu1.log << 'EOF'
+GPU 0 | FP64:  | FP32:  | TF32:  | FP16(hhh):  | hsh:  | hss:  | BF16:  | FP8: 
+EOF
+2026-05-19 12:47:03,847 - INFO - gpu-deploy - [40] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-19 12:47:03,847 - INFO - gpu-deploy - [40] [10.0.16.211] 执行: test -f /ssd/nfs/gpu-test/result/cublas_*.log
+2026-05-19 12:47:03,935 - WARNING - gpu-deploy - [40] [10.0.16.211] stderr:
+2026-05-19 12:47:03,935 - WARNING - gpu-deploy -   bash: line 1: test: /ssd/nfs/gpu-test/result/cublas_gpugpugpu1.log: binary operator expected
+2026-05-19 12:47:03,935 - INFO - gpu-deploy - [40] [10.0.16.211] ✗ exit_code=2, 耗时=0.09s
+2026-05-19 12:47:03,936 - INFO - gpu-deploy - 进度报告已保存: logs/progress_report.json
+2026-05-19 12:47:03,936 - INFO - gpu-deploy - HTML报告已生成: logs/deployment_report.html
+2026-05-19 12:47:03,937 - INFO - gpu-deploy - ============================================================
+2026-05-19 12:47:03,937 - INFO - gpu-deploy - 部署失败
+2026-05-19 12:47:03,938 - INFO - gpu-deploy - ============================================================

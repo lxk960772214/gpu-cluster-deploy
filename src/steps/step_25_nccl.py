@@ -63,6 +63,7 @@ class NCCLInstall(BaseStep):
         install_path = getattr(nccl_config, 'install_path', '/home/ubuntu/nccl')
         install_method = getattr(nccl_config, 'install_method', 'source')
         local_file = getattr(nccl_config, 'local_file', None)
+        compile_jobs = getattr(nccl_config, 'compile_jobs', None)  # None表示使用nproc
 
         for host in hosts:
             self.logger.info(f"[{host}] 开始安装NCCL...")
@@ -194,10 +195,12 @@ class NCCLInstall(BaseStep):
                 continue
 
             # 3. 编译NCCL
+            # 确定编译并行度：如果compile_jobs设置了固定值则使用，否则使用nproc自动检测
+            jobs_arg = f"-j{compile_jobs}" if compile_jobs else "-j$(nproc)"
             compile_cmd = f'''
 cd {nccl_src_dir}
 mkdir -p {install_path}
-make -j$(nproc) src.build BUILDDIR={install_path} CUDA_HOME=/usr/local/cuda NVCC_GENCODE="-gencode=arch=compute_{compute_cap},code=sm_{compute_cap}"
+make {jobs_arg} src.build BUILDDIR={install_path} CUDA_HOME=/usr/local/cuda NVCC_GENCODE="-gencode=arch=compute_{compute_cap},code=sm_{compute_cap}"
 '''
             compile_result = self.execute_on_host(host, compile_cmd, sudo=True, timeout=1200)
             results[host] = {"compile": compile_result}

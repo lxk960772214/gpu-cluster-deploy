@@ -1,0 +1,28 @@
+2026-05-19 12:50:55,017 - INFO - gpu-deploy - ============================================================
+2026-05-19 12:50:55,017 - INFO - gpu-deploy - 开始GPU集群环境部署
+2026-05-19 12:50:55,018 - INFO - gpu-deploy - ============================================================
+2026-05-19 12:50:55,018 - INFO - gpu-deploy - 正在加载配置...
+2026-05-19 12:50:55,024 - INFO - gpu-deploy - 配置加载成功: gpu-test-cluster
+2026-05-19 12:50:55,024 - INFO - gpu-deploy - 节点数量: 2
+2026-05-19 12:50:55,025 - INFO - gpu-deploy - 正在初始化SSH连接...
+2026-05-19 12:50:55,228 - INFO - gpu-deploy - SSH初始化成功
+2026-05-19 12:50:55,228 - INFO - gpu-deploy - 正在检查节点连通性...
+2026-05-19 12:50:56,532 - INFO - gpu-deploy - 连通性检查完成: 2/2 节点可达
+2026-05-19 12:50:56,532 - WARNING - gpu-deploy - 步骤 43 没有关联的阶段
+2026-05-19 12:50:56,532 - INFO - gpu-deploy - [43] 检查配置状态...
+2026-05-19 12:50:56,533 - INFO - gpu-deploy - [43] [10.0.16.211] 执行: which sysbench && echo 'installed' || echo 'not_installed'
+2026-05-19 12:50:56,619 - INFO - gpu-deploy - [43] [10.0.16.211] stdout:
+2026-05-19 12:50:56,619 - INFO - gpu-deploy -   /usr/bin/sysbench
+2026-05-19 12:50:56,619 - INFO - gpu-deploy -   installed
+2026-05-19 12:50:56,620 - INFO - gpu-deploy - [43] [10.0.16.211] ✓ exit_code=0, 耗时=0.09s
+2026-05-19 12:50:56,620 - INFO - gpu-deploy - [43] [10.0.22.143] 执行: which sysbench && echo 'installed' || echo 'not_installed'
+2026-05-19 12:50:56,707 - INFO - gpu-deploy - [43] [10.0.22.143] stdout:
+2026-05-19 12:50:56,707 - INFO - gpu-deploy -   /usr/bin/sysbench
+2026-05-19 12:50:56,707 - INFO - gpu-deploy -   installed
+2026-05-19 12:50:56,708 - INFO - gpu-deploy - [43] [10.0.22.143] ✓ exit_code=0, 耗时=0.09s
+2026-05-19 12:50:56,708 - INFO - gpu-deploy - [43] 2 台主机已配置，跳过: 10.0.16.211, 10.0.22.143
+2026-05-19 12:50:56,708 - INFO - gpu-deploy - 进度报告已保存: logs/progress_report.json
+2026-05-19 12:50:56,709 - INFO - gpu-deploy - HTML报告已生成: logs/deployment_report.html
+2026-05-19 12:50:56,709 - INFO - gpu-deploy - ============================================================
+2026-05-19 12:50:56,710 - INFO - gpu-deploy - 部署成功
+2026-05-19 12:50:56,710 - INFO - gpu-deploy - ============================================================

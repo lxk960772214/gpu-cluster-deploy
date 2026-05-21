@@ -4,9 +4,9 @@ cuda:
   download_url: "https://developer.download.nvidia.com/compute/cuda/13.0.0/local_installers/cuda_13.0.0_580.65.06_linux.run"
 
 nvidia_driver:
-  version: "580.159.03"
-  file: "NVIDIA-Linux-x86_64-580.159.03.run"
-  local_file: "/tmp/NVIDIA-Linux-x86_64-580.159.03.run"
+  version: "580.142"
+  file: "NVIDIA-Linux-x86_64-580.142.run"
+  local_file: "/home/ubuntu/sourcecode/NVIDIA-Linux-x86_64-580.142.run"
 
 mlnx_ofed:
   enabled: false
@@ -17,13 +17,64 @@ kernel:
     lock_version: true
     update_grub: true
 
-# nccl:
-#   enabled: true
-#   install_method: "local_file"
-#   install_path: "/tmp/nccl"
-#   local_file: "/tmp/nccl-master.zip"
+apt_mirror:
+  enabled: true  # 是否启用APT换源
+  mirror: "tuna"  # 镜像源: tuna(清华), aliyun(阿里), ustc(中科大), 或自定义URL
 
 nccl:
   enabled: true
-  install_method: "source"  # 直接克隆编译
-  install_path: "/home/ubuntu/nccl"
+  install_method: "local_file"
+  install_path: "/usr/local/nccl"
+  local_file: "/home/ubuntu/sourcecode/nccl-master.zip"
+  compile_jobs: 8  # 编译并行进程数，null表示自动(nproc)，可设置为固定值如 8
+
+# nccl:
+#   enabled: true
+#   install_method: "source"  # 直接克隆编译
+#   install_path: "/home/ubuntu/nccl"
+
+# 性能测试软件包配置
+test_packages:
+  # 工具包目录（存放测试工具包的本地目录）
+  packages_dir: "packages"  # 相对于项目根目录，或绝对路径
+
+  # 各测试工具包路径（相对于packages_dir，或绝对路径）
+  cublas_bench: "cublasMatmulBench"
+  gpu_burn: "gpu-burn-master.zip"
+  nccl_tests: "nccl-tests-master.zip"
+  openmpi: "openmpi-4.1.8.tar.gz"  # 多机NCCL测试需要
+
+  # 编译目录：使用本地临时目录，避免NFS共享时的多节点编译冲突
+  # 每个节点独立编译，编译完成后复制到共享工具目录
+  build_dir: "/tmp/gpu-test-build"  # 本地编译目录
+
+  # 工具目录：存放编译好的工具（可放在NFS共享目录供所有节点使用）
+  # 如果是NFS目录，编译会在本地完成后复制到这里
+  toolkit_dir: "/ssd/nfs/gpu-test/toolkit"  # 共享工具目录（可NFS）
+
+  # 结果目录：测试结果存放位置
+  result_dir: "/ssd/nfs/gpu-test/result"  # 测试结果目录
+
+  # 日志目录：编译日志存放位置
+  log_dir: "/ssd/nfs/gpu-test/logs"  # 编译日志目录
+
+  # GPU Burn测试配置
+  gpuburn_duration: 600  # 测试时长(秒)
+
+  # NCCL测试配置
+  nccl_test_size: "1G"  # 测试数据大小，B200/RTX5090建议2G
+
+  # 编译并行进程数，null表示自动(nproc)，可设置为固定值如8
+  # 适用于NCCL、OpenMPI、NCCL-tests等所有编译步骤
+  compile_jobs: 8
+
+  # 编译策略：
+  # - local: 每个节点在本地build_dir独立编译（不推荐NFS环境）
+  # - single_node: 只在第一个节点编译（默认）
+  # - role_based: 根据 nodes.roles 中的 test_compile role 决定哪些节点编译
+  compile_strategy: "role_based"  # 推荐role_based，灵活控制编译节点
+
+  # 编译角色名称（当compile_strategy=role_based时生效）
+  # 节点需要在roles中添加此角色才会参与编译
+  compile_role: "test_compile"
+
